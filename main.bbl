@@ -1,0 +1,2494 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{ArbnkB}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c3e46885b17d76c79c2794327248d9db}{%
+           family={{Arbeitnehmerkammer Bremen}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3e46885b17d76c79c2794327248d9db}
+      \strng{fullhash}{c3e46885b17d76c79c2794327248d9db}
+      \strng{fullhashraw}{c3e46885b17d76c79c2794327248d9db}
+      \strng{bibnamehash}{c3e46885b17d76c79c2794327248d9db}
+      \strng{authorbibnamehash}{c3e46885b17d76c79c2794327248d9db}
+      \strng{authornamehash}{c3e46885b17d76c79c2794327248d9db}
+      \strng{authorfullhash}{c3e46885b17d76c79c2794327248d9db}
+      \strng{authorfullhashraw}{c3e46885b17d76c79c2794327248d9db}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pagination}{page}
+      \field{title}{Beitragsordnung der Arbeitnehmerkammer im Lande Bremen}
+      \field{urlday}{3}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{version}{07.10.2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 3}
+      \range{pages}{3}
+      \verb{urlraw}
+      \verb https://www.arbeitnehmerkammer.de/fileadmin/user_upload/Gesch%C3%A4ftsf%C3%BChrung/Beitragsordnung_2022.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.arbeitnehmerkammer.de/fileadmin/user_upload/Gesch%C3%A4ftsf%C3%BChrung/Beitragsordnung_2022.pdf
+      \endverb
+    \endentry
+    \entry{Beckmann2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7ae5920c684a9bd2c4f2758f568545e5}{%
+           family={Beckmann},
+           familyi={B\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4cb3ad7fc91ce1346bca77de6e7ba12e}{%
+           family={Goseberg},
+           familyi={G\bibinitperiod},
+           given={Lea\bibnamedelima Philline},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e5342cd2df60b95890d202043d1ebbe}{%
+           family={Sondermann},
+           familyi={S\bibinitperiod},
+           given={Wiebke},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f924972f279c19a5ef78ebe846a39ce6}
+      \strng{fullhash}{0beeff48cad44600f438e8eec931f60d}
+      \strng{fullhashraw}{0beeff48cad44600f438e8eec931f60d}
+      \strng{bibnamehash}{0beeff48cad44600f438e8eec931f60d}
+      \strng{authorbibnamehash}{0beeff48cad44600f438e8eec931f60d}
+      \strng{authornamehash}{f924972f279c19a5ef78ebe846a39ce6}
+      \strng{authorfullhash}{0beeff48cad44600f438e8eec931f60d}
+      \strng{authorfullhashraw}{0beeff48cad44600f438e8eec931f60d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal für politische Bildung}
+      \field{number}{12 (2)}
+      \field{pagetotal}{28}
+      \field{pagination}{page}
+      \field{subtitle}{Chancen und Herausforderungen mit Zielgruppenbezügen in der politischen Bildung}
+      \field{title}{Zielgruppenspezifische politische Bildung abseits von Defizitorientierung}
+      \field{volume}{2-2022}
+      \field{year}{2022}
+      \field{pages}{28\bibrangedash 31}
+      \range{pages}{4}
+      \keyw{Außerschulische Jugendbildung;Bildungsangebot;Demokratie;Politische Bildung;Zielgruppe}
+    \endentry
+    \entry{Behrmann.2004}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0298ce74e2f2c48c9a93cf4157de43d6}{%
+           family={Behrmann},
+           familyi={B\bibinitperiod},
+           given={Günter\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a15868988409163736f884e15e06bde5}{%
+           family={Grammes},
+           familyi={G\bibinitperiod},
+           given={Tilman},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38def30235b1251a20f933da44a018db}{%
+           family={Reinhardt},
+           familyi={R\bibinitperiod},
+           given={Sibylle},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f5cb50817218b4fc2cf4eb216dfb39c}{%
+           family={Hampe},
+           familyi={H\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=29c71656db5560a1b41109919a54cc35}{%
+           family={Tenorth},
+           familyi={T\bibinitperiod},
+           given={Heinz-Elmar},
+           giveni={H\bibinithyphendelim E\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Weinheim}%
+        {Basel}%
+      }
+      \strng{namehash}{e5667ccc0f0917289c0cb368a95f06df}
+      \strng{fullhash}{541134ed822dc759534ba88e11ece024}
+      \strng{fullhashraw}{541134ed822dc759534ba88e11ece024}
+      \strng{bibnamehash}{541134ed822dc759534ba88e11ece024}
+      \strng{authorbibnamehash}{541134ed822dc759534ba88e11ece024}
+      \strng{authornamehash}{e5667ccc0f0917289c0cb368a95f06df}
+      \strng{authorfullhash}{541134ed822dc759534ba88e11ece024}
+      \strng{authorfullhashraw}{541134ed822dc759534ba88e11ece024}
+      \strng{editorbibnamehash}{29c71656db5560a1b41109919a54cc35}
+      \strng{editornamehash}{29c71656db5560a1b41109919a54cc35}
+      \strng{editorfullhash}{29c71656db5560a1b41109919a54cc35}
+      \strng{editorfullhashraw}{29c71656db5560a1b41109919a54cc35}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booktitle}{Kerncurriculum Oberstufe II. Biologie, Chemie, Physik, Geschichte, Politik. Expertisen - Im Auftrag der Ständigen Konferenz der Kultusminister}
+      \field{title}{Politik: Kerncurriculum Sozialwissenschaften in der gymnasialen Oberstufe}
+      \field{year}{2004}
+      \field{pages}{322\bibrangedash 406}
+      \range{pages}{85}
+    \endentry
+    \entry{bplan}{misc}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=cef25fd4ae5fa7f776c0f37a440ca5c2}{%
+           family={Block},
+           familyi={B\bibinitperiod},
+           given={Thorsten},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8e38474786d1d10c573d818343b6d15}{%
+           family={Froböse},
+           familyi={F\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1853a227afb29531e91af36aededf8e3}{%
+           family={Scharf},
+           familyi={S\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2329e9cb4c1a3e0f4b5e4e5c76eb25a8}{%
+           family={Witte},
+           familyi={W\bibinitperiod},
+           given={Thorsten},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=bad0a3d86ef6a1fe4800de6aeaf0edb9}{%
+           family={{Die Senatorin für Kinder und Bildung}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bremen}%
+      }
+      \list{organization}{1}{%
+        {Landesinstitut für Schule Bremen}%
+      }
+      \strng{namehash}{69eff35ecc6765459573b08ee28692d5}
+      \strng{fullhash}{82eb8020fb7b36cea0095e70e0ce037f}
+      \strng{fullhashraw}{82eb8020fb7b36cea0095e70e0ce037f}
+      \strng{bibnamehash}{82eb8020fb7b36cea0095e70e0ce037f}
+      \strng{authorbibnamehash}{82eb8020fb7b36cea0095e70e0ce037f}
+      \strng{authornamehash}{69eff35ecc6765459573b08ee28692d5}
+      \strng{authorfullhash}{82eb8020fb7b36cea0095e70e0ce037f}
+      \strng{authorfullhashraw}{82eb8020fb7b36cea0095e70e0ce037f}
+      \strng{editorbibnamehash}{bad0a3d86ef6a1fe4800de6aeaf0edb9}
+      \strng{editornamehash}{bad0a3d86ef6a1fe4800de6aeaf0edb9}
+      \strng{editorfullhash}{bad0a3d86ef6a1fe4800de6aeaf0edb9}
+      \strng{editorfullhashraw}{bad0a3d86ef6a1fe4800de6aeaf0edb9}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{für alle Bildungsgänge der berufsbildenden Schulen im Land Bremen}
+      \field{title}{Politik Bildungsplan}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lis.bremen.de/schulqualitaet/bildungsplaene/sekundarbereich-ii-berufsbildend-15316
+      \endverb
+      \verb{url}
+      \verb https://www.lis.bremen.de/schulqualitaet/bildungsplaene/sekundarbereich-ii-berufsbildend-15316
+      \endverb
+    \endentry
+    \entry{BremSchulG}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8d8395b4f11c4d83259b350549aa2fa7}{%
+           family={{Bremische Bürgerschaft}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d8395b4f11c4d83259b350549aa2fa7}
+      \strng{fullhash}{8d8395b4f11c4d83259b350549aa2fa7}
+      \strng{fullhashraw}{8d8395b4f11c4d83259b350549aa2fa7}
+      \strng{bibnamehash}{8d8395b4f11c4d83259b350549aa2fa7}
+      \strng{authorbibnamehash}{8d8395b4f11c4d83259b350549aa2fa7}
+      \strng{authornamehash}{8d8395b4f11c4d83259b350549aa2fa7}
+      \strng{authorfullhash}{8d8395b4f11c4d83259b350549aa2fa7}
+      \strng{authorfullhashraw}{8d8395b4f11c4d83259b350549aa2fa7}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{11}
+      \field{note}{Brem.GBl. 2005, S. 260, 388, 398}
+      \field{title}{Bremisches Schulgesetz}
+      \field{titleaddon}{BremSchulG}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{version}{28. Juni 2005 (Brem.GBl. 2005, S. 260, 388, 398) zuletzt Inhaltsverzeichnis geändert, § 72a neu gefasst durch Artikel 4 des Gesetzes vom 14. Dezember 2021 (Brem.GBl. S. 913, 917)}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.transparenz.bremen.de/metainformationen/bremisches-schulgesetz-bremschulg-in-der-fassung-der-bekanntmachung-vom-28-juni-2005-175324
+      \endverb
+      \verb{url}
+      \verb https://www.transparenz.bremen.de/metainformationen/bremisches-schulgesetz-bremschulg-in-der-fassung-der-bekanntmachung-vom-28-juni-2005-175324
+      \endverb
+    \endentry
+    \entry{banz.gering}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c91ac37956d17c006816d7a9c8cec244}{%
+           family={{Bundesministerium für Arbeit und Soziales}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=40bd9b36786117008e518b5ae36e8a46}{%
+           family={Bundesanzeiger},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{c91ac37956d17c006816d7a9c8cec244}
+      \strng{fullhash}{c91ac37956d17c006816d7a9c8cec244}
+      \strng{fullhashraw}{c91ac37956d17c006816d7a9c8cec244}
+      \strng{bibnamehash}{c91ac37956d17c006816d7a9c8cec244}
+      \strng{authorbibnamehash}{c91ac37956d17c006816d7a9c8cec244}
+      \strng{authornamehash}{c91ac37956d17c006816d7a9c8cec244}
+      \strng{authorfullhash}{c91ac37956d17c006816d7a9c8cec244}
+      \strng{authorfullhashraw}{c91ac37956d17c006816d7a9c8cec244}
+      \strng{editorbibnamehash}{40bd9b36786117008e518b5ae36e8a46}
+      \strng{editornamehash}{40bd9b36786117008e518b5ae36e8a46}
+      \strng{editorfullhash}{40bd9b36786117008e518b5ae36e8a46}
+      \strng{editorfullhashraw}{40bd9b36786117008e518b5ae36e8a46}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bundesministerium für Arbeit und Soziales Bekanntmachung der Geringfügigkeitsgrenze nach § 8 Absatz 1a des Vierten Buches Sozialgesetzbuch Vom 30. November 2023 Gemäß § 8 Absatz 1a Satz 3 des Vierten Buches Sozialgesetzbuch – Gemeinsame Vorschriften für die Sozialversicherung – in der Fassung der Bekanntmachung vom 12. November 2009 (BGBl. I S. 3710, 3973; 2011 I S. 363), das zuletzt durch Ar tikel 8 des Gesetzes vom 16. August 2023 (BGBl. 2023 I Nr. 217) geändert worden ist, wird bekannt gemacht: Die Geringfügigkeitsgrenze beträgt ab dem 1. Januar 2024: 538 Euro und ab dem 1. Januar 2025: 556 Euro. Berlin, den 30. November 2023 Bundesministerium für Arbeit und Soziales Im Auftrag Marco Becker}
+      \field{day}{7}
+      \field{issue}{BAnz AT 07.12.2023 B1}
+      \field{month}{12}
+      \field{title}{Bekanntmachung der Geringfügigkeitsgrenze nach § 8 Absatz 1a des Vierten Buches Sozialgesetzbuch}
+      \field{titleaddon}{BAnz}
+      \field{urlday}{24}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bmas.de/SharedDocs/Downloads/DE/Arbeitsrecht/bekanntmachung-bundesanzeiger-geringfuegigkeitsgrenze-2022.pdf?__blob=publicationFile&v=7
+      \endverb
+      \verb{url}
+      \verb https://www.bmas.de/SharedDocs/Downloads/DE/Arbeitsrecht/bekanntmachung-bundesanzeiger-geringfuegigkeitsgrenze-2022.pdf?__blob=publicationFile&v=7
+      \endverb
+    \endentry
+    \entry{b.gering}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2644f47cd13ffc0a75f326bb474477ce}{%
+           family={Bundestag},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{2644f47cd13ffc0a75f326bb474477ce}
+      \strng{fullhash}{2644f47cd13ffc0a75f326bb474477ce}
+      \strng{fullhashraw}{2644f47cd13ffc0a75f326bb474477ce}
+      \strng{bibnamehash}{2644f47cd13ffc0a75f326bb474477ce}
+      \strng{authorbibnamehash}{2644f47cd13ffc0a75f326bb474477ce}
+      \strng{authornamehash}{2644f47cd13ffc0a75f326bb474477ce}
+      \strng{authorfullhash}{2644f47cd13ffc0a75f326bb474477ce}
+      \strng{authorfullhashraw}{2644f47cd13ffc0a75f326bb474477ce}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{§ 8 Geringfügige Beschäftigung und geringfügige selbständige Tätigkeit; Geringfügigkeitsgrenze. In: Sozialgesetzbuch (SGB) Viertes Buch (IV) - Gemeinsame Vorschriften für die Sozialversicherung - (Artikel I des Gesetzes vom 23. Dezember 1976, BGBl. I S. 3845)}
+      \field{titleaddon}{SGB IV}
+      \field{urlday}{23}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gesetze-im-internet.de/sgb_4/__8.html
+      \endverb
+      \verb{url}
+      \verb https://www.gesetze-im-internet.de/sgb_4/__8.html
+      \endverb
+    \endentry
+    \entry{gpje2004}{book}{}{}
+      \name{author}{6}{ul=2}{%
+        {{un=0,uniquepart=base,hash=a953a217f8b4b82fe6d0fa49c1dc87d3}{%
+           family={Detjen},
+           familyi={D\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1cae10e28c4575a5edfc7108b44fc69b}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={Hans-Werner},
+           giveni={H\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a656757ff71e2bdc8d314cc4000ad1d7}{%
+           family={Massing},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=15a69ec282b8c6a2dc2136b379460636}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Dagmar},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=830801426ed6c9fe33c4bd454cc8985c}{%
+           family={Sander},
+           familyi={S\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07968f2e498945a8e0a8b8082aea1eeb}{%
+           family={Weißeno},
+           familyi={W\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editorc}{1}{}{%
+        {{hash=20ab83ca8259e755a95d5f1e86b44b28}{%
+           family={{Satz {\&} Gestaltung: Besand, Anja}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Schwalbach am Taunus}%
+      }
+      \list{publisher}{1}{%
+        {Wochenschau Verlag}%
+      }
+      \strng{namehash}{9509d3833fad5fa5771076cea5b0ac48}
+      \strng{fullhash}{3ee946fe1eec3cecca5ebd3999ac5cc2}
+      \strng{fullhashraw}{3ee946fe1eec3cecca5ebd3999ac5cc2}
+      \strng{bibnamehash}{3ee946fe1eec3cecca5ebd3999ac5cc2}
+      \strng{authorbibnamehash}{3ee946fe1eec3cecca5ebd3999ac5cc2}
+      \strng{authornamehash}{9509d3833fad5fa5771076cea5b0ac48}
+      \strng{authorfullhash}{3ee946fe1eec3cecca5ebd3999ac5cc2}
+      \strng{authorfullhashraw}{3ee946fe1eec3cecca5ebd3999ac5cc2}
+      \strng{editorcbibnamehash}{20ab83ca8259e755a95d5f1e86b44b28}
+      \strng{editorcnamehash}{20ab83ca8259e755a95d5f1e86b44b28}
+      \strng{editorcfullhash}{20ab83ca8259e755a95d5f1e86b44b28}
+      \strng{editorcfullhashraw}{20ab83ca8259e755a95d5f1e86b44b28}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. Auflage}
+      \field{editorctype}{collaborator}
+      \field{isbn}{3-89974112-9}
+      \field{note}{Gesellschaft für Politikdidaktik und politische Jugend- und Erwachsenenbildung (GPJE)}
+      \field{subtitle}{Ein Entwurf}
+      \field{title}{Anforderungen an Nationale Bildungsstandards für den Fachunterricht in der Politischen Bildung an Schulen}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb GPJE 2024 Entwurf Bildungsstandards-1-edited:Attachments/GPJE 2024 Entwurf Bildungsstandards-1-edited.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://gpje.de/wp-content/uploads/2024/07/Bildungsstandards-1.pdf
+      \endverb
+      \verb{url}
+      \verb https://gpje.de/wp-content/uploads/2024/07/Bildungsstandards-1.pdf
+      \endverb
+    \endentry
+    \entry{Detjen.2012}{book}{}{}
+      \name{author}{4}{ul=2}{%
+        {{un=0,uniquepart=base,hash=a953a217f8b4b82fe6d0fa49c1dc87d3}{%
+           family={Detjen},
+           familyi={D\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a656757ff71e2bdc8d314cc4000ad1d7}{%
+           family={Massing},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=15a69ec282b8c6a2dc2136b379460636}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Dagmar},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07968f2e498945a8e0a8b8082aea1eeb}{%
+           family={Weißeno},
+           familyi={W\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden}%
+      }
+      \strng{namehash}{baf47064bec4e0d0b6f9025131ecdd51}
+      \strng{fullhash}{c98ceef12c771bf15150664e24f4120d}
+      \strng{fullhashraw}{c98ceef12c771bf15150664e24f4120d}
+      \strng{bibnamehash}{c98ceef12c771bf15150664e24f4120d}
+      \strng{authorbibnamehash}{c98ceef12c771bf15150664e24f4120d}
+      \strng{authornamehash}{baf47064bec4e0d0b6f9025131ecdd51}
+      \strng{authorfullhash}{c98ceef12c771bf15150664e24f4120d}
+      \strng{authorfullhashraw}{c98ceef12c771bf15150664e24f4120d}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-658-00784-3}
+      \field{title}{Politikkompetenz – ein Modell}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1007/978-3-658-00785-0
+      \endverb
+    \endentry
+    \entry{Elsasser.2017}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c08a999a75f7d99340b463de1bfd9384}{%
+           family={Elsässer},
+           familyi={E\bibinitperiod},
+           given={Lea},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=505cedf8e57c400eb54e6af2b845530c}{%
+           family={Hense},
+           familyi={H\bibinitperiod},
+           given={Svenja},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d380573e1f7db6300b6737a15c0a640e}{%
+           family={Schäfer},
+           familyi={S\bibinitperiod},
+           given={Armin},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{649ffd81b10b85b1451bf914fc729dd8}
+      \strng{fullhash}{2c60e5421a52eb24d97b3e5aa9d9d29d}
+      \strng{fullhashraw}{2c60e5421a52eb24d97b3e5aa9d9d29d}
+      \strng{bibnamehash}{2c60e5421a52eb24d97b3e5aa9d9d29d}
+      \strng{authorbibnamehash}{2c60e5421a52eb24d97b3e5aa9d9d29d}
+      \strng{authornamehash}{649ffd81b10b85b1451bf914fc729dd8}
+      \strng{authorfullhash}{2c60e5421a52eb24d97b3e5aa9d9d29d}
+      \strng{authorfullhashraw}{2c60e5421a52eb24d97b3e5aa9d9d29d}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ZPol (Zeitschrift für Politikwissenschaft)}
+      \field{note}{PII: 97}
+      \field{number}{2}
+      \field{pagination}{page}
+      \field{title}{„Dem Deutschen Volke“? Die ungleiche Responsivität des Bundestags}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{27}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{161\bibrangedash 180}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1007/s41358-017-0097-9
+      \endverb
+      \verb{file}
+      \verb Elsässer, Hense et al. 2017 - Dem Deutschen Volke:Attachments/Elsässer, Hense et al. 2017 - Dem Deutschen Volke.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1007/s41358-017-0097-9
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1007/s41358-017-0097-9
+      \endverb
+    \endentry
+    \entry{Wolle}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=aca2fab9ac40ba9858e2ee5fee448809}{%
+           family={Gännsicke},
+           familyi={G\bibinitperiod},
+           given={Anne},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0d1434d86f2a019c78e14af90e373b37}{%
+           family={{Redaktuer*in: Müller}},
+           familyi={R\bibinitperiod},
+           given={Birgit},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d1511108db1ddc9ffc83fc32d21f37e}{%
+           family={{underDOK Filmproduktion}},
+           familyi={u\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {NDR}%
+      }
+      \strng{namehash}{1fc0f5893a351509f94e0289fcbfb468}
+      \strng{fullhash}{05656b326c4ea7948b12ecab9d23b03e}
+      \strng{fullhashraw}{05656b326c4ea7948b12ecab9d23b03e}
+      \strng{bibnamehash}{05656b326c4ea7948b12ecab9d23b03e}
+      \strng{authorbibnamehash}{05656b326c4ea7948b12ecab9d23b03e}
+      \strng{authornamehash}{1fc0f5893a351509f94e0289fcbfb468}
+      \strng{authorfullhash}{05656b326c4ea7948b12ecab9d23b03e}
+      \strng{authorfullhashraw}{05656b326c4ea7948b12ecab9d23b03e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{2}
+      \field{series}{Die Nordreportage}
+      \field{subtitle}{Die Nordreportage}
+      \field{title}{Wolle for future - Es wird immer bunter}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=E9UgBzmU30E
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=E9UgBzmU30E
+      \endverb
+    \endentry
+    \entry{gpje.satzung}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1670115669d1105652e46555509c713c}{%
+           family={{Gesellschaft für Politikdidaktik und politische Jugend- und Erwachsenenbildung}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{1670115669d1105652e46555509c713c}
+      \strng{fullhash}{1670115669d1105652e46555509c713c}
+      \strng{fullhashraw}{1670115669d1105652e46555509c713c}
+      \strng{bibnamehash}{1670115669d1105652e46555509c713c}
+      \strng{authorbibnamehash}{1670115669d1105652e46555509c713c}
+      \strng{authornamehash}{1670115669d1105652e46555509c713c}
+      \strng{authorfullhash}{1670115669d1105652e46555509c713c}
+      \strng{authorfullhashraw}{1670115669d1105652e46555509c713c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{4}
+      \field{month}{6}
+      \field{title}{Satzung der GPJE}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{version}{22.06.2012}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gpje.de/satzung/
+      \endverb
+      \verb{url}
+      \verb https://gpje.de/satzung/
+      \endverb
+      \warn{\item Overwriting field 'year' with year value from field 'date' for entry 'gpje.satzung'}
+    \endentry
+    \entry{Gesner2016}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=01634f3d98411c09f3b767626804dba5}{%
+           family={Geßner},
+           familyi={G\bibinitperiod},
+           given={Rebekka},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=928139c4ba6c92d483c400646e74195e}{%
+           family={Hoffmann},
+           familyi={H\bibinitperiod},
+           given={Kora},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49c12a21c8ac451378f8d71b0f289cac}{%
+           family={Lotz},
+           familyi={L\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0dc9f72718d5cf7332720c91f7bf11b}{%
+           family={Wohnig},
+           familyi={W\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5de7146c52ba80258e12d9a0ac1203c2}{%
+           family={Widmaier},
+           familyi={W\bibinitperiod},
+           given={Benedikt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=edf19ecd9f2ba42e9fc78dda048e4eea}{%
+           family={Zorn},
+           familyi={Z\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bonn}%
+      }
+      \list{publisher}{1}{%
+        {Bundeszentrale für politische Bildung}%
+      }
+      \strng{namehash}{179a290b61f5f590589d460a1d72fcce}
+      \strng{fullhash}{7c3db48d7fca2d7787504026f1e80fff}
+      \strng{fullhashraw}{7c3db48d7fca2d7787504026f1e80fff}
+      \strng{bibnamehash}{7c3db48d7fca2d7787504026f1e80fff}
+      \strng{authorbibnamehash}{7c3db48d7fca2d7787504026f1e80fff}
+      \strng{authornamehash}{179a290b61f5f590589d460a1d72fcce}
+      \strng{authorfullhash}{7c3db48d7fca2d7787504026f1e80fff}
+      \strng{authorfullhashraw}{7c3db48d7fca2d7787504026f1e80fff}
+      \strng{editorbibnamehash}{f80b53c0cc066d7f3048fb565d5a80da}
+      \strng{editornamehash}{f80b53c0cc066d7f3048fb565d5a80da}
+      \strng{editorfullhash}{f80b53c0cc066d7f3048fb565d5a80da}
+      \strng{editorfullhashraw}{f80b53c0cc066d7f3048fb565d5a80da}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booksubtitle}{Eine Debatte der politischen Bildung}
+      \field{booktitle}{Brauchen wir den Beutelsbacher Konsens?}
+      \field{isbn}{978-3-8389-0793-2}
+      \field{number}{Band 1793}
+      \field{series}{Schriftenreihe / Bundeszentrale für Politische Bildung}
+      \field{title}{Brauchen wir den Beutelsbacher Konsens? Bericht über eine Fachtagung}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{28\bibrangedash 36}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb https://www.bpb.de/system/files/dokument_pdf/1793_Beutelsbacher_Konsens_ba.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.bpb.de/system/files/dokument_pdf/1793_Beutelsbacher_Konsens_ba.pdf
+      \endverb
+    \endentry
+    \entry{Giesecke.1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=20212ea2b5a62eaeeb34c2c863a6977c}{%
+           family={Giesecke},
+           familyi={G\bibinitperiod},
+           given={Hermann},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{20212ea2b5a62eaeeb34c2c863a6977c}
+      \strng{fullhash}{20212ea2b5a62eaeeb34c2c863a6977c}
+      \strng{fullhashraw}{20212ea2b5a62eaeeb34c2c863a6977c}
+      \strng{bibnamehash}{20212ea2b5a62eaeeb34c2c863a6977c}
+      \strng{authorbibnamehash}{20212ea2b5a62eaeeb34c2c863a6977c}
+      \strng{authornamehash}{20212ea2b5a62eaeeb34c2c863a6977c}
+      \strng{authorfullhash}{20212ea2b5a62eaeeb34c2c863a6977c}
+      \strng{authorfullhashraw}{20212ea2b5a62eaeeb34c2c863a6977c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Aus Politik und Zeitgeschichte (APuZ)}
+      \field{note}{ISSN: 0479-611 X}
+      \field{number}{7-8}
+      \field{pagination}{page}
+      \field{title}{Entstehung und Krise der Fachdidaktik Politik 1960-1976}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+      \field{pages}{13\bibrangedash 23}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb https://www.bpb.de/shop/zeitschriften/apuz/archiv/538800/apuz-7-8-1999/
+      \endverb
+      \verb{url}
+      \verb https://www.bpb.de/shop/zeitschriften/apuz/archiv/538800/apuz-7-8-1999/
+      \endverb
+    \endentry
+    \entry{Gloe2020}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9b332be620b1417e47d729244e10d299}{%
+           family={Gloe},
+           familyi={G\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=047cb230f7a5d0f07682fa46ae26cb51}{%
+           family={Oeftering},
+           familyi={O\bibinitperiod},
+           given={Tonio},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=6f90992e9e36dc53737d998aef6b5678}{%
+           family={Meyer},
+           familyi={M\bibinitperiod},
+           given={Dorothee},
+           giveni={D\bibinitperiod}}}%
+        {{hash=329750dddced8aa622c75108f743a576}{%
+           family={Hilpert},
+           familyi={H\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=3c53cbb0a4883eefaa195609e84f8938}{%
+           family={Lindmeier},
+           familyi={L\bibinitperiod},
+           given={Bettina},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bonn}%
+      }
+      \list{publisher}{1}{%
+        {Bundeszentrale für politische Bildung}%
+      }
+      \strng{namehash}{9d8a420c20c7faba1d97e4a64102403d}
+      \strng{fullhash}{9d8a420c20c7faba1d97e4a64102403d}
+      \strng{fullhashraw}{9d8a420c20c7faba1d97e4a64102403d}
+      \strng{bibnamehash}{9d8a420c20c7faba1d97e4a64102403d}
+      \strng{authorbibnamehash}{9d8a420c20c7faba1d97e4a64102403d}
+      \strng{authornamehash}{9d8a420c20c7faba1d97e4a64102403d}
+      \strng{authorfullhash}{9d8a420c20c7faba1d97e4a64102403d}
+      \strng{authorfullhashraw}{9d8a420c20c7faba1d97e4a64102403d}
+      \strng{editorbibnamehash}{4d5dbb8b54e3a1382e1aa94dd7d70e8a}
+      \strng{editornamehash}{245606787ef2fe575fb7b2dd07306fcf}
+      \strng{editorfullhash}{4d5dbb8b54e3a1382e1aa94dd7d70e8a}
+      \strng{editorfullhashraw}{4d5dbb8b54e3a1382e1aa94dd7d70e8a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booksubtitle}{Dorothee Meyer/Wolfram Hilpert/Bettina Lindmeier (Hrsg.)}
+      \field{booktitle}{Grundlagen und Praxis inklusiver politischer Bildung}
+      \field{isbn}{978-3-7425-0230-8}
+      \field{number}{Band 10230}
+      \field{series}{Schriftenreihe / Bundeszentrale für Politische Bildung}
+      \field{subtitle}{Ein Überblick über Ziele und Grundlagen inklusiver politischer Bildung}
+      \field{title}{Didaktik der politischen Bildung}
+      \field{year}{2020}
+      \field{pages}{87\bibrangedash 132}
+      \range{pages}{46}
+    \endentry
+    \entry{Gokbudak2020}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a12a6734cdae9540c721a8dc522ff73d}{%
+           family={Gökbudak},
+           familyi={G\bibinitperiod},
+           given={Mahir},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bc77d95806e6d96ebfb41b016913af8}{%
+           family={Hedtke},
+           familyi={H\bibinitperiod},
+           given={Reinhold},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=80bf799503cebcf82373729519f8caf7}{%
+           family={Hagedorn},
+           familyi={H\bibinitperiod},
+           given={Udo},
+           giveni={U\bibinitperiod}}}%
+        {{hash=da53c0b4f88a7059b863a52f85255c6b}{%
+           family={Zurstrassen},
+           familyi={Z\bibinitperiod},
+           given={Bettina},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bielefeld}%
+      }
+      \list{publisher}{1}{%
+        {Universität Bielefeld: Fakultät für Soziologie}%
+      }
+      \strng{namehash}{fd17f50e08a49236f867ae49000b61e8}
+      \strng{fullhash}{fd17f50e08a49236f867ae49000b61e8}
+      \strng{fullhashraw}{fd17f50e08a49236f867ae49000b61e8}
+      \strng{bibnamehash}{fd17f50e08a49236f867ae49000b61e8}
+      \strng{authorbibnamehash}{fd17f50e08a49236f867ae49000b61e8}
+      \strng{authornamehash}{fd17f50e08a49236f867ae49000b61e8}
+      \strng{authorfullhash}{fd17f50e08a49236f867ae49000b61e8}
+      \strng{authorfullhashraw}{fd17f50e08a49236f867ae49000b61e8}
+      \strng{editorbibnamehash}{bd376d367197a11615c8a71c6915cc5e}
+      \strng{editornamehash}{bd376d367197a11615c8a71c6915cc5e}
+      \strng{editorfullhash}{bd376d367197a11615c8a71c6915cc5e}
+      \strng{editorfullhashraw}{bd376d367197a11615c8a71c6915cc5e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Das 3. Ranking Politische Bildung 2019 misst den Stellenwert der politischen Bildung in Schulen der Sekundarstufe I und liefert einen quantitativen Vergleich der Bundesländer. Der empirische Indikator für die Relevanz schulischer politischer Bildung ist die Stundentafelquote des Leitfaches der politischen Bildung. Sie erfasst, vereinfacht gesprochen, den Anteil politischer Bildung an der gesamten Lernzeit eines Bildungsgangs. [...] Die Bundesländer schneiden im Ranking Politische Bildung sehr unterschiedlich ab. [...] Das 3. Ranking vergleicht erstmals die Lernzeit für politische Bildung mit der verbindlichen Zeit für Berufsorientierung einschließlich Schülerbetriebspraktikum, die zur ökonomischen Bildung zählt. [...] Für die Demokratiebildung existieren weder verbindliche Maßnahmen noch verlässliche Zeitkontingente. Die Analyse der Daten zeigt erneut, dass die Bildungspolitik die sehr große Ungleichheit beim Erwerb von politischer Kompetenz und demokratischen Einstellungen in der Schule beseitigen muss. Das gilt auch hinsichtlich der Zeitressourcen für die politische Bildung und die Demokratiebildung im Vergleich zur obligatorischen Berufsorientierung. (DIPF/Orig.)}
+      \field{booksubtitle}{Working Papers}
+      \field{booktitle}{Didaktik der Sozialwissenschaften}
+      \field{number}{11}
+      \field{title}{3. Ranking Politische Bildung. Politische Bildung an allgemeinbildenden Schulen der Sekundarstufe I im Bundesländervergleich 2019}
+      \field{volume}{11}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.25656/01:19456
+      \endverb
+      \keyw{Allgemein bildende Schule;Baden-Wurtemberg;Baden-Wurttemberg;Baden-Württemberg;Bayern;Berlin;Berufsorientierung;Betriebspraktikum;Bildungspolitik;Brandenburg;Bremen;Bundesland;Citizenship education;Civic education;Community School;Comprehensive school;Comprehensive secondary school;Curriculum subject;Curriculumvergleich;Democracy;Demokratie;Demokratische Bildung;Deutschland;educational policy;Empirical study;Empirische Untersuchung;Fachfremder Unterricht;Fachunterricht;Gemeinschaftsschule;General education school;Geografieunterricht;Geography Education;Geography lessons;German academic secondary school;Germany;Gesamtschule;Geschichtsunterricht;Gesellschaftswissenschaftlicher Unterricht;Grammar School;Gymnasium;Hamburg;Hessen;History lessons;In-plant training;Intermediate school;Lower level secondary education;Lower Saxony;Lower secondary;Lower secondary education;Mecklenburg-Vorpommern;Mecklenburg-Western Pomerania;Nationaler Vergleich;Niedersachsen;Nordrhein-Westfalen;North Rhine-Westphalia;North-Rhine Westphalia;Oberschule;Occupational orientation;Political education;Politische Bildung;Practice period for pupils;Quantitative Analyse;Quantitative research;Quote;Ranking;Ratio;Realschule;Rheinland-Pfalz;Rhineland-Palatinate;Saarland;Sachsen;Sachsen-Anhalt;Saxony;Saxony-Anhalt;Schleswig-Holstein;School level of education;School system;Schulbildung;Schülerpraktikum;Schulfach;Schulform;Schulsystem;Secondary education lower level;Secondary school;Sekundarschule;Sekundarstufe I;Sozialwissenschaftlicher Unterricht;Stellenwert;Stundentafel;Subject;Teaching of a special subject;Teaching of geography;Teaching of history;Thüringen;Thuringia;Time-table;Timetables (School);Type of school}
+    \endentry
+    \entry{Gortler.2017}{collection}{}{}
+      \name{editor}{5}{}{%
+        {{un=0,uniquepart=base,hash=f9215d244e7574b64f592a768376be9c}{%
+           family={Görtler},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49c12a21c8ac451378f8d71b0f289cac}{%
+           family={Lotz},
+           familyi={L\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7888523b93d199ce310e3b88811916a}{%
+           family={Partetzke},
+           familyi={P\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b04501db540db369dbb935fbd559d2f1}{%
+           family={{Poma Poma}},
+           familyi={P\bibinitperiod},
+           given={Sara},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=097e373f959b172dc5d400b31e412d82}{%
+           family={Samland},
+           familyi={S\bibinitperiod},
+           given={Marie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Schwalbach am Taunus}%
+      }
+      \list{publisher}{1}{%
+        {Wochenschau Verlag}%
+      }
+      \strng{namehash}{b40ca8d78844ca098c7c76e6d23e90e4}
+      \strng{fullhash}{42c342d8003557868b3fe4a3539568cd}
+      \strng{fullhashraw}{42c342d8003557868b3fe4a3539568cd}
+      \strng{bibnamehash}{42c342d8003557868b3fe4a3539568cd}
+      \strng{editorbibnamehash}{42c342d8003557868b3fe4a3539568cd}
+      \strng{editornamehash}{b40ca8d78844ca098c7c76e6d23e90e4}
+      \strng{editorfullhash}{42c342d8003557868b3fe4a3539568cd}
+      \strng{editorfullhashraw}{42c342d8003557868b3fe4a3539568cd}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In der politischen Bildung wird die Debatte um eine kritische politische Bildung erneut geführt. Im Fokus der Debattenbeiträge stehen unterschiedliche Vorstellungen hinsichtlich Notwendigkeit, Begründung, Zielen, Inhalten und Methoden einer kritischen politischen Bildung im schulischen wie außerschulischen Bereich. Dieser Band zeigt unterschiedliche Standpunkte und Forschungsperspektiven auf, wie sie diesbezüglich auf der GPJE-Nachwuchstagung im Frühjahr 2016 an der Universität Bremen diskutiert worden sind. Der Band gliedert sich in drei Teile. Der erste umfasst theoretische wie konzeptionelle Beiträge. Im zweiten Teil steht die empirische Forschung im Mittelpunkt. Im dritten Teil werden schließlich die politisch-bildnerische Praxis und deren Reflexion thematisiert. Insgesamt werfen die Beiträge einen differenzierten Blick auf die Debatte um den Gehalt einer kritischen politischen Bildung. Dabei setzen sich die Autorinnen und Autoren mit Argumenten aus der aktuellen Diskussion auseinander und beleuchten blinde Flecken.}
+      \field{isbn}{9783734404207}
+      \field{pagetotal}{1189}
+      \field{series}{Wochenschau Wissenschaft}
+      \field{title}{Kritische politische Bildung: Standpunkt und Perspektiven}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.wochenschau-verlag.de/Kritische-politische-Bildung-Standpunkte-und-Perspektiven/40420 ODER https://elibrary.utb.de/doi/book/10.46499/9783734404207
+      \endverb
+      \verb{url}
+      \verb https://www.wochenschau-verlag.de/Kritische-politische-Bildung-Standpunkte-und-Perspektiven/40420%20ODER%20https://elibrary.utb.de/doi/book/10.46499/9783734404207
+      \endverb
+      \keyw{Cultural Studies;Demokratie;Empirie;Gesellschaftstheorie;kritische;Methoden;Politikdidaktik;Politikunterricht;Politikwissenschaft 2018{\_}2;Politische Bildung;politische Urteilen;Professionalisierung;Werte}
+    \endentry
+    \entry{Grammes.2005}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a15868988409163736f884e15e06bde5}{%
+           family={Grammes},
+           familyi={G\bibinitperiod},
+           given={Tilman},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=fc5b832e3ce951a8a49d169bc71d1b3d}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Eberhard},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {VS Verlag für Sozialwissenschaften}%
+      }
+      \strng{namehash}{a15868988409163736f884e15e06bde5}
+      \strng{fullhash}{a15868988409163736f884e15e06bde5}
+      \strng{fullhashraw}{a15868988409163736f884e15e06bde5}
+      \strng{bibnamehash}{a15868988409163736f884e15e06bde5}
+      \strng{authorbibnamehash}{a15868988409163736f884e15e06bde5}
+      \strng{authornamehash}{a15868988409163736f884e15e06bde5}
+      \strng{authorfullhash}{a15868988409163736f884e15e06bde5}
+      \strng{authorfullhashraw}{a15868988409163736f884e15e06bde5}
+      \strng{editorbibnamehash}{fc5b832e3ce951a8a49d169bc71d1b3d}
+      \strng{editornamehash}{fc5b832e3ce951a8a49d169bc71d1b3d}
+      \strng{editorfullhash}{fc5b832e3ce951a8a49d169bc71d1b3d}
+      \strng{editorfullhashraw}{fc5b832e3ce951a8a49d169bc71d1b3d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booktitle}{Standards für die politische Bildung}
+      \field{isbn}{978-3-531-14647-8}
+      \field{title}{Das sachlogische Kerncurriculum}
+      \field{year}{2005}
+      \field{pages}{41\bibrangedash 61}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/978-3-322-80750-2_4
+      \endverb
+    \endentry
+    \entry{Hedtke2016}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8bc77d95806e6d96ebfb41b016913af8}{%
+           family={Hedtke},
+           familyi={H\bibinitperiod},
+           given={Reinhold},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=a31807f6054e61bbe43c15f3ed8f358a}{%
+           family={{Forschungsinstitut für gesellschaftliche Weiterentwicklung e.V.}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Düsseldorf}%
+      }
+      \list{organization}{1}{%
+        {Forschungsinstitut für gesellschaftliche Weiterentwicklung e.V.}%
+      }
+      \list{publisher}{1}{%
+        {Forschungsinstitut für gesellschaftliche Weiterentwicklung e.V. (FGW)}%
+      }
+      \strng{namehash}{8bc77d95806e6d96ebfb41b016913af8}
+      \strng{fullhash}{8bc77d95806e6d96ebfb41b016913af8}
+      \strng{fullhashraw}{8bc77d95806e6d96ebfb41b016913af8}
+      \strng{bibnamehash}{8bc77d95806e6d96ebfb41b016913af8}
+      \strng{authorbibnamehash}{8bc77d95806e6d96ebfb41b016913af8}
+      \strng{authornamehash}{8bc77d95806e6d96ebfb41b016913af8}
+      \strng{authorfullhash}{8bc77d95806e6d96ebfb41b016913af8}
+      \strng{authorfullhashraw}{8bc77d95806e6d96ebfb41b016913af8}
+      \strng{editorbibnamehash}{a31807f6054e61bbe43c15f3ed8f358a}
+      \strng{editornamehash}{a31807f6054e61bbe43c15f3ed8f358a}
+      \strng{editorfullhash}{a31807f6054e61bbe43c15f3ed8f358a}
+      \strng{editorfullhashraw}{a31807f6054e61bbe43c15f3ed8f358a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Die Debatte um die sozio/ökonomische Bildung an Schulen hält an. Der Beitrag analysiert sie aus politischer, fachdidaktisch konzeptioneller, fachwissenschaftlicher, curricularer und medialer Perspektive und fragt: Welche Akteurgruppen prägen das Feld, und was wollen sie erreichen? Welche Bildungsziele verfolgt die sozioökonomische Bildung? Was sind die wissenschaftlichen und bildungspolitischen Schwächen der gängigen Konzepte ökonomischer Bildung? Orientieren sie sich hinreichend am wissenschaftlichen Diskussionsstand? Berücksichtigen sie auch Wissen aus dem breiten Feld von Politischer Ökonomie, Wirtschaftspolitik und Makroökonomik? Wie ist dieser Bereich in den Kernlehrplänen der einschlägigen Fächer repräsentiert? Wer bringt externe Unterrichtsmaterialien mit welchen Strategien in die Schulen? Wie gehen Lehrkräfte damit um?}
+      \field{number}{1}
+      \field{series}{FGW-Studie Neues ökonomisches Denken}
+      \field{subtitle}{Eine Studie zu Gestalt und Gehalt sozio/ökonomischer Bildung}
+      \field{title}{Paradigmatische Parteilichkeit, lückenhafte Lehrpläne und tendenziöses Unterrichtsmaterial?}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Hedtke 2016 - Paradigmatische Parteilichkeit:Attachments/Hedtke 2016 - Paradigmatische Parteilichkeit.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ssoar.info/ssoar/handle/document/66437
+      \endverb
+      \verb{url}
+      \verb https://www.ssoar.info/ssoar/handle/document/66437
+      \endverb
+      \keyw{Bildung und Erziehung;Bildungspolitik;Bundesrepublik Deutschland;Curriculum;Didactics;Didaktik;economic education;Education;educational policy;Fachdidaktik;Federal Republic of Germany;Lehrplan;Nordrhein-Westfalen;North Rhine-Westphalia;ökonomische Bildung;Sonderbereiche der Pädagogik;Special areas of Education;subject didactics;syllabus;Teaching;teaching materials;Unterricht;Unterrichtsmaterial;Wirtschaftsunterricht}
+    \endentry
+    \entry{Heidenreich.2012a}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=468c2c20c44bc8a4a5f8a8f4c55ad8f6}{%
+           family={Heidenreich},
+           familyi={H\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=468c2c20c44bc8a4a5f8a8f4c55ad8f6}{%
+           family={Heidenreich},
+           familyi={H\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e915efba2f64e4f59897276c00b43d85}{%
+           family={Schaal},
+           familyi={S\bibinitperiod},
+           given={Gary\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Baden-Baden}%
+      }
+      \list{publisher}{1}{%
+        {Nomos Verlagsgesellschaft mbH {\&} Co. KG}%
+      }
+      \strng{namehash}{468c2c20c44bc8a4a5f8a8f4c55ad8f6}
+      \strng{fullhash}{468c2c20c44bc8a4a5f8a8f4c55ad8f6}
+      \strng{fullhashraw}{468c2c20c44bc8a4a5f8a8f4c55ad8f6}
+      \strng{bibnamehash}{468c2c20c44bc8a4a5f8a8f4c55ad8f6}
+      \strng{authorbibnamehash}{468c2c20c44bc8a4a5f8a8f4c55ad8f6}
+      \strng{authornamehash}{468c2c20c44bc8a4a5f8a8f4c55ad8f6}
+      \strng{authorfullhash}{468c2c20c44bc8a4a5f8a8f4c55ad8f6}
+      \strng{authorfullhashraw}{468c2c20c44bc8a4a5f8a8f4c55ad8f6}
+      \strng{editorbibnamehash}{2500d8e8d9eaebcf9c9a07075a447d67}
+      \strng{editornamehash}{2500d8e8d9eaebcf9c9a07075a447d67}
+      \strng{editorfullhash}{2500d8e8d9eaebcf9c9a07075a447d67}
+      \strng{editorfullhashraw}{2500d8e8d9eaebcf9c9a07075a447d67}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booktitle}{Politische Theorie und Emotionen}
+      \field{edition}{1}
+      \field{isbn}{9783845238364}
+      \field{number}{23}
+      \field{title}{Versuch eines Überblicks: Politische Theorie und Emotionen}
+      \field{year}{2012}
+      \field{pages}{9\bibrangedash 28}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.5771/9783845238364-9
+      \endverb
+    \endentry
+    \entry{Helsper.2001}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4f7602bfd454cd99852bbcaef259ffac}{%
+           family={Helsper},
+           familyi={H\bibinitperiod},
+           given={Werner},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=339fb27e32677668de19dd29b0404c3d}{%
+           family={Hericks},
+           familyi={H\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod}}}%
+        {{hash=02c042fcacff579c46731418e6a39ea6}{%
+           family={Keuffer},
+           familyi={K\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3599ea4a62abcdc37341585869fe0d32}{%
+           family={Kräft},
+           familyi={K\bibinitperiod},
+           given={Hans\bibnamedelima Christof},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=79ee6f31f6e7850be093ea096b5f9111}{%
+           family={Kunze},
+           familyi={K\bibinitperiod},
+           given={Ingrid},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {VS Verlag für Sozialwissenschaften}%
+      }
+      \strng{namehash}{4f7602bfd454cd99852bbcaef259ffac}
+      \strng{fullhash}{4f7602bfd454cd99852bbcaef259ffac}
+      \strng{fullhashraw}{4f7602bfd454cd99852bbcaef259ffac}
+      \strng{bibnamehash}{4f7602bfd454cd99852bbcaef259ffac}
+      \strng{authorbibnamehash}{4f7602bfd454cd99852bbcaef259ffac}
+      \strng{authornamehash}{4f7602bfd454cd99852bbcaef259ffac}
+      \strng{authorfullhash}{4f7602bfd454cd99852bbcaef259ffac}
+      \strng{authorfullhashraw}{4f7602bfd454cd99852bbcaef259ffac}
+      \strng{editorbibnamehash}{c28b4850d4ae9254cec8b4cfd3b60dca}
+      \strng{editornamehash}{8427c15ee7243f3382566f8ce40309dc}
+      \strng{editorfullhash}{c28b4850d4ae9254cec8b4cfd3b60dca}
+      \strng{editorfullhashraw}{c28b4850d4ae9254cec8b4cfd3b60dca}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booktitle}{Bildungsgangdidaktik}
+      \field{isbn}{978-3-8100-3345-1}
+      \field{title}{Antinomien des Lehrerhandelns — Anfragen an die Bildungsgangdidaktik}
+      \field{year}{2001}
+      \field{pages}{83\bibrangedash 103}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/978-3-663-05749-9_6
+      \endverb
+    \endentry
+    \entry{kerschensteiner1966}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8d48d916afa67645261dc884ba8e506a}{%
+           family={Kerschensteiner},
+           familyi={K\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Paderborn}%
+      }
+      \list{publisher}{1}{%
+        {Ferdinand Schöningh}%
+      }
+      \strng{namehash}{8d48d916afa67645261dc884ba8e506a}
+      \strng{fullhash}{8d48d916afa67645261dc884ba8e506a}
+      \strng{fullhashraw}{8d48d916afa67645261dc884ba8e506a}
+      \strng{bibnamehash}{8d48d916afa67645261dc884ba8e506a}
+      \strng{authorbibnamehash}{8d48d916afa67645261dc884ba8e506a}
+      \strng{authornamehash}{8d48d916afa67645261dc884ba8e506a}
+      \strng{authorfullhash}{8d48d916afa67645261dc884ba8e506a}
+      \strng{authorfullhashraw}{8d48d916afa67645261dc884ba8e506a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Ausgewählte Pädagogische Schriften . Band 1}
+      \field{title}{Berufsbildung und Berufsschule}
+      \field{urlday}{2}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{1966}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://digi20.digitale-sammlungen.de/de/fs1/object/display/bsb00045616_00005.html
+      \endverb
+      \verb{url}
+      \verb https://digi20.digitale-sammlungen.de/de/fs1/object/display/bsb00045616_00005.html
+      \endverb
+    \endentry
+    \entry{Kiesel2012}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f8e5eef86ebd638d21581234aab47ffb}{%
+           family={Kiesel},
+           familyi={K\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03284a26826d3cb912800a97795ffb61}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={Iring},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {ger}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {VS Verlag für Sozialwissenschaften}%
+      }
+      \strng{namehash}{43cfe35c47f6d4293ee496689f3ba2c3}
+      \strng{fullhash}{43cfe35c47f6d4293ee496689f3ba2c3}
+      \strng{fullhashraw}{43cfe35c47f6d4293ee496689f3ba2c3}
+      \strng{bibnamehash}{43cfe35c47f6d4293ee496689f3ba2c3}
+      \strng{authorbibnamehash}{43cfe35c47f6d4293ee496689f3ba2c3}
+      \strng{authornamehash}{43cfe35c47f6d4293ee496689f3ba2c3}
+      \strng{authorfullhash}{43cfe35c47f6d4293ee496689f3ba2c3}
+      \strng{authorfullhashraw}{43cfe35c47f6d4293ee496689f3ba2c3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Kompakt und verständlich stellt dieser Band die psychologischen Grundlagen des Lernens vor. Behandelt werden sowohl klassische behavioristische Lerntheorien, wie z.B. das klassische und operante Konditionieren, als auch neuere Ansätze, die in der aktuellen Forschung eine wichtige Rolle spielen. Neben theoretischen Erläuterungen werden Anwendungsmöglichkeiten von Lerntheorien z.B. in der Psychotherapie aufgezeigt.}
+      \field{edition}{1. Auflage}
+      \field{isbn}{978-3-531-17607-9}
+      \field{pagetotal}{152}
+      \field{series}{Basiswissen Psychologie}
+      \field{subtitle}{Grundlagen der Lernpsychologie}
+      \field{title}{Lernen}
+      \field{year}{2012}
+      \keyw{Allgemeine Psychologie;Beobachtungslernen;Cognitive psychology;Fachhochschul-/Hochschulausbildung;Kausalitätslernen;Kognition;Konditionieren;Learning,psychology of;Lernen;motorisches Lernen;Neuropsychology;Paperback / softback;unbewusstes Lernen;Wissenserwerb}
+    \endentry
+    \entry{Klein2022}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c6445b0aed9135d61c467256ca31af6e}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Universität Bremen}%
+      }
+      \list{location}{1}{%
+        {Bremen}%
+      }
+      \strng{namehash}{c6445b0aed9135d61c467256ca31af6e}
+      \strng{fullhash}{c6445b0aed9135d61c467256ca31af6e}
+      \strng{fullhashraw}{c6445b0aed9135d61c467256ca31af6e}
+      \strng{bibnamehash}{c6445b0aed9135d61c467256ca31af6e}
+      \strng{authorbibnamehash}{c6445b0aed9135d61c467256ca31af6e}
+      \strng{authornamehash}{c6445b0aed9135d61c467256ca31af6e}
+      \strng{authorfullhash}{c6445b0aed9135d61c467256ca31af6e}
+      \strng{authorfullhashraw}{c6445b0aed9135d61c467256ca31af6e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lernen als Diskurs mit dem Beutelsbacher Konsens}
+      \field{type}{Hausarbeit}
+      \field{year}{2022}
+    \endentry
+    \entry{KMKMittel}{misc}{}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=daed120f2583e1c74179f04d1fa6e094}{%
+           family={Kultusministerkonferenz},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{daed120f2583e1c74179f04d1fa6e094}
+      \strng{fullhash}{daed120f2583e1c74179f04d1fa6e094}
+      \strng{fullhashraw}{daed120f2583e1c74179f04d1fa6e094}
+      \strng{bibnamehash}{daed120f2583e1c74179f04d1fa6e094}
+      \strng{editorbibnamehash}{daed120f2583e1c74179f04d1fa6e094}
+      \strng{editornamehash}{daed120f2583e1c74179f04d1fa6e094}
+      \strng{editorfullhash}{daed120f2583e1c74179f04d1fa6e094}
+      \strng{editorfullhashraw}{daed120f2583e1c74179f04d1fa6e094}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{Definition Lern- und Lehrmittel}
+      \field{urlday}{1}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.kmk.org/themen/allgemeinbildende-schulen/weitere-themen/lehr-und-lernmittel.html
+      \endverb
+      \verb{url}
+      \verb https://www.kmk.org/themen/allgemeinbildende-schulen/weitere-themen/lehr-und-lernmittel.html
+      \endverb
+    \endentry
+    \entry{LisBildungspläne}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dbf3372813af104de176bcec89a272a9}{%
+           family={{Landesinstitut für Schule Bremen}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=1bd2a46f707ea7019afb1e2ca2250fc8}{%
+           family={{Senatorin für Bildung und Wissenschaft}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Landesinstitut für Schule Bremen}%
+      }
+      \strng{namehash}{dbf3372813af104de176bcec89a272a9}
+      \strng{fullhash}{dbf3372813af104de176bcec89a272a9}
+      \strng{fullhashraw}{dbf3372813af104de176bcec89a272a9}
+      \strng{bibnamehash}{dbf3372813af104de176bcec89a272a9}
+      \strng{authorbibnamehash}{dbf3372813af104de176bcec89a272a9}
+      \strng{authornamehash}{dbf3372813af104de176bcec89a272a9}
+      \strng{authorfullhash}{dbf3372813af104de176bcec89a272a9}
+      \strng{authorfullhashraw}{dbf3372813af104de176bcec89a272a9}
+      \strng{editorbibnamehash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editornamehash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editorfullhash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editorfullhashraw}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bildungspläne Sekundarbereich II - berufsbildend}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lis.bremen.de/schulqualitaet/bildungsplaene/sekundarbereich-ii-berufsbildend-15316
+      \endverb
+      \verb{url}
+      \verb https://www.lis.bremen.de/schulqualitaet/bildungsplaene/sekundarbereich-ii-berufsbildend-15316
+      \endverb
+    \endentry
+    \entry{lower2008}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=413bbc8c8e548076b949eaaf62008dfe}{%
+           family={Löwer},
+           familyi={L\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=1bd2a46f707ea7019afb1e2ca2250fc8}{%
+           family={{Senatorin für Bildung und Wissenschaft}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bremen}%
+      }
+      \list{organization}{1}{%
+        {Landesinstitut für Schule Bremen}%
+      }
+      \strng{namehash}{413bbc8c8e548076b949eaaf62008dfe}
+      \strng{fullhash}{413bbc8c8e548076b949eaaf62008dfe}
+      \strng{fullhashraw}{413bbc8c8e548076b949eaaf62008dfe}
+      \strng{bibnamehash}{413bbc8c8e548076b949eaaf62008dfe}
+      \strng{authorbibnamehash}{413bbc8c8e548076b949eaaf62008dfe}
+      \strng{authornamehash}{413bbc8c8e548076b949eaaf62008dfe}
+      \strng{authorfullhash}{413bbc8c8e548076b949eaaf62008dfe}
+      \strng{authorfullhashraw}{413bbc8c8e548076b949eaaf62008dfe}
+      \strng{editorbibnamehash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editornamehash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editorfullhash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editorfullhashraw}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Bildungsplan für die Gymnasiale Oberstufe - Qualifikationsphase -}
+      \field{title}{Politik}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/POL_GyQ_2008.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/POL_GyQ_2008.pdf
+      \endverb
+    \endentry
+    \entry{Massing2012}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a656757ff71e2bdc8d314cc4000ad1d7}{%
+           family={Massing},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{fullhash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{fullhashraw}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{bibnamehash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{authorbibnamehash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{authornamehash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{authorfullhash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{authorfullhashraw}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Aus Politik und Zeitgeschichte (APuZ)}
+      \field{number}{46-47}
+      \field{pagination}{page}
+      \field{title}{Die vier Dimensionen der Politikkompetenz}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{62}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \field{pages}{23\bibrangedash 28}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://www.bpb.de/shop/zeitschriften/apuz/148228/politische-bildung/
+      \endverb
+      \verb{url}
+      \verb https://www.bpb.de/shop/zeitschriften/apuz/148228/politische-bildung/
+      \endverb
+    \endentry
+    \entry{Massing.2022}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a656757ff71e2bdc8d314cc4000ad1d7}{%
+           family={Massing},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=07968f2e498945a8e0a8b8082aea1eeb}{%
+           family={Weißeno},
+           familyi={W\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a8cb1106db224f47d4eb975f942e94c1}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Béatrice},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Wiesbaden}%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer VS}%
+      }
+      \strng{namehash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{fullhash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{fullhashraw}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{bibnamehash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{authorbibnamehash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{authornamehash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{authorfullhash}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{authorfullhashraw}{a656757ff71e2bdc8d314cc4000ad1d7}
+      \strng{editorbibnamehash}{fcff3c0d1da7700567e2179b7ba6e54d}
+      \strng{editornamehash}{fcff3c0d1da7700567e2179b7ba6e54d}
+      \strng{editorfullhash}{fcff3c0d1da7700567e2179b7ba6e54d}
+      \strng{editorfullhashraw}{fcff3c0d1da7700567e2179b7ba6e54d}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booktitle}{Handbuch Geschichts- und Politikdidaktik}
+      \field{isbn}{978-3-658-29667-4}
+      \field{title}{Kompetenzmodelle in der Politikdidaktik}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{17\bibrangedash 32}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/978-3-658-29668-1_2
+      \endverb
+      \verb{file}
+      \verb Massing 2022 - Kompetenzmodelle in der Politikdidaktik:Attachments/Massing 2022 - Kompetenzmodelle in der Politikdidaktik.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/chapter/10.1007/978-3-658-29668-1_2
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/chapter/10.1007/978-3-658-29668-1_2
+      \endverb
+    \endentry
+    \entry{Neumann2015}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=31ce43498e297175d2accc0b82c71469}{%
+           family={Neumann},
+           familyi={N\bibinitperiod},
+           given={Dominik},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {ger}%
+      }
+      \list{location}{1}{%
+        {Bad Heilbrunn}%
+      }
+      \strng{namehash}{31ce43498e297175d2accc0b82c71469}
+      \strng{fullhash}{31ce43498e297175d2accc0b82c71469}
+      \strng{fullhashraw}{31ce43498e297175d2accc0b82c71469}
+      \strng{bibnamehash}{31ce43498e297175d2accc0b82c71469}
+      \strng{authorbibnamehash}{31ce43498e297175d2accc0b82c71469}
+      \strng{authornamehash}{31ce43498e297175d2accc0b82c71469}
+      \strng{authorfullhash}{31ce43498e297175d2accc0b82c71469}
+      \strng{authorfullhashraw}{31ce43498e297175d2accc0b82c71469}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Die alltägliche Unterrichtspraxis wird in unseren Schulen durch kaum etwas anderes so stark geprägt wie durch die eingesetzten Lehrmittel. Sie sind es, mit denen die Schüler unter Anleitung des Lehrers Wissen und Kompetenzen für die Zukunft aufbauen sollen.Neben den klassischen Lehrmitteln wie dem Schulbuch findet sich aber gerade in jüngster Zeit ein neues Phänomen, das bisher im wissenschaftlichen Diskurs kaum Beachtung gefunden hat: Kostenloses Lehrmaterial aus dem Internet. Durch seine Wesensart und seine einfachen Distributionswege findet es bei Lehrern sehr großen Anklang. Mit Hilfe von empirischen Methoden wagt sich der Autor auf bisher unerforschtes Terrain und untersucht eben solches Lehrmaterial. Einerseits wird dazu der Bestand in einer Längsschnittstudie über drei Jahre hinweg systematisch beobachtet. Andererseits wird eine Online-Fragebogenstudie unter Lehrkräften aller Fachrichtungen durchgeführt, so dass sich ein sehr detailliertes Bild der aktuellen Nutzungspraktiken von Lehrmitteln im Unterricht zeichnen lässt. Dabei wird deutlich, inwieweit kostenloses Lehrmaterial aus dem Internet inzwischen in unseren Schulen Anwendung findet und ob eine Verdrängung des klassischen Lehrmittels Schulbuch bereits stattfindet.}
+      \field{subtitle}{Marktsichtung und empirische Nutzungsanalyse.}
+      \field{title}{Bildungsmedien Online. Kostenloses Lehrmaterial aus dem Internet.}
+      \field{titleaddon}{Verlag Julius Klinkhardt}
+      \field{type}{Dissertation}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://d-nb.info/121382995X
+      \endverb
+      \verb{url}
+      \verb https://d-nb.info/121382995X
+      \endverb
+      \keyw{Bildungsmedien;Internet;Lehrmaterial;Lehrmittel;Schulbuch;Schulbuchforschung;Unterrichtspraxis}
+    \endentry
+    \entry{Nullmeier2019}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=511440bbd62e030a66e2f81a21fe7a25}{%
+           family={Nullmeier},
+           familyi={N\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{511440bbd62e030a66e2f81a21fe7a25}
+      \strng{fullhash}{511440bbd62e030a66e2f81a21fe7a25}
+      \strng{fullhashraw}{511440bbd62e030a66e2f81a21fe7a25}
+      \strng{bibnamehash}{511440bbd62e030a66e2f81a21fe7a25}
+      \strng{authorbibnamehash}{511440bbd62e030a66e2f81a21fe7a25}
+      \strng{authornamehash}{511440bbd62e030a66e2f81a21fe7a25}
+      \strng{authorfullhash}{511440bbd62e030a66e2f81a21fe7a25}
+      \strng{authorfullhashraw}{511440bbd62e030a66e2f81a21fe7a25}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{28}
+      \field{journaltitle}{Soziopolis}
+      \field{month}{5}
+      \field{subtitle}{Über Demokratie, Öffentlichkeit und die Abwertung der Meinung als Gegenteil von Wahrheit}
+      \field{title}{„Bloße Meinung“}
+      \field{urlday}{22}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{2019}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.soziopolis.de/blosse-meinung.html
+      \endverb
+      \verb{url}
+      \verb https://www.soziopolis.de/blosse-meinung.html
+      \endverb
+    \endentry
+    \entry{bbkÖsterreich2023}{misc}{}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=de801d24ffc19a45b932573e5bf3fe6e}{%
+           family={{Parlament Österreich}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Parlament Österreich}%
+      }
+      \strng{namehash}{de801d24ffc19a45b932573e5bf3fe6e}
+      \strng{fullhash}{de801d24ffc19a45b932573e5bf3fe6e}
+      \strng{fullhashraw}{de801d24ffc19a45b932573e5bf3fe6e}
+      \strng{bibnamehash}{de801d24ffc19a45b932573e5bf3fe6e}
+      \strng{editorbibnamehash}{de801d24ffc19a45b932573e5bf3fe6e}
+      \strng{editornamehash}{de801d24ffc19a45b932573e5bf3fe6e}
+      \strng{editorfullhash}{de801d24ffc19a45b932573e5bf3fe6e}
+      \strng{editorfullhashraw}{de801d24ffc19a45b932573e5bf3fe6e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Aktionstage Politische Bildung 23. April bis 9. Mai 2024}
+      \field{title}{Welche Bedeutung hat politische Bildung für eine Demokratie?}
+      \field{urlday}{10}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.parlament.gv.at/fachinfos/rlw/Welche-Bedeutung-hat-politische-Bildung-fuer-eine-Demokratie
+      \endverb
+      \verb{url}
+      \verb https://www.parlament.gv.at/fachinfos/rlw/Welche-Bedeutung-hat-politische-Bildung-fuer-eine-Demokratie
+      \endverb
+    \endentry
+    \entry{Reinfried2009}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d90f26c3e829ff7cdaf367b44bbc32c7}{%
+           family={Reinfried},
+           familyi={R\bibinitperiod},
+           given={Sibylle},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e63f49711babebd66828a13499369581}{%
+           family={Mathis},
+           familyi={M\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53c784d792ce590c14770dcadb90b3cf}{%
+           family={Kattmann},
+           familyi={K\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {de}%
+      }
+      \strng{namehash}{e68600167b4250eb7b60e929771478be}
+      \strng{fullhash}{37b945b3bb009b160bd6940b8fbb4869}
+      \strng{fullhashraw}{37b945b3bb009b160bd6940b8fbb4869}
+      \strng{bibnamehash}{37b945b3bb009b160bd6940b8fbb4869}
+      \strng{authorbibnamehash}{37b945b3bb009b160bd6940b8fbb4869}
+      \strng{authornamehash}{e68600167b4250eb7b60e929771478be}
+      \strng{authorfullhash}{37b945b3bb009b160bd6940b8fbb4869}
+      \strng{authorfullhashraw}{37b945b3bb009b160bd6940b8fbb4869}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Im vorliegenden Beitrag wird das Modell der Didaktischen Rekonstruktion beschrieben. Das Modell ist ein theoretischer und methodischer Rahmen sowohl für die Unterrichtsplanung als auch für die fachdidaktische Lehr-Lernforschung. Es besteht aus den drei Teilen Fachliche Klärung, Erfassung der Schülerperspektiven und Didaktische Strukturierung, deren fachdidaktische Erforschung und Bedeutung für die Konstruktion von Unterricht anhand je eines Beispiels aus der Biologie-, Geschichts- und Geografiedidaktik näher beschrieben werden. Auch wird die Bedeutung des Modells für die Lehrerbildung diskutiert. In this paper the model of didactic reconstruction is described. The model is a theoretical and methodological framework for both curriculum planning and for didactic teaching-learning research. It consists of three parts: technical clarification, recording student perspectives and didactic structuring. The methodological research and implications for the design of teaching are clearly described based on an example from biology, history and geography didactics. The importance of the model is discussed for teacher training.}
+      \field{issn}{0259-353X}
+      \field{journaltitle}{Beiträge zur Lehrerbildung}
+      \field{title}{Das Modell der Didaktischen Rekonstruktion. Eine innovative Methode zur fachdidaktischen Erforschung und Entwicklung von Unterricht}
+      \field{titleaddon}{Beiträge zur Lehrerbildung 27 (2009) 3, S. 404-414}
+      \field{volume}{27}
+      \field{year}{2009}
+      \verb{doi}
+      \verb 10.25656/01:13710
+      \endverb
+      \keyw{370 Education;370 Erziehung;Fachdidaktik;Lehrerbildung;Lehr-Lern-Forschung;Lesson Planing;Planning of teaching;Schul- und Bildungswesen;Specialized didactics;subject didactics;Teacher education;Teachers' training;Teaching-learning research;Unterrichtsplanung}
+    \endentry
+    \entry{Roler2016}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=42561eadbccd99a96a792eb8d3c83aa3}{%
+           family={Rößler},
+           familyi={R\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=5de7146c52ba80258e12d9a0ac1203c2}{%
+           family={Widmaier},
+           familyi={W\bibinitperiod},
+           given={Benedikt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=edf19ecd9f2ba42e9fc78dda048e4eea}{%
+           family={Zorn},
+           familyi={Z\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bonn}%
+      }
+      \list{publisher}{1}{%
+        {Bundeszentrale für politische Bildung}%
+      }
+      \strng{namehash}{42561eadbccd99a96a792eb8d3c83aa3}
+      \strng{fullhash}{42561eadbccd99a96a792eb8d3c83aa3}
+      \strng{fullhashraw}{42561eadbccd99a96a792eb8d3c83aa3}
+      \strng{bibnamehash}{42561eadbccd99a96a792eb8d3c83aa3}
+      \strng{authorbibnamehash}{42561eadbccd99a96a792eb8d3c83aa3}
+      \strng{authornamehash}{42561eadbccd99a96a792eb8d3c83aa3}
+      \strng{authorfullhash}{42561eadbccd99a96a792eb8d3c83aa3}
+      \strng{authorfullhashraw}{42561eadbccd99a96a792eb8d3c83aa3}
+      \strng{editorbibnamehash}{f80b53c0cc066d7f3048fb565d5a80da}
+      \strng{editornamehash}{f80b53c0cc066d7f3048fb565d5a80da}
+      \strng{editorfullhash}{f80b53c0cc066d7f3048fb565d5a80da}
+      \strng{editorfullhashraw}{f80b53c0cc066d7f3048fb565d5a80da}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booksubtitle}{Eine Debatte der politischen Bildung}
+      \field{booktitle}{Brauchen wir den Beutelsbacher Konsens?}
+      \field{isbn}{978-3-8389-0793-2}
+      \field{number}{Band 1793}
+      \field{series}{Schriftenreihe / Bundeszentrale für Politische Bildung}
+      \field{title}{Blödmaschine Beutelsbach}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{276\bibrangedash 284}
+      \range{pages}{9}
+    \endentry
+    \entry{Sander.2016}{book}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=830801426ed6c9fe33c4bd454cc8985c}{%
+           family={Sander},
+           familyi={S\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38def30235b1251a20f933da44a018db}{%
+           family={Reinhardt},
+           familyi={R\bibinitperiod},
+           given={Sibylle},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f49e93f0f478ca78d83f49f9dc86eef}{%
+           family={Petrik},
+           familyi={P\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b8826b5d8d1e7d56b9761f012630ad0}{%
+           family={Lange},
+           familyi={L\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8ed89a872522667bcfe8abe6e50b7e5}{%
+           family={Henkenborg},
+           familyi={H\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bc77d95806e6d96ebfb41b016913af8}{%
+           family={Hedtke},
+           familyi={H\bibinitperiod},
+           given={Reinhold},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a15868988409163736f884e15e06bde5}{%
+           family={Grammes},
+           familyi={G\bibinitperiod},
+           given={Tilman},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0a6fbcc911559576f20dda72d478fa8}{%
+           family={Besand},
+           familyi={B\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {ger}%
+      }
+      \list{location}{1}{%
+        {Schwalbach am Taunus}%
+      }
+      \list{publisher}{1}{%
+        {Wochenschau Verlag}%
+      }
+      \strng{namehash}{2f26af9c7acb4e23a1b2535454966e92}
+      \strng{fullhash}{743b345f9664244d91106846634a0789}
+      \strng{fullhashraw}{743b345f9664244d91106846634a0789}
+      \strng{bibnamehash}{743b345f9664244d91106846634a0789}
+      \strng{authorbibnamehash}{743b345f9664244d91106846634a0789}
+      \strng{authornamehash}{2f26af9c7acb4e23a1b2535454966e92}
+      \strng{authorfullhash}{743b345f9664244d91106846634a0789}
+      \strng{authorfullhashraw}{743b345f9664244d91106846634a0789}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-7344-0166-4}
+      \field{note}{Autorengruppe Fachdidaktik}
+      \field{pagetotal}{238}
+      \field{series}{Wochenschau Politik}
+      \field{subtitle}{Leitfaden für den sozialwissenschaftlichen Unterricht}
+      \field{title}{Was ist gute politische Bildung?}
+      \field{year}{2016}
+    \endentry
+    \entry{Scholz2004}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1884ea7da28b5ecb628b926b3a7cebbd}{%
+           family={Scholz},
+           familyi={S\bibinitperiod},
+           given={Gerold},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {ger}%
+      }
+      \strng{namehash}{1884ea7da28b5ecb628b926b3a7cebbd}
+      \strng{fullhash}{1884ea7da28b5ecb628b926b3a7cebbd}
+      \strng{fullhashraw}{1884ea7da28b5ecb628b926b3a7cebbd}
+      \strng{bibnamehash}{1884ea7da28b5ecb628b926b3a7cebbd}
+      \strng{authorbibnamehash}{1884ea7da28b5ecb628b926b3a7cebbd}
+      \strng{authornamehash}{1884ea7da28b5ecb628b926b3a7cebbd}
+      \strng{authorfullhash}{1884ea7da28b5ecb628b926b3a7cebbd}
+      \strng{authorfullhashraw}{1884ea7da28b5ecb628b926b3a7cebbd}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Der Sachunterricht beschäftigt sich mit Sachzusammenhängen. Seine grundsätzliche didaktische Zielsetzung besteht deshalb darin, mit Sachzusammenhängen umzugehen und nicht mit Bildern oder Texten über Sachen. Mit Sachen umgehen kann entweder heißen, sie in der Realität, also außerhalb der Schule aufzusuchen oder sie in die Schule hereinzuholen. Drei Gründe legen es dennoch nahe, auch Materialien im Sachunterricht einzusetzen: Es gibt Sachzusammenhänge, die nicht aufgesucht und untersucht werden können. Etwa: Einen Ameisenhaufen darf man nicht zerstören und eine Schulklasse kann man nicht bei einer Geburt zuschauen lassen. Materialien können die Auseinandersetzung mit Sachzusammenhängen vorbereiten oder begleiten. Es lassen sich aus Büchern und Bildern Anregungen entnehmen, ebenso Fragen oder Aufgaben. Die Dokumentation der Sachbegegnung kann ebenfalls durch Materialien unterstützt werden. Sachzusammenhänge sind komplex. Materialien können eine Reduktion der Komplexität vornehmen, indem sie das Wesentliche eines Zusammenhanges enthalten. Hier geht es vor allem um Dinge, um Geräte oder einfache Abläufe. Diese Gegenstände können - im Unterschied zur Realität - Kindern die Möglichkeit bieten, selbst handelnd mit ihnen umzugehen. Diese Ausgangsthesen beinhalten eine bestimmte Grundposition zum Sachunterricht. Die Diskussion der Materialien zum Sachunterricht kann nicht von der Didaktik des Sachunterrichts getrennt werden, denn die Art des Zuganges zu einem Sachverhalt ist entscheidend dafür, was eigentlich von der Sache gelernt wird.}
+      \field{journaltitle}{widerstreit sachunterricht}
+      \field{number}{2}
+      \field{title}{Offen, aber nicht beliebig: Materialien für den Sachunterricht}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.25673/112140
+      \endverb
+    \endentry
+    \entry{Schroder.2020}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8116f0b11f6d20ae8a2f63f75527e814}{%
+           family={Schröder},
+           familyi={S\bibinitperiod},
+           given={Hendrik},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden}%
+      }
+      \strng{namehash}{8116f0b11f6d20ae8a2f63f75527e814}
+      \strng{fullhash}{8116f0b11f6d20ae8a2f63f75527e814}
+      \strng{fullhashraw}{8116f0b11f6d20ae8a2f63f75527e814}
+      \strng{bibnamehash}{8116f0b11f6d20ae8a2f63f75527e814}
+      \strng{authorbibnamehash}{8116f0b11f6d20ae8a2f63f75527e814}
+      \strng{authornamehash}{8116f0b11f6d20ae8a2f63f75527e814}
+      \strng{authorfullhash}{8116f0b11f6d20ae8a2f63f75527e814}
+      \strng{authorfullhashraw}{8116f0b11f6d20ae8a2f63f75527e814}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-658-30655-7}
+      \field{series}{Politische Bildung}
+      \field{title}{Emotionen und politisches Urteilen}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1007/978-3-658-30656-4
+      \endverb
+    \endentry
+    \entry{Schwarzer.08.02.2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=333a6f0d6cc745b06b127de9b716093d}{%
+           family={Schwarzer},
+           familyi={S\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5a5d5c6aa2911d282e879a9dde2f24e6}{%
+           family={{Redaktionsnetzwerk Deutschland}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{fullhash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{fullhashraw}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{bibnamehash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{authorbibnamehash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{authornamehash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{authorfullhash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{authorfullhashraw}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{editorbibnamehash}{5a5d5c6aa2911d282e879a9dde2f24e6}
+      \strng{editornamehash}{5a5d5c6aa2911d282e879a9dde2f24e6}
+      \strng{editorfullhash}{5a5d5c6aa2911d282e879a9dde2f24e6}
+      \strng{editorfullhashraw}{5a5d5c6aa2911d282e879a9dde2f24e6}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{2}
+      \field{title}{Bürgermeister reagiert auf wütenden Wollunternehmer: „Nicht jaulen“}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rnd.de/panorama/burgermeister-reagiert-auf-wutenden-woll-unternehmer-nicht-jaulen-EOPRRN6X3NETDHLZOLWNYI6N2Q.html
+      \endverb
+      \verb{url}
+      \verb https://www.rnd.de/panorama/burgermeister-reagiert-auf-wutenden-woll-unternehmer-nicht-jaulen-EOPRRN6X3NETDHLZOLWNYI6N2Q.html
+      \endverb
+    \endentry
+    \entry{Schwarzer.05.02.2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=333a6f0d6cc745b06b127de9b716093d}{%
+           family={Schwarzer},
+           familyi={S\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5a5d5c6aa2911d282e879a9dde2f24e6}{%
+           family={{Redaktionsnetzwerk Deutschland}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{fullhash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{fullhashraw}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{bibnamehash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{authorbibnamehash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{authornamehash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{authorfullhash}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{authorfullhashraw}{333a6f0d6cc745b06b127de9b716093d}
+      \strng{editorbibnamehash}{5a5d5c6aa2911d282e879a9dde2f24e6}
+      \strng{editornamehash}{5a5d5c6aa2911d282e879a9dde2f24e6}
+      \strng{editorfullhash}{5a5d5c6aa2911d282e879a9dde2f24e6}
+      \strng{editorfullhashraw}{5a5d5c6aa2911d282e879a9dde2f24e6}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{2}
+      \field{title}{Wutrede von Wollunternehmer: Das steckt hinter dem witzigen Clip}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rnd.de/medien/wutrede-von-woll-unternehmer-das-steckt-hinter-dem-viralen-clip-5WPMZ52XHRCJVA73IMOF7LRQ2E.html
+      \endverb
+      \verb{url}
+      \verb https://www.rnd.de/medien/wutrede-von-woll-unternehmer-das-steckt-hinter-dem-viralen-clip-5WPMZ52XHRCJVA73IMOF7LRQ2E.html
+      \endverb
+    \endentry
+    \entry{ArbnkG}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f5c5a93a5e6effaf8bd413a41890bb11}{%
+           family={{Senat der Bürgerschaft Bremen}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5c5a93a5e6effaf8bd413a41890bb11}
+      \strng{fullhash}{f5c5a93a5e6effaf8bd413a41890bb11}
+      \strng{fullhashraw}{f5c5a93a5e6effaf8bd413a41890bb11}
+      \strng{bibnamehash}{f5c5a93a5e6effaf8bd413a41890bb11}
+      \strng{authorbibnamehash}{f5c5a93a5e6effaf8bd413a41890bb11}
+      \strng{authornamehash}{f5c5a93a5e6effaf8bd413a41890bb11}
+      \strng{authorfullhash}{f5c5a93a5e6effaf8bd413a41890bb11}
+      \strng{authorfullhashraw}{f5c5a93a5e6effaf8bd413a41890bb11}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pagination}{page}
+      \field{title}{Gesetz über die Arbeitnehmerkammer im Lande Bremen}
+      \field{titleaddon}{ArbnkG}
+      \field{urlday}{3}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{version}{16. August 2022}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 14}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb https://www.arbeitnehmerkammer.de/fileadmin/user_upload/Gesch%C3%A4ftsf%C3%BChrung/Gesetz_ueber_die_Arbeitnehmerkammer_im_Lande_Bremen_01.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.arbeitnehmerkammer.de/fileadmin/user_upload/Gesch%C3%A4ftsf%C3%BChrung/Gesetz_ueber_die_Arbeitnehmerkammer_im_Lande_Bremen_01.pdf
+      \endverb
+    \endentry
+    \entry{vogel2006gy}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=09da4aaf79bfc21ce6d6cabe6d64008b}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Beate},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=caf60c23406c7ff1d3461b128243fcaa}{%
+           family={{Senator für Bildung und Wissenschaft}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bremen}%
+      }
+      \list{organization}{1}{%
+        {Landesinstitut für Schule Bremen}%
+      }
+      \strng{namehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{fullhash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{fullhashraw}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{bibnamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorbibnamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authornamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorfullhash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorfullhashraw}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{editorbibnamehash}{caf60c23406c7ff1d3461b128243fcaa}
+      \strng{editornamehash}{caf60c23406c7ff1d3461b128243fcaa}
+      \strng{editorfullhash}{caf60c23406c7ff1d3461b128243fcaa}
+      \strng{editorfullhashraw}{caf60c23406c7ff1d3461b128243fcaa}
+      \field{extraname}{1}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Bildungsplan für das Gymnasium Jahrgangsstufe 5 - 10}
+      \field{title}{Welt-Umweltkunde, Geschichte, Geografie, Politik}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/06-12-06_wuk-gy.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/06-12-06_wuk-gy.pdf
+      \endverb
+    \endentry
+    \entry{vogel2006gs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=09da4aaf79bfc21ce6d6cabe6d64008b}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Beate},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=caf60c23406c7ff1d3461b128243fcaa}{%
+           family={{Senator für Bildung und Wissenschaft}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bremen}%
+      }
+      \list{organization}{1}{%
+        {Landesinstitut für Schule Bremen}%
+      }
+      \strng{namehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{fullhash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{fullhashraw}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{bibnamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorbibnamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authornamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorfullhash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorfullhashraw}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{editorbibnamehash}{caf60c23406c7ff1d3461b128243fcaa}
+      \strng{editornamehash}{caf60c23406c7ff1d3461b128243fcaa}
+      \strng{editorfullhash}{caf60c23406c7ff1d3461b128243fcaa}
+      \strng{editorfullhashraw}{caf60c23406c7ff1d3461b128243fcaa}
+      \field{extraname}{2}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Bildungsplan für die Gesamtschule Jahrgangsstufe 5 - 10}
+      \field{title}{Welt-Umweltkunde. Geschichte, Geografie, Politik}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/06-12-06_wuk_gs.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/06-12-06_wuk_gs.pdf
+      \endverb
+    \endentry
+    \entry{vogel2010gp}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=09da4aaf79bfc21ce6d6cabe6d64008b}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Beate},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=1bd2a46f707ea7019afb1e2ca2250fc8}{%
+           family={{Senatorin für Bildung und Wissenschaft}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bremen}%
+      }
+      \list{organization}{1}{%
+        {Landesinstitut für Schule Bremen}%
+      }
+      \strng{namehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{fullhash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{fullhashraw}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{bibnamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorbibnamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authornamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorfullhash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorfullhashraw}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{editorbibnamehash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editornamehash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editorfullhash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editorfullhashraw}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \field{extraname}{3}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Bildungsplan für die Oberschule}
+      \field{title}{Gesellschaft und Politik. Geografie, Geschichte, Politik}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/2010_BP_O_GP%20Erlassversion.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/2010_BP_O_GP%20Erlassversion.pdf
+      \endverb
+    \endentry
+    \entry{vogel2010nw}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=09da4aaf79bfc21ce6d6cabe6d64008b}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Beate},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=1bd2a46f707ea7019afb1e2ca2250fc8}{%
+           family={{Senatorin für Bildung und Wissenschaft}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bremen}%
+      }
+      \list{organization}{1}{%
+        {Landesinstitut für Schule Bremen}%
+      }
+      \strng{namehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{fullhash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{fullhashraw}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{bibnamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorbibnamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authornamehash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorfullhash}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{authorfullhashraw}{09da4aaf79bfc21ce6d6cabe6d64008b}
+      \strng{editorbibnamehash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editornamehash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editorfullhash}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \strng{editorfullhashraw}{1bd2a46f707ea7019afb1e2ca2250fc8}
+      \field{extraname}{4}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Bildungsplan für die Oberschule}
+      \field{title}{Naturwissenschaften. Biologie, Chemie, Physik}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/2010_BP_O_Nat%20Erlassversion.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.lis.bremen.de/sixcms/media.php/13/2010_BP_O_Nat%20Erlassversion.pdf
+      \endverb
+    \endentry
+    \entry{Wehling1977}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=55d9fdd838bd64c5d0fb6c74944f7972}{%
+           family={Wehling},
+           familyi={W\bibinitperiod},
+           given={Hans\bibnamedelima Georg},
+           giveni={H\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=8af795988cd8b750beb3f93bffb524fa}{%
+           family={Schiele},
+           familyi={S\bibinitperiod},
+           given={Siegfried},
+           giveni={S\bibinitperiod}}}%
+        {{hash=06901d4cbe0c0e7e85486f6e096e2b30}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Stuttgart}%
+      }
+      \strng{namehash}{55d9fdd838bd64c5d0fb6c74944f7972}
+      \strng{fullhash}{55d9fdd838bd64c5d0fb6c74944f7972}
+      \strng{fullhashraw}{55d9fdd838bd64c5d0fb6c74944f7972}
+      \strng{bibnamehash}{55d9fdd838bd64c5d0fb6c74944f7972}
+      \strng{authorbibnamehash}{55d9fdd838bd64c5d0fb6c74944f7972}
+      \strng{authornamehash}{55d9fdd838bd64c5d0fb6c74944f7972}
+      \strng{authorfullhash}{55d9fdd838bd64c5d0fb6c74944f7972}
+      \strng{authorfullhashraw}{55d9fdd838bd64c5d0fb6c74944f7972}
+      \strng{editorbibnamehash}{7d9a88f8dcef77db87b9f7c9c3176fae}
+      \strng{editornamehash}{7d9a88f8dcef77db87b9f7c9c3176fae}
+      \strng{editorfullhash}{7d9a88f8dcef77db87b9f7c9c3176fae}
+      \strng{editorfullhashraw}{7d9a88f8dcef77db87b9f7c9c3176fae}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{page}
+      \field{booktitle}{Das Konsensproblem in der politischen Bildung.}
+      \field{subtitle}{Nachlese zu einem Expertengespräch.}
+      \field{title}{Konsens à la Beutelsbach?}
+      \field{year}{1977}
+      \field{pages}{173\bibrangedash 184}
+      \range{pages}{12}
+    \endentry
+    \entry{weißeno.2010}{book}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=07968f2e498945a8e0a8b8082aea1eeb}{%
+           family={Weißeno},
+           familyi={W\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a953a217f8b4b82fe6d0fa49c1dc87d3}{%
+           family={Detjen},
+           familyi={D\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4aa7b44cde9ba2aa3a02524e9e890718}{%
+           family={Juchler},
+           familyi={J\bibinitperiod},
+           given={Ingo},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a656757ff71e2bdc8d314cc4000ad1d7}{%
+           family={Massing},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=15a69ec282b8c6a2dc2136b379460636}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Dagmar},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {ger}%
+      }
+      \list{location}{1}{%
+        {Bonn}%
+      }
+      \list{publisher}{1}{%
+        {bpb Bundeszentrale für politische Bildung}%
+      }
+      \strng{namehash}{d0fad601def3ad8c07a599d464c72384}
+      \strng{fullhash}{dc3aa17d6b97ae7df28ffcc1212f6f39}
+      \strng{fullhashraw}{dc3aa17d6b97ae7df28ffcc1212f6f39}
+      \strng{bibnamehash}{dc3aa17d6b97ae7df28ffcc1212f6f39}
+      \strng{authorbibnamehash}{dc3aa17d6b97ae7df28ffcc1212f6f39}
+      \strng{authornamehash}{d0fad601def3ad8c07a599d464c72384}
+      \strng{authorfullhash}{dc3aa17d6b97ae7df28ffcc1212f6f39}
+      \strng{authorfullhashraw}{dc3aa17d6b97ae7df28ffcc1212f6f39}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Das in diesem Band vorgestellte Modell versucht aus politikdidaktischer Sicht das schulische politische Wissen im Sinne von Standards zu definieren. Die Autoren/-innen haben sich auf Maximal- und Minimalstandards für alle Schulstufen durch Verfahren geeinigt. Ihr Kompetenzmodell erhebt den Anspruch, Politik als inhaltlichen Kernbereich des Faches {"}Politische Bildung{"} zu klären. Zugleich begründen sie politikwissenschaftlich und politikdidaktisch, warum dieses Wissen vermittelt werden soll. Dabei nutzen sie neueste Erkenntnisse der Lernpsychologie zur Konstruktion und zum Aufbau von Wissen im Gehirn. Lehrerinnen und Lehrern wie auch Schülerinnen und Schülern werden konkrete Hinweise zu Fehlkonzepten, Themen und Begriffsnetzen angeboten}
+      \field{isbn}{978-3-8389-0016-2}
+      \field{pagetotal}{231}
+      \field{series}{Schriftenreihe / Bundeszentrale für Politische Bildung}
+      \field{subtitle}{Ein Kompetenzmodell}
+      \field{title}{Konzepte der Politik}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{Bd. 1016}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Konzepte der Politik_091201:Attachments/Konzepte der Politik_091201.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.bpb.de/shop/buecher/schriftenreihe/35835/konzepte-der-politik/
+      \endverb
+      \verb{url}
+      \verb https://www.bpb.de/shop/buecher/schriftenreihe/35835/konzepte-der-politik/
+      \endverb
+    \endentry
+    \entry{WD8.2016}{misc}{}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=4b3aa8ad89a299fa64d1b9475531a931}{%
+           family={{Wissenschaftliche Dienste des Deutschen Bundestages}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b3aa8ad89a299fa64d1b9475531a931}
+      \strng{fullhash}{4b3aa8ad89a299fa64d1b9475531a931}
+      \strng{fullhashraw}{4b3aa8ad89a299fa64d1b9475531a931}
+      \strng{bibnamehash}{4b3aa8ad89a299fa64d1b9475531a931}
+      \strng{editorbibnamehash}{4b3aa8ad89a299fa64d1b9475531a931}
+      \strng{editornamehash}{4b3aa8ad89a299fa64d1b9475531a931}
+      \strng{editorfullhash}{4b3aa8ad89a299fa64d1b9475531a931}
+      \strng{editorfullhashraw}{4b3aa8ad89a299fa64d1b9475531a931}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{note}{WD 8: Umwelt, Naturschutz, Reaktorsicherheit, Bildung und Forschung}
+      \field{number}{WD 8 - 3000 - 077/16}
+      \field{title}{Sachstand: Schulischer Politikunterricht in den Bundesländern}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bundestag.de/resource/blob/487700/d782a1c792d2e8b02d26a25ffb1b0835/wd-8-077-16-pdf-data.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.bundestag.de/resource/blob/487700/d782a1c792d2e8b02d26a25ffb1b0835/wd-8-077-16-pdf-data.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

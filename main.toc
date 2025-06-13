@@ -1,0 +1,48 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\nonumberline Abstract}{i}{section*.2}%
+\contentsline {section}{Abkürzungsverzeichnis}{iv}{section*.4}%
+\contentsline {section}{\numberline {1}Einleitung \& Theoretischer Hintergrund}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Von der Theorie in die Praxis}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Lerngegenstände}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Herkunft der Lerngegenstände}{3}{subsubsection.1.2.1}%
+\contentsline {section}{\numberline {2}Theoretischer Hintergrund / Begriffsklärungen}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Politische Bildung an berufsbildenden Schulen in Bremen}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Bremer Bildungsplan \& Kompetenzen in der politischen Bildung}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Exkurs: Schlechte Quellenangaben und miese Vorbildfunktion. Beginnt Medienkompetenz im Bildungsplan?}{4}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Kompetenzen in der politischen Bildung}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Beutelsbacher Konsens}{11}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Bildungsplan für berufsbildende Schulen oder allgemeine politische Bildung mit Zielgruppenorientierung?}{11}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Sozioökonomische Bildung, politische Bildung und interdisziplinäres Begriffs Wirrwarr}{11}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Arbeitnehmerkammer Bremen (ANK)}{12}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Unterrichtsmaterial}{13}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}\enquote {Wahrheit}, \enquote {Wahrhaftigkeit} und \enquote {Richtigkeit}}{13}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Medienkompetenz und die unbedingte Verknüpfung zu \enquote {Wahrheit}}{14}{subsection.2.10}%
+\contentsline {subsubsection}{\numberline {2.10.1}Die Zerteilung der Welt durch Worte}{14}{subsubsection.2.10.1}%
+\contentsline {subsubsection}{\numberline {2.10.2}Quellen}{15}{subsubsection.2.10.2}%
+\contentsline {subsection}{\numberline {2.11}Zielgruppe}{16}{subsection.2.11}%
+\contentsline {subsubsection}{\numberline {2.11.1}Schüler*innenvorstellungen}{17}{subsubsection.2.11.1}%
+\contentsline {subsection}{\numberline {2.12}Was sagt die Wissenschaft zu politischer Bildung an (Berufs)schulen?}{17}{subsection.2.12}%
+\contentsline {subsection}{\numberline {2.13}Ökonomische versus politische Sozialisation?}{17}{subsection.2.13}%
+\contentsline {subsection}{\numberline {2.14}Mehr Platz für Emotionalität}{17}{subsection.2.14}%
+\contentsline {subsection}{\numberline {2.15}Veröffentlichungsreichweite, Auffindbarkeit, Preis, Einsetzungsreichweite}{18}{subsection.2.15}%
+\contentsline {subsection}{\numberline {2.16}Forschungsfrage}{18}{subsection.2.16}%
+\contentsline {section}{\numberline {3}Analysemaßstab}{18}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fragen an das Material}{18}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Bildungsplan als Analysemaßstab}{20}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Poltische Bildung in der Fachliteratur -- Ein Auszug}{21}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Quellenangaben}{21}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Analyse}{21}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Demokratie}{21}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Demokratie A - \enquote {Föderalismus und Arbeitsschutz – Welche Chancen und Risiken bringt das Mehrebenensystem der BRD für die Sicherheit und Gesundheit am Arbeitsplatz mit sich?}}{22}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Demokratie B - \enquote {Wahlen – von welchem Teil des Volkes geht eigentlich die Staatsgewalt aus?}}{22}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Arbeitsleben}{23}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Wirtschaftspolitik}{24}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Den Themenfeldern gemeinsame Beobachtungen}{24}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Erwartungshorizont}{24}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Arbeitsblatt-Charakter}{24}{subsubsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.5}Vorbildfunktion -- Beobachtungslernen}{24}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Subjektive Einschätzung}{25}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Reflexion}{25}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Handlungsfähigkeit = Reproduktion des Status quo versus Handlungsfähigkeit = Überwindung von Resignation und Zynismus}{26}{section.5}%
+\contentsline {section}{\numberline {6}Schlussbetrachtung}{26}{section.6}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
