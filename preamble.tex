@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%%%%%%%%% DISCLAIMER %%%%%%%%%%%%%%%%%%%%%%%%%
+% Die Kommentare sind tatsächlich nur für mich - sollen mich aber nicht davon abhalten, das Ding hier zu veröffentlichen, nur weil die Qaulität des Codes sowohl amateurhaft, als auch null für die Veröffentlichung aufbereitet ist und die Sprache der Kommentare nicht veröffentlichungstauglich ist.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 
+    12pt, 
+    ngerman, 
+    titlepage]{scrartcl} % a4paper, damit nicht amerik. letterpaper; 12pt Schriftgröße; ngerman Umlaute äöü oder sowas; titlepage damit keine Seitenzahl bei Titelseite, \subject etc. dazugeknallt werden können, hübscher isses auch; scratrcl soll deutsch und hübsch sein, hat aber keine chapter nur section, aber chapter fangen auch neue Seiten an https://texwelt.de/fragen/15869/seitennummer-in-scrartcl-auf-titelseite-unterdrucken
+% hatte bis 2025-05-14 a4paper in [] nach springer nature vorlage habe ich da mal pdflatex reingeschrieben, scheint nix kaputt zu machen. Ich glaube KOMA script mit scrartcl sollte sich schon um DIN A4 kümmern
+
+\usepackage[utf8]{inputenc} % moderner Zeichencode, auch mit ä ö ü und so'n Kram
+
+\usepackage{lmodern} % hübsche Schrift? hab's vergessen
+
+\usepackage[T1]{fontenc} % Schriftarten gute diese glaube ich
+\usepackage[onehalfspacing]{setspace} % Zeilenanbstand, Grüße ans Kompendium
+\usepackage[ngerman]{babel} % Sprache, ngerman Silbentrennung nach neuer Rechtschreibung und so
+% \usepackage{verbatim} % das habe ich gefunden um ganze Blöcke inklusive Zeilenumbrüchen auszukommentieren -- Nachtrag lol, bullshit, verbatim direkt druckt code ohne auszuführen
+% \usepackage[normalem]{ulem} % zum Durchstreichen https://texwelt.de/fragen/3223/wie-kann-ich-text-durchstreichen ulem besser wegen äöüß und neuer. soul besser als ulem für Zeilenumbrüche, Zeilenumbrüche bei Links waren nicht existent mit ulem https://tex.stackexchange.com/questions/74893/strikeout-when-which-package-ulem-vs-soul-vs#comment710882_74910 ich versuche also ulem mit normalem als Option https://golatex.de/viewtopic.php?t=3079 prima, scheint zu klappen
+
+% \usepackage{acronym} % added 2024-06-05 https://www.heise.de/tipps-tricks/Abkuerzungsverzeichnis-in-LaTeX-erstellen-4982473.html oder https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_Abk%C3%BCrzungsverzeichnis wiki empfiehlt womöglich package glossaries, hab da gerade kein Bock zu, acronym tut's bestimmt auch https://www.overleaf.com/learn/latex/Glossaries
+% printonlyused could be put in []
+% [v2 used because compile time in overleaf free]
+% I try \usepackage{glossaries} 2025-06-03
+
+\usepackage{geometry} % Seitenränder, ein wahrer Krampf
+\geometry{
+    left=30mm, 
+    right=30mm, 
+    top=25mm, 
+    bottom=25mm
+    } % mm besser als cm, bestimmt wegen , und . als Dezimaltrennzeichen, der Krampf hat sich entspannt, mm rulez
+\usepackage[
+    autostyle=true, 
+    german
+    ]
+    {csquotes} % für Anführungszeichen in Zitaten in versch. Sprachen, Schachtelung und so: https://www.namsu.de/Extra/pakete/Csquotes.html
+
+\usepackage[
+    backend=biber, 
+    style=authoryear-icomp, 
+    bibstyle=authoryear, 
+    dashed=false, 
+    maxcitenames=2, 
+    maxbibnames=99, 
+    block=none
+    ]
+    {biblatex} % Zitationsstil, authoryear kommt Harvard nah -- date=year von Antwort aus https://texwelt.de/fragen/27027/zitationsstil-anpassen-biblatex-authoryear
+% 2025-04-22 block=nbpar wäre erklärt bei Seite 51 von der Anleitung 3.1.2.1 https://mirrors.ibiblio.org/CTAN/info/translations/biblatex/de/biblatex-de-Benutzerhandbuch.pdf
+
+\addbibresource{references.bib} %Bibliographie erstellen
+% wenn unter Zitation -> Latex Assistant F7 ausgegraut, dann: Extras > Optionen > Zitation, da LaTeX anklicken
+% im Moment (2022-09-06) ist TeXStudio angegeben und: quote; autocite; cite; parencite & quote; autocite; cite; parencite
+% inspiriert von: https://help.citavi.com/topic/latex-assistent-kopieren
+% stil authoryear-icomp s. Handbuch Seite 77 https://mirrors.ibiblio.org/CTAN/info/translations/biblatex/de/biblatex-de-Benutzerhandbuch.pdf
+% 2025-04.02 maxbibnames=99 aus [] von biblatex genommen, da standard wohl =maxnames ist, Anleitung S. 49... Ok, doch nicht, gibt dann Fehler. vierlleicht lieber =99, weil ich die Schrägstriche definiert habe? Und sorting=nyt etnfernt, sollte Standard sein. Und dashed=false hinzugefügt Anleitung zu bibtex S. 81 bei Bibliographiestile
+% hier steht auch maxbibnames=99 ist beste: https://tex.stackexchange.com/questions/12806/guidelines-for-customizing-biblatex-styles
+
+% erst Nachname, dann Vorname https://www.mrunix.de/forums/showthread.php?75128-Biblatex-Nachname-Vorname klappt nur leider auch mit family-given nicht 2025-04-02 \DeclareNameAlias{default}{family-given}
+% 2025-04-02 ohne ist nur beim ersten in der Bibliography der Nachname zu Beginn, danach ist es Vorname Nachname 
+
+% https://texwelt.de/fragen/29060/biblatex-nachname-vorname default durch author (und editor und translator) ersetzt
+\DeclareNameAlias{author}{family-given} % 2025-05-28 scheint nur author zu ändern, bei editor bleibts, daher: 
+\DeclareNameAlias{editor}{family-given}
+% \DeclareNameAlias{editor}{sortname}
+% \DeclareNameAlias{translator}{sortname}
+
+%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% 
+%%% von copilot für prompt: 
+% wie verändere ich textcite in biblatex so, dass alle namen mit komma und und aufgezählt werden?
+% \DeclareDelimFormat{andothersdelim}{\addcomma\space}
+% \DeclareDelimFormat{finalnamedelim}{\space und\space}
+% \DeclareDelimFormat{multinamedelim}{\addcomma\space}
+%scheint aber nix zu ändern 2025-05-28
+
+%%% von copilot für prompt: 
+% das hat noch nicht geklappt. ich nuze folgenden stil: \usepackage[backend=biber, style=authoryear-icomp, bibstyle=authoryear, dashed=false, maxcitenames=2, maxbibnames=99]{biblatex}
+% \DeclareDelimFormat{finalnamedelim}{\space und\space}
+% \DeclareDelimFormat{multinamedelim}{\addcomma\space}
+%scheint aber nix zu ändern 2025-05-28
+%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% 
+
+\DefineBibliographyStrings{ngerman}{
+   andothers = {{et\,al\adddot}},
+} % damit wird u.a. zu et al. siehe https://tex.stackexchange.com/questions/236854/changing-u-a-of-german-to-et-al
+
+% no p. pp. and : instead of ,
+% https://stackoverflow.com/questions/58448860/how-can-i-add-colons-and-remove-p-pp-from-in-text-citations-with-biblatex
+\DefineBibliographyStrings{ngerman}{
+  page             = {},
+  pages            = {},
+}  % ich habe german anstatt english ergänzt % 2025-05-27 auf ngmerman geändert
+% colon instead of comma bei in text cite
+\renewcommand{\postnotedelim}{\addcolon \addspace} % \addspace kommt von mir
+
+% no p.von anderer Quelle
+% \DeclareFieldFormat{postnote}{#1}
+% \DeclareFieldFormat{multipostnote}{#1}
+
+\renewcommand*{\multinamedelim}{\addslash}
+\renewcommand*{\finalnamedelim}{\multinamedelim}
+% Schrägstriche zur Abtrennung https://golatex.de/viewtopic.php?t=18487 andere Quelle (hat nicht auf Anhieb funktioniert) https://groups.google.com/g/de.comp.text.tex/c/eSVMHAMphCA
+
+%%%%%%% danke copilot
+% Spezielle Anpassung für textcite
+\DeclareDelimFormat[textcite]{finalnamedelim}{\space und\space}
+\DeclareDelimFormat[textcite]{multinamedelim}{\addcomma\space}
+
+% S. im Literaturverzeichnis wäre nett. da stehen hundert Zahlen hintereinander
+%\renewbibmacro*{volume+number+eid}{%
+%  \printfield{volume}%
+%  \iffieldundef{volume}{}{~Aufl.}%
+%  \setunit*{\addcomma\space}%
+%  \printfield{number}%
+%  \setunit*{\addcomma\space}%
+%  \printfield{eid}}
+
+%\renewbibmacro*{pages}{%
+%  \iffieldundef{pages}{}{S.\space\printfield{pages}}}
+%%%%%%%%%%%%%
+
+% doppelte Nachnamen wegen shorthands (auto. durch citavi erstellt) in den refenerces.bib https://golatex.de/viewtopic.php?t=13563
+% keine KURZBELEGE in CITAVI für Harvard Zit. verwenden!! https://www1.citavi.com/sub/manual6/de/index.html?cse_customizing_citation_keys.html
+
+% \usepackage{minitoc} %h Mini Inhaltsverzeichnis https://cs.brown.edu/about/system/managed/latex/doc/minitoc.pdf
+% \usepackage{pdfpages} % vielleicht mal pdfs direkt hier als anhang einbinden https://texwelt.de/fragen/19153/pdf-dateien-in-anhang-einbinden-aber-formatierung-des-vorhergehenden-dokuments-ubernehmen
+% \usepackage{subfiles} % Best loaded last in the preamble https://de.overleaf.com/learn/latex/Multi-file_LaTeX_projects%23The_subfiles_package
+
+\usepackage[]{pdfpages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}   % PDF Support % vorher war hier auch [pdftex] eingebunden. Nachdem ich hyperref in der Präambel nach unten geschoben habe, hat overleaf aber einen Fehler ausgespuckt
+\usepackage{float} % addded 2025-06-10
+% hier war mal \usepackage[hidelinks]{hyperref} % Hyperlinks % hidelinks keine bunten Kasten um klickbare Elemente: https://texwelt.de/fragen/1121/wie-entferne-ich-die-roten-rahmen-um-hyperlinks? 2025-05-14 ist jetzt nach unten gerutscht 2025-06-19
+\usepackage{times}              % Font fuer PDF besser
+\usepackage{thumbpdf}           % PDF Thumbnails erstellen
+% https://www.linux-community.de/ausgaben/linuxuser/2005/04/mit-pdflatex-bessere-pdf-dateien-erzeugen/2/  
+% 2025-05-14
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+    xindy, 
+    toc, 
+    acronym
+    ]
+    {glossaries}
+% xindy weil: https://tex.stackexchange.com/questions/199211/differences-between-xindy-and-makeindex/199841#199841
+% https://en.wikibooks.org/wiki/LaTeX/Glossary#cite_note-2
+
+    \newacronym{abb}{Abb.}{Abbildung}
+    \newacronym{abs}{Abs.}{Abschnitt}
+    \newacronym{ank}{ANK}{Arbeitnehmerkammer Bremen}
+    \newacronym{bbk}{BBK}{Beutelsbacher Konsens}
+    \newacronym{bgbl}{BGBl}{Bundesgesetzblatt}
+    \newacronym{bmas}{BMAS}{Bundesministerium für Arbeit und Soziales}
+    \newacronym{bpb}{bpb}{Bundeszentrale für politische Bildung}
+    \newacronym{bzw}{bzw.}{beziehungsweise}
+    \newacronym{c}{\copyright}{Copyright}
+    \newacronym{doi}{DOI}{Digital Object Identifier}
+    \newacronym{ebd}{ebd.}{ebenda}
+    \newacronym{etc}{etc.}{et cetera}
+    \newacronym{gp}{GP oder GuP}{Gesellschaft und Politik}
+    \newacronym{gpje}{GPJE}{Gesellschaft für Politikdidaktik und politische Jugend- und Erwachsenenbildung}
+    \newacronym{kmk}{KMK}{Kultusministerkonferenz}
+    \newacronym{lis}{LIS}{Landesinstitut für Schule}
+    \newacronym{me}{m.E.}{meines Erachtens}
+    \newacronym{nw}{NW}{Naturwissenschaften}
+    \newacronym{oä}{o.Ä.}{oder Ähnliche(s)}
+    \newacronym{s}{s.}{siehe}
+    \newacronym{S}{S.}{Seite}
+    \newacronym{suub}{SuUB}{Staats- und Universitätsbibliothek Bremen}
+    \newacronym{sek}{SEK}{Sekundarstufe}
+    \newacronym{sus}{SuS}{Schülerinnen und Schüler}
+    \newacronym{ua}{u.A.}{unter Anderem}
+    \newacronym{url}{URL}{Universal Ressource Locator }% (einheitlicher Ressourcen Verorter, Webadressen)
+    \newacronym{vgl}{vgl.}{vergleiche}
+    \newacronym{wuk}{WUK}{Welt-Umweltkunde}
+    \newacronym{zap}{zap}{Zentrum für Arbeit und Politik}
+    \newacronym{zb}{z.B.}{zum Beispiel}
+    \newacronym{zit}{zit.}{zitiert}
+
+\makeglossaries % das makeglossaries muss vor \begin{document} stehen, damit es funktioniert
+% open Console in Visual Studio Code -- STRG+J click Console -- type: makeglossaries main (main being main.tex without extension) if no glossary with abbreviations appears
+
+\usepackage[hidelinks]{hyperref} % Hyperlinks % hidelinks keine bunten Kasten um klickbare Elemente: https://

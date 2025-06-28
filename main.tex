@@ -1,193 +1,11 @@
-\documentclass[a4paper, 12pt, ngerman, titlepage]{scrartcl} % a4paper, damit nicht amerik. letterpaper; 12pt Schriftgröße; ngerman Umlaute äöü oder sowas; titlepage damit keine Seitenzahl bei Titelseite, \subject etc. dazugeknallt werden können, hübscher isses auch; scratrcl soll deutsch und hübsch sein, hat aber keine chapter nur section, aber chapter fangen auch neue Seiten an https://texwelt.de/fragen/15869/seitennummer-in-scrartcl-auf-titelseite-unterdrucken
-% hatte bis 2025-05-14 a4paper in [] nach springer nature vorlage habe ich da mal pdflatex reingeschrieben, scheint nix kaputt zu machen. Ich glaube KOMA script mit scrartcl sollte sich schon um DIN A4 kümmern
-\usepackage[utf8]{inputenc} % moderner Zeichencode, auch mit ä ö ü und so'n Kram
-\usepackage{lmodern} % hübsche Schrift? hab's vergessen
-\usepackage[T1]{fontenc} % Schriftarten gute diese glaube ich
-\usepackage[onehalfspacing]{setspace} % Zeilenanbstand, Grüße ans Kompendium
-\usepackage[ngerman]{babel} % Sprache, ngerman Silbentrennung nach neuer Rechtschreibung und so
-% \usepackage{verbatim} % das habe ich gefunden um ganze Blöcke inklusive Zeilenumbrüchen auszukommentieren -- Nachtrag lol, bullshit, verbatim direkt druckt code ohne auszuführen
-% \usepackage[normalem]{ulem} % zum Durchstreichen https://texwelt.de/fragen/3223/wie-kann-ich-text-durchstreichen ulem besser wegen äöüß und neuer. soul besser als ulem für Zeilenumbrüche, Zeilenumbrüche bei Links waren nicht existent mit ulem https://tex.stackexchange.com/questions/74893/strikeout-when-which-package-ulem-vs-soul-vs#comment710882_74910 ich versuche also ulem mit normalem als Option https://golatex.de/viewtopic.php?t=3079 prima, scheint zu klappen
-
-% \usepackage{acronym} % added 2024-06-05 https://www.heise.de/tipps-tricks/Abkuerzungsverzeichnis-in-LaTeX-erstellen-4982473.html oder https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_Abk%C3%BCrzungsverzeichnis wiki empfiehlt womöglich package glossaries, hab da gerade kein Bock zu, acronym tut's bestimmt auch https://www.overleaf.com/learn/latex/Glossaries
-% printonlyused could be put in []
-% [v2 used because compile time in overleaf free]
-% I try \usepackage{glossaries} 2025-06-03
-
-
-\usepackage{geometry} % Seitenränder, ein wahrer Krampf
-\geometry{left=30mm, right=30mm, top=25mm, bottom=25mm} % mm besser als cm, bestimmt wegen , und . als Dezimaltrennzeichen, der Krampf hat sich entspannt, mm rulez
-\usepackage[autostyle=true, german]{csquotes} % für Anführungszeichen in Zitaten in versch. Sprachen und so: https://www.namsu.de/Extra/pakete/Csquotes.html
-
-\usepackage[backend=biber, style=authoryear-icomp, bibstyle=authoryear, dashed=false, maxcitenames=2, maxbibnames=99, block=none]{biblatex} % Zitationsstil, authoryear kommt Harvard nah -- date=year von Antwort aus https://texwelt.de/fragen/27027/zitationsstil-anpassen-biblatex-authoryear
-% 2025-04-22 block=nbpar wäre erklärt bei Seite 51 von der Anleitung 3.1.2.1 https://mirrors.ibiblio.org/CTAN/info/translations/biblatex/de/biblatex-de-Benutzerhandbuch.pdf
-
-\addbibresource{references.bib} %Bibliographie erstellen
-% wenn unter Zitation -> Latex Assistant F7 ausgegraut, dann: Extras > Optionen > Zitation, da LaTeX anklicken
-% im Moment (2022-09-06) ist TeXStudio angegeben und: quote; autocite; cite; parencite & quote; autocite; cite; parencite
-% inspiriert von: https://help.citavi.com/topic/latex-assistent-kopieren
-% stil authoryear-icomp s. Handbuch Seite 77 https://mirrors.ibiblio.org/CTAN/info/translations/biblatex/de/biblatex-de-Benutzerhandbuch.pdf
-% 2025-04.02 maxbibnames=99 aus [] von biblatex genommen, da standard wohl =maxnames ist, Anleitung S. 49... Ok, doch nicht, gibt dann Fehler. vierlleicht lieber =99, weil ich die Schrägstriche definiert habe? Und sorting=nyt etnfernt, sollte Standard sein. Und dashed=false hinzugefügt Anleitung zu bibtex S. 81 bei Bibliographiestile
-% hier steht auch maxbibnames=99 ist beste: https://tex.stackexchange.com/questions/12806/guidelines-for-customizing-biblatex-styles
-
-% erst Nachname, dann Vorname https://www.mrunix.de/forums/showthread.php?75128-Biblatex-Nachname-Vorname klappt nur leider auch mit family-given nicht 2025-04-02 \DeclareNameAlias{default}{family-given}
-% 2025-04-02 ohne ist nur beim ersten in der Bibliography der Nachname zu Beginn, danach ist es Vorname Nachname 
-
-% https://texwelt.de/fragen/29060/biblatex-nachname-vorname default durch author (und editor und translator) ersetzt
-\DeclareNameAlias{author}{family-given} % 2025-05-28 scheint nur author zu ändern, bei editor bleibts, daher: 
-\DeclareNameAlias{editor}{family-given}
-% \DeclareNameAlias{editor}{sortname}
-% \DeclareNameAlias{translator}{sortname}
-
-
-%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% 
-%%% von copilot für prompt: 
-% wie verändere ich textcite in biblatex so, dass alle namen mit komma und und aufgezählt werden?
-% \DeclareDelimFormat{andothersdelim}{\addcomma\space}
-% \DeclareDelimFormat{finalnamedelim}{\space und\space}
-% \DeclareDelimFormat{multinamedelim}{\addcomma\space}
-%scheint aber nix zu ändern 2025-05-28
-
-%%% von copilot für prompt: 
-% das hat noch nicht geklappt. ich nuze folgenden stil: \usepackage[backend=biber, style=authoryear-icomp, bibstyle=authoryear, dashed=false, maxcitenames=2, maxbibnames=99]{biblatex}
-% \DeclareDelimFormat{finalnamedelim}{\space und\space}
-% \DeclareDelimFormat{multinamedelim}{\addcomma\space}
-%scheint aber nix zu ändern 2025-05-28
-%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% 
-
-
-\DefineBibliographyStrings{ngerman}{
-   andothers = {{et\,al\adddot}},
-} % damit wird u.a. zu et al. siehe https://tex.stackexchange.com/questions/236854/changing-u-a-of-german-to-et-al
-
-% no p. pp. and : instead of ,
-% https://stackoverflow.com/questions/58448860/how-can-i-add-colons-and-remove-p-pp-from-in-text-citations-with-biblatex
-\DefineBibliographyStrings{ngerman}{
-  page             = {},
-  pages            = {},
-}  % ich habe german anstatt english ergänzt % 2025-05-27 auf ngmerman geändert
-% colon instead of comma bei in text cite
-\renewcommand{\postnotedelim}{\addcolon \addspace} % \addspace kommt von mir
-
-% no p.von anderer Quelle
-% \DeclareFieldFormat{postnote}{#1}
-% \DeclareFieldFormat{multipostnote}{#1}
-
-\renewcommand*{\multinamedelim}{\addslash}
-\renewcommand*{\finalnamedelim}{\multinamedelim}
-% Schrägstriche zur Abtrennung https://golatex.de/viewtopic.php?t=18487 andere Quelle (hat nicht auf Anhieb funktioniert) https://groups.google.com/g/de.comp.text.tex/c/eSVMHAMphCA
-
-%%%%%%% danke copilot
-% Spezielle Anpassung für textcite
-\DeclareDelimFormat[textcite]{finalnamedelim}{\space und\space}
-\DeclareDelimFormat[textcite]{multinamedelim}{\addcomma\space}
-%%%%%%%%%%%%%
-
-% doppelte Nachnamen wegen shorthands (auto. durch citavi erstellt) in den refenerces.bib https://golatex.de/viewtopic.php?t=13563
-% keine KURZBELEGE in CITAVI für Harvard Zit. verwenden!! https://www1.citavi.com/sub/manual6/de/index.html?cse_customizing_citation_keys.html
-
-% \usepackage{minitoc} %h Mini Inhaltsverzeichnis https://cs.brown.edu/about/system/managed/latex/doc/minitoc.pdf
-% \usepackage{pdfpages} % vielleicht mal pdfs direkt hier als anhang einbinden https://texwelt.de/fragen/19153/pdf-dateien-in-anhang-einbinden-aber-formatierung-des-vorhergehenden-dokuments-ubernehmen
-% \usepackage{subfiles} % Best loaded last in the preamble https://de.overleaf.com/learn/latex/Multi-file_LaTeX_projects%23The_subfiles_package
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{graphicx}   % PDF Support % vorher war hier auch [pdftex] eingebunden. Nachdem ich hyperref in der Präambel nach unten geschoben habe, hat overleaf aber einen Fehler ausgespuckt
-\usepackage[hidelinks]{hyperref}   % Hyperlinks % hidelinks keine bunten Kasten um klickbare Elemente: https://texwelt.de/fragen/1121/wie-entferne-ich-die-roten-rahmen-um-hyperlinks? 2025-05-14
-\usepackage{times}              % Font fuer PDF besser
-\usepackage{thumbpdf}           % PDF Thumbnails erstellen
-% https://www.linux-community.de/ausgaben/linuxuser/2005/04/mit-pdflatex-bessere-pdf-dateien-erzeugen/2/  
-% 2025-05-14
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subject{Universität Bremen\\ Sommersemester 2025\\ Masterarbeit}
-\title{Chancen und Risiken von Fremdmaterial: Eine beispielhafte Analyse und Wertung von Unterrichtsmaterial der Arbeitnehmerkammer Bremen für den Politikunterricht an berufsbildenden Schulen in Bremen.} 
-%%%%%%%%%%%%% TitelBRainStorming %%%%%%%%%%%%%%%%%%%%%%%%%
-% Nutzung von fremden Unterrichtsmaterialien. Eine exemplarische Analyse für den Politikunterricht an berufsbildenden Schulen in Bremen
-% Nutzung von Unterrichtsmaterialien einer externen Institution. Eine exemplarische Analyse für den Politikunterricht an berufsbildenden Schulen in Bremen
-
-% Entwürfe 2025-03-04 Di.
-% Nutzung von fremden Unterrichtsmaterialien. Eine exemplarische Analyse für den Politikunterricht an berufsbildenden Schulen in Bremen
-
-% Analyse und Wertung von großflächig angelegtem Unterrichtsmaterial Materialvorlagen: Exemplarisches Vorgehen mit Material der Arbeitnehmerkammer Bremen.
-
-% Analyse und Wertung von Materialvorlagen für den Politikunterricht an berufsbildenden Schulen in Bremen: Eine beispielhafte Analyse mit Material der Arbeitnehmerkammer Bremen.
-
-% Gekürzt:
-% Analyse und Wertung von Materialvorlagen: Eine beispielhafte Analyse anhand von Unterrichtsmaterial für den Politikunterricht an berufsbildenden Schulen in Bremen der Arbeitnehmerkammer Bremen.
-
-% Die Realität der Nutzung von institutionellem Unterrichtsmaterial entgegen selbsterstelltem Material: Eine beispielhafte Analyse anhand von Unterrichtsmaterial der Arbeitnehmerkammer Bremen für den Politikunterricht an berufsbildenden Schulen in Bremen.
-
-% Nur selbsterstelltes Unterrichtsmaterial? Chancen und Risiken von Fremdmaterial: Eine beispielhafte Analyse und Wertung von Unterrichtsmaterial der Arbeitnehmerkammer Bremen für den Politikunterricht an berufsbildenden Schulen in Bremen.
-
-% Unterricht von der Stange? Chancen und Risiken von Fremdmaterial: Eine beispielhafte Analyse und Wertung von Unterrichtsmaterial der Arbeitnehmerkammer Bremen für den Politikunterricht an berufsbildenden Schulen in Bremen
-
-% Kriterien zur Bewertung von externen Unterrichtsmaterialien im Politikunterricht. Am Beispiel 
-% Geschenke nimmt man gerne an
-% Unterricht von der Stange
-% Erleichterung durch fertiges Unterrichtsmaterial
-%%%%%%%%%%%%%%%%%%%%%%
-\author{Paul Aljoscha Klein\\ $\#$ 4134166\\ $\ast$ 20.07.1995\\ \\ Erstprüfer: Prof. Dr. Andreas Klee \\ Zweitprüferin: Dr. Eva Anslinger}
-\date{Juli 2025}
-% So sieht's gut aus mit titlepage bei Dokumentklasse
-
-
-\usepackage[xindy, toc, acronym]{glossaries}
-% xindy weil: https://tex.stackexchange.com/questions/199211/differences-between-xindy-and-makeindex/199841#199841
-% https://en.wikibooks.org/wiki/LaTeX/Glossary#cite_note-2
-\makeglossaries % das makeglossaries muss vor \begin{document} stehen, damit es funktioniert
-
-    \newacronym{abs}{Abs.}{Abschnitt}
-    \newacronym{ank}{ANK}{Arbeitnehmerkammer Bremen}
-    \newacronym{bbk}{BBK}{Beutelsbacher Konsens}
-    \newacronym{bpb}{bpb}{Bundeszentrale für politische Bildung}
-    \newacronym{bzw}{bzw.}{beziehungsweise}
-    \newacronym{c}{\copyright}{Copyright}
-    \newacronym{doi}{DOI}{Digital Object Identifier}
-    \newacronym{ebd}{ebd.}{ebenda}
-    \newacronym{etc}{etc.}{et cetera}
-    \newacronym{gp}{GP oder GuP}{Gesellschaft und Politik}
-    \newacronym{gpje}{GPJE}{Gesellschaft für Politikdidaktik und politische Jugend- und Erwachsenenbildung}
-    \newacronym{lis}{LIS}{Landesinstitut für Schule}
-    \newacronym{nw}{NW}{Naturwissenschaften}
-    \newacronym{oä}{o.Ä.}{oder Ähnliche(s)}
-    \newacronym{s}{s.}{siehe}
-    \newacronym{S}{S.}{Seite}
-    \newacronym{suub}{SuUB}{Staats- und Universitätsbibliothek Bremen}
-    \newacronym{sek}{SEK}{Sekundarstufe}
-    \newacronym{sus}{SuS}{Schülerinnen und Schüler}
-    \newacronym{ua}{u.A.}{unter Anderem}
-    \newacronym{url}{URL}{Universal Ressource Locator }% (einheitlicher Ressourcen Verorter, Webadressen)
-    \newacronym{vgl}{vgl.}{vergleiche}
-    \newacronym{wuk}{WUK}{Welt-Umweltkunde}
-    \newacronym{zap}{zap}{Zentrum für Arbeit und Politik}
-    \newacronym{zb}{z.B.}{zum Beispiel}
-
+\input{preamble.tex}
 \begin{document}
-% \maketitle
-% \thispagestyle{empty}
-% \pagestyle{empty} war für Seitennummer weg in Klasse article
-\pagenumbering{roman}
-\addsec{Abstract}
-blub
-\newpage
-\tableofcontents % war früher mal vor pagenumbering. Macht das einen Unterschied? Keine AHnung 2024-06-05 ah ja, will ja nicht das Inhaltsverzeichnis Seitenummeriert haben 2024-06-06
-
-\clearpage
-\newpage
-% \addsec{Abkürzungsverzeichnis}
-
-\printglossary[type=\acronymtype, title={Abkürzungsverzeichnis}, toctitle={Abkürzungsverzeichnis}, nonumberlist] % Acronymtype ist von glossaries, title und toctitle sind Titel im Inhaltsverzeichnis
-
-\clearpage
-\newpage
-
-\setcounter{page}{1}
-\pagenumbering{arabic}
-
+\input{titlepage.tex}
+\input{roman.tex}
 \section{Einleitung \& Theoretischer Hintergrund}
 % Unterrichtsmaterial kommt nicht nur aus Schulbüchern oder wird von den Lehrkräften selbst erstellt
 
-\subsection{Von der Theorie in die Praxis} \label{theorie in praxis}
+\subsection{Von der Theorie in die Praxis \label{theorie in praxis}}
 Es gibt extensive Forschung in den Erziehungswissenschaften und der Fachdidaktik. Insbesondere der Bereich der politischen Bildung ist darüber hinaus mit zahlreichen interdisziplinären Brücken in die Sozialwissenschaften und über einen schulischen Bildungsbegriff hinaus ein Forschungsfeld, welches in seiner Gänze nicht einmal von Menschen zu überblicken ist, die ihr ganzes (Arbeits-)Leben der politischen Bildung gewidmet haben. 
 
 Gleichzeitig sind sowohl die Möglichkeiten zur weiteren Erforschung als auch der konkrete Forschungsbedarf im Detail von nicht zu überblickender Größe. 
@@ -196,23 +14,29 @@ Gleichzeitig sind sowohl die Möglichkeiten zur weiteren Erforschung als auch de
 In unserer hochkomplexen Welt gilt dies sicherlich für das Gros an Forschungsbereichen. Die Eingrenzung und damit Abgrenzung von Forschungsgegenständen ist daher stets zwangsläufiger Bestandteil des Forschens. In der Praxis bedeutet das, immer wieder aushandeln zu müssen, inwieweit Querverbindungen zu anderen Bereichen notwendig sind und an welcher Stelle der Fokus wieder auf das Wesentliche zu legen ist.
 Diese Entscheidungen sind optimalerweise logisch zu begründen. Getroffen werden müssen sie dennoch. Das ist sicherlich mit Arbeit verbunden. 
 
-Analog zu den Entscheidungen, die Forschende treffen müssen, um handlungsfähig zu sein, das heißt fokussiert ihre Forschung vorantreiben zu können, ist die Eingrenzung eines Lerngegenstandes ebenfalls zu begründen und mit Entscheidungen verbunden. 
+Analog zu den Entscheidungen, die Forschende treffen müssen, um handlungsfähig zu sein, das heißt fokussiert ihre Forschung vorantreiben zu können, ist die Eingrenzung eines Lernxxgegenstandes ebenfalls zu begründen und mit Entscheidungen verbunden. 
 Lehrende befinden sich diesbezüglich also in einer ähnlichen Situation wie Forschende. 
 
 Es ließe sich allerdings argumentieren, dass die Notwendigkeit im Unterrichten von Weltwissen Entscheidungen zu treffen -- wie es im Schulkontext stattfindet -- auf einer vageren Datengrundlage stattfinden muss. In der Forschung wird sich wegen der zuvor beschriebenen Notwendigkeit der Eingrenzung zunehmend spezialisiert. Im schulischen Weltverstehen-Lernen hingegen ist in weiten Teilen (noch) kein hochspezialisiertes Verständnis gefordert. Stattdessen steht ein allgemeines Zusammenhänge-verstehen-Lernen im Vordergrund. Das setzt Lernen an exemplarischen Lerngegenständen voraus. 
-Dies gilt insbesondere für die politische Bildung -- nicht nur in allgemeinbildenden Schulen, sondern auch für Politikunterricht in der dualen Berufsbildung \autocite[vgl. \gls{abs} \ref{bplan}; \gls{S} \pageref{bplan} \&][4; 9-13]{bplan}.
+Dies gilt insbesondere für die politische Bildung -- nicht nur in allgemeinbildenden Schulen, sondern auch für Politikunterricht in der dualen Berufsbildung \autocite[vgl. \gls{abs} \ref{bplan}: \gls{S} \pageref{bplan} \&][4; 9-13]{bplan}.
 In der Ausbildung zum Lehramt wird Wert darauf gelegt, solche Entscheidungen, welche Lerngegenstände ausgewählt werden, umfassend begründen zu können. 
 In der Praxis des Lehrens wird Wert darauf gelegt, tatsächlich zu unterrichten.
 In der wissenschaftlichen Literatur wurde dieses ständige im Widerspruch stehen, dem Lehrkräfte an verschiedenen Stellen ausgesetzt sind, längst erkannt und jener als Antinomie bezeichnet \autocite[\gls{vgl} \gls{zb}][]{Helsper.2001}.
 
-Den kompletten Wissensstand der unterrichteten Domäne von einzelnen Lehrkräften fachwissenschaftlich oder didaktisch im kompletten Überblick zu behalten, ohne dass Teile des Alltagsgeschäfts hintenüber fallen, erschiene daher eine utopische Forderung.
+Den kompletten Wissensstand der unterrichteten Domäne von einzelnen Lehrkräften fachwissenschaftlich oder didaktisch im kompletten Überblick zu behalten, ohne dass Teile des Alltagsgeschäfts hintenüber fallen, erschiene daher eine utopische Forderung. Daher erscheint die Benutzung von vorgefertigtem Unterrichtsmaterial eine praktikable Erleichterung. 
 
-Daher ist es eine willkommene Abwechslung, in dieser Arbeit zwar nicht zur Erleichterung des Handwerks des Unterrichtens beizutragen, wohl aber eine Initiative zum Untersuchungsgegenstand zu haben, der genau diese Intention unterstellt werden kann. 
+% HIER NOCH MEHR BRÜCKE ZU ARBEITSERLEICHTERUNG SCHLAGEN. MATERIALERSTELLUNG UNGLEICH UNTERRICHTEN
+
+Entsprechend ist es eine willkommene Abwechslung, in dieser Arbeit zwar nicht zur Erleichterung des Handwerks des Unterrichtens beizutragen, wohl aber eine Initiative zum Untersuchungsgegenstand zu haben, der genau diese Intention unterstellt werden kann. 
 
 \subsection{Lerngegenstände}
-Unterrichten an Bildungsinstitutionen passiert meist unter Zuhilfenahme von Medien und die Planung ist im besten Fall verschriftlicht oder anderweitig aufgezeichnet, \gls{zb} durch Grafiken. Die Planung des Unterrichts und die Auswahl oder Erstellung der zum Unterrichten verwendeten Materialien nehmen dabei einen erheblichen Zeitaufwand seitens der Lehrkräfte ein.
+Die \gls{kmk} definiert Lehrmittel als Materialen der Schule und Lernmittel als Materialien der Schüler*innen \autocite{KMKMittel}. Gerade im Hinblick auf Verbrauchsmaterial und dessen Finanzierung bestimmt eine sinnvolle Unterscheidungsdimension. Papier und Stifte, stammen in der Regel von Schüler*innen, die abbrechende Bohrerspitze im Werkunterricht und % die Objektträger zur Mikroskopie 
+das Gas um die Chemikalie im Naturwissenschaftsunterricht zu erhitzen, sind häufig aus der Schule oder werden auch mal aus den privaten Ressourcen der Lehrkräfte finanziert. Herausgestellt werden soll, dass Lernen in weiten Teilen in Verbindung mit der dinglichen Welt stattfindet.
+
+Unterrichten an Bildungsinstitutionen passiert hauptsächlich unter Zuhilfenahme von Medien im engeren Sinne und die Planung ist im besten Fall verschriftlicht oder anderweitig aufgezeichnet, \gls{zb} durch Grafiken. Die Planung des Unterrichts und die Auswahl oder Erstellung der zum Unterrichten verwendeten Materialien nehmen dabei einen erheblichen Zeitaufwand seitens der Lehrkräfte ein.
 
 Das Zurückgreifen auf bestehende Medien ist dabei natürlicher Bestandteil des Lernens. So ist die (Primär-)Quellenanalyse im Geschichtsunterricht, das Lesen eines Haikus in Deutsch, die Analyse einer Inszenierung, das Basteln an einem Motor oder das Erhitzen von Chemikalien alles die natürliche Benutzung von Unterrichtsmaterial. 
+
 
 Um diversen Gegebenheiten gerecht zu werden, ist das Material jedoch häufig abstrahiert. Eine Dampfmaschine steht womöglich nicht zur Verfügung. In so einem Fall kann \gls{zb} auf eine Explosionszeichnung, einen Film, ein Modell oder eine Beschreibung zurückgegriffen werden. Eine Beschreibung in Worten erfordert dabei eine höhere Abstraktionsebene als ein Modell und birgt die Gefahr, schlechtere Lernergebnisse zu erzielen; was dann durch entsprechende Einbettung oder die Ergänzung weiterer Materialien, wie einem Schema oder einem Film, versucht werden sollte zu kompensieren. Wie anhand dieses Beispiels bereits deutlich wird, erfordert bereits die Auswahl der Lehrmaterialien Arbeit, bevor überhaupt mit den Lernenden in Interaktion getreten wird. 
 Wenn nun in der politischen Bildung eine Rede analysiert wird, sind die naheliegenden Möglichkeiten überschaubar. Eine Verschriftlichung und eine Videoaufnahme bieten sich an. 
@@ -235,9 +59,18 @@ Auch die \gls{ank} entwickelt in Kooperation mit dem \gls{zap} an der Universit�
 
 In dieser Arbeit soll ein Versuch unternommen werden, dieses Unterrichtsmaterial zu analysieren und zu bewerten. % welches den Lehrkräften von dem quasi staatlichen Akteur der Arbeitnehmerkammer Bremen zur Verfügung gestellt wird. 
 
+\subsection{Unterrichtsmaterial}
+Der Begriff Unterrichtsmaterial soll in etwa synonym zur Definition auf der Website der \textcite{KMKMittel} für Lehr- und Lernmittel verwendet werden: 
+Es gibt eine Lernmittelfreiheit \autocite[]{KMKMittel}.
+Welches Unterrichtsmaterial am Ende auch in Kontakt mit den Schüler*innen kommt, liegt hauptsächlich in den Händen der Lehrer*innen.
+Die Lehrkräfte selbst sind bei der Auswahl des Materials jedoch zahlreichen Zwängen ausgesetzt:
+\begin{itemize}
+    \item Zeitliche Zwänge: Der Tag hat nur 24 Stunden und Menschen sind Tiere mit zahlreichen Bedürfnissen. Diese zu erfüllen ist Voraussetzung für eine gute Arbeitsleistung, nimmt jedoch, genau wie Arbeit selbst, Zeit in Anspruch. 
+    \item Finanzielle Zwänge: Schulen stehen begrenzte Budgets zur Verfügung, z.B. sind Schulbücher häufig nicht die \enquote{besten} und aktuellsten am Markt und Exkursionen müssen für alle bezahlbar sein. 
+    \item Bereits am Markt existierendes Material ist entweder kostspielig und/oder unterliegt nur unzureichenden Qualitätskontrollen. Die Prüfung und Umgestaltung, um im Unterricht eingesetzt werden zu können, nimmt wiederum viel Zeit in Anspruch. 
+\end{itemize}
 
-
-
+Unterrichtsmaterial wird häufig aus dem Internet bezogen \autocite[82]{Neumann2015}. % zitiert nach \autocite[66]{Hedtke2016}
 
 
 \section{Theoretischer Hintergrund / Begriffsklärungen}
@@ -253,8 +86,30 @@ Blub blub, nur ausführen was die Überschriften weshalb sagen........
 \subsection{Politische Bildung an berufsbildenden Schulen in Bremen}
 
 
-\subsection{Bremer Bildungsplan \& Kompetenzen in der politischen Bildung} \label{bplan}
-Der aktuelle Bremer Bildungsplan für politische Bildung\footnote{Als Fach vom \gls{lis} nur als Politik bezeichnet} für berufsbildende Schulen ist mit der Erscheinung \citeyear{bplan} (\citeauthor{bplan}) vergleichsweise aktuell. Die Bremer Bildungspläne für die \gls{sek} I und II der allgemeinbildenden Schulen sind alle etwa im vorletzten Jahrzehnt, zwischen \citeyear{vogel2006gy} \autocites{vogel2006gs, vogel2006gy, lower2008} und \citeyear{vogel2010gp} \autocite{vogel2010gp}, erschienen. Die Fächerbezeichnungen sind innerhalb der Bremer Bildungspläne nicht kongruent. Die unstete Bezeichnung der Fächer -- welche politische Bildung, häufig neben anderen Bereichen, mit abdecken -- wird in \gls{abs} \ref{polBildung} (\gls{S} \pageref{polBildung}) weiter diskutiert.
+\subsection{Beutelsbacher Konsens \label{bbk}}% Beeinflussung durch Material.
+Da insbesondere durch die Schulpflicht \autocite{BremSchulG} die schulische (politische) Bildung mit Zwang verbunden ist, liegt es nahe, dass versucht wird, diese durch Regeln, trotz des Zwanges, mit freiheitlichen, demokratischen Grundwerten zu vereinbaren. Auch an Berufsschulen für die das hier untersuchte Material primär entworfen ist, besteht noch ein starkes, strukturvorgegebenes Machtgefälle, welches derartige Überlgungen stets aktuell sein lässt. 
+
+Ein wichtiges historisches Dokument im Rahmen derartiger Fragestellungen ist der \Acrlong{bbk} \autocites[29]{Gesner2016}{Wehling1977}. So wichtig, dass auch über den deutschen Raum hinaus auf den \gls{bbk} Bezug genommen wird. So wurde im Rahmen der Aktionstage Politische Bildung vom 23. April bis 9. Mai 2024 in Österreich formuliert, dass der \gls{bbk} \enquote{[v]on internationaler Bedeutung [...] ist [...]. \autocite{bbkÖsterreich2023}}. Entsprechend leitet auch der Bremer Bildungsplan zentrale Kompetenzen aus dem \gls{bbk} ab und gibt die wesentlichste Stelle \enquote{im Wortlaut} wieder \autocite[11-12]{bplan}: 
+\begin{quote}
+    \textbf{1. Überwältigungsverbot.}
+
+    Es ist nicht erlaubt, den Schüler - mit welchen Mitteln auch immer - im Sinne erwünschter Meinungen zu überrumpeln und damit an der \enquote{Gewinnung eines selbständigen Urteils} zu hindern. Hier genau verläuft nämlich die Grenze zwischen Politischer Bildung und Indoktrination. Indoktrination aber ist unvereinbar mit der Rolle des Lehrers in einer demokratischen Gesellschaft und der - rundum akzeptierten - Zielvorstellung von der Mündigkeit des Schülers. 
+
+    \textbf{2. Was in Wissenschaft und Politik kontrovers ist, muss auch im Unterricht kontrovers erscheinen.}
+
+    Diese Forderung ist mit der vorgenannten aufs engste verknüpft, denn wenn unterschiedliche Standpunkte unter den Tisch fallen, Optionen unterschlagen werden, Alternativen unerörtert bleiben, ist der Weg zur Indoktrination beschritten. Zu fragen ist, ob der Lehrer nicht sogar eine Korrekturfunktion haben sollte, d.h. ob er nicht solche Standpunkte und Alternativen besonders herausarbeiten muss, die den Schülern (und anderen Teilnehmern politischer Bildungsveranstaltungen) von ihrer jeweiligen politischen und sozialen Herkunft her fremd sind. Bei der Konstatierung dieses zweiten Grundprinzips wird deutlich, warum der persönliche Standpunkt des Lehrers, seine wissenschaftstheoretische Herkunft und seine politische Meinung verhältnismäßig uninteressant werden. Um ein bereits genanntes Beispiel erneut aufzugreifen: Sein Demokratieverständnis stellt kein Problem dar, denn auch dem entgegenstehende andere Ansichten kommen ja zum Zuge. 
+    
+    \textbf{3. Der Schüler muss in die Lage versetzt werden, eine politische Situation und seine eigene Interessenlage zu analysieren,} 
+
+    sowie nach Mitteln und Wegen zu suchen, die vorgefundene politische Lage im Sinne seiner Interessen zu beeinflussen. Eine solche Zielsetzung schließt in sehr starkem Maße die Betonung operationaler Fähigkeiten ein, was eine logische Konsequenz aus den beiden vorgenannten Prinzipien ist. Der in diesem Zusammenhang gelegentlich - etwa gegen Herman Giesecke und Rolf Schmiederer - erhobene Vorwurf einer \enquote{Rückkehr zur Formalität}, um die eigenen Inhalte nicht korrigieren zu müssen, trifft insofern nicht, als es hier nicht um die Suche nach einem Maximal-, sondern nach einem Minimalkonsens geht. 
+    
+    \autocite[Im Original mit anderen Hervorhebungen:][179-180]{Wehling1977}
+\end{quote}
+
+
+
+\subsection{Bremer Bildungsplan \label{bplan}} % \& Kompetenzen in der politischen Bildung
+Der aktuelle Bremer Bildungsplan für politische Bildung\footnote{Als Fach vom \gls{lis} nur als Politik bezeichnet} für berufsbildende Schulen ist mit der Erscheinung \citeyear{bplan} (\citeauthor{bplan}) vergleichsweise aktuell. Die Bremer Bildungspläne für politische Bildung, an der \gls{sek} I und II der allgemeinbildenden Schulen sind alle etwa im vorletzten Jahrzehnt, zwischen \citeyear{vogel2006gy} \autocites{vogel2006gs, vogel2006gy, lower2008} und \citeyear{vogel2010gp} \autocite{vogel2010gp}, erschienen. Die Fächerbezeichnungen sind innerhalb der Bremer Bildungspläne nicht kongruent. Die unstete Bezeichnung der Fächer -- welche politische Bildung, häufig neben anderen Bereichen, mit abdecken -- wird in \gls{abs} \ref{polBildung}: (\gls{S} \pageref{polBildung}) weiter diskutiert.
 
 Politik ist neben Deutsch im Jahr 2024/2025 aktuell das einzige andere Fach im Land Bremen, welches für den berufsbildenden Bereich fächerübergreifend für alle Schülerinnen und Schüler unterrichtet wird (vgl. Website des \gls{lis} \citeyear{LisBildungspläne}). Direkt im Bildungsplan \autocite[][4]{bplan} wird darauf eingegangen, dass zwar an \enquote{heterogene[...] Voraussetzungen der Schüler:innen} angeknüpft wird, was auch \enquote{die Unterschiedlichkeit der jeweiligen Bildungsgänge} berücksichtigen soll, aber als Teil der \enquote{allgemeinbildenden Fächer} sollen die \enquote{Zielsetzungen politische Urteilsfähigkeit, politische Handlungsfähigkeit und methodische Fähigkeiten} immer die Grundlage bilden. 
 
@@ -262,17 +117,18 @@ Politik ist neben Deutsch im Jahr 2024/2025 aktuell das einzige andere Fach im L
 Allgemeine politische Kompetenzen sind die hauptsächlichen Ziele \autocite[9-13]{bplan}.
 
 Für die \enquote{Kompetenzdimensionen in der politischen Bildung} orientiert sich der Bildungsplan stark an den Ausarbeitungen der \gls{gpje}.
-Da in dieser Arbeit (\gls{s} \gls{abs} \ref{öffi}; \gls{S} \pageref{öffi}) auch auf die Verfügbarkeit und Nutzfreundlichkeit von Unterrichtsmaterial eingegangen wird, bietet es sich an, an dieser Stelle ein strukturelles Einzelfallbeispiel aufzuziehen:
+Da in dieser Arbeit (\gls{s} \gls{abs} \ref{öffi}: \gls{S} \pageref{öffi}) auch auf die Verfügbarkeit und Nutzfreundlichkeit von Unterrichtsmaterial eingegangen wird, bietet es sich an, an dieser Stelle ein strukturelles Einzelfallbeispiel aufzuziehen:
 
-\subsubsection{Exkurs: Schlechte Quellenangaben und miese Vorbildfunktion. Beginnt Medienkompetenz im Bildungsplan?} \label{gpje}
-Der Bildungsplan selbst ist von fiskalisch finanzierten Stellen erarbeitet und für einen Bildungsbereich veröffentlicht, welcher sich vermutlich auch als öffentlich, sowohl in Form von öffentlichen Geldern finanziert als auch in Form von öffentlich zugänglich versteht, da es sich um einen verbreiteten, staatlich vorgezeichneten \mbox{(Weiter-)Bildungsweg} % \mbox trennt Begriff nicht 
+\subsubsection{Exkurs: Schlechte Quellenangaben und miese Vorbildfunktion. Beginnt Medienkompetenz im Bildungsplan? \label{gpje}}
+Der Bildungsplan selbst ist von fiskalisch finanzierten Stellen erarbeitet und für einen Bildungsbereich veröffentlicht, welcher sich vermutlich auch als öffentlich versteht -- sowohl in Form von öffentlichen Geldern finanziert als auch in Form von öffentlich zugänglich -- da es sich um einen verbreiteten, staatlich vorgezeichneten \mbox{(Weiter-)Bildungsweg} % \mbox trennt Begriff nicht 
 handelt. Der Bildungsplan ist auf der Website des \gls{lis} (\citeyear[]{LisBildungspläne}) auch öffentlich zugänglich im etablierten .pdf-Format vorzufinden und bietet allen Menschen die Möglichkeit, mit diesem öffentlich erarbeiteten Wissen zu arbeiten.
 Soweit erscheint das Vorgehen kohärent und sinnvoll.
 
-Der Bildungsplan orientiert sich \gls{ua} an den Bildungsstandards der \gls{gpje}. Konkret wird das \gls{ua} Fußnote 13 im Bildungsplan \autocite[][9]{bplan} deutlich, vergleichbar zu folgender Fußnote\footnote{http://gpje.de/wp-content/uploads/2017/01/Bildungsstandards-1.pdf}. Da der perfekte Zitierstil nicht nur kontextabhängig, sondern subjektiv ist, soll dahingehend keine Wertung stattfinden. Allerdings sind an dieser Stelle bereits mehrere zitierstilübergreifende Grundsätze missachtet worden. Sich dafür zu entscheiden, einen Fußnotenzitierstil zu nutzen und an späterer Stelle ein komplettes Quellenverzeichnis, wäre eine solide Wahl. Auch wenn als dabei übliche Kurzform in der Fußnote ausschließlich einen kompletten Weblink anzugeben, schon wild ist. Nur dass es kein komplettes Quellenverzeichnis gibt.  
+Der Bildungsplan orientiert sich \gls{ua} an den Bildungsstandards der \gls{gpje}. Konkret wird das \gls{ua} an Fußnote 13 im Bildungsplan \autocite[][9]{bplan} deutlich, vergleichbar zu folgender Fußnote\footnote{\url{http://gpje.de/wp-content/uploads/2017/01/Bildungsstandards-1.pdf}}. Da ein Zitierstil nicht nur kontextabhängig, traditionsabhängig und subjektiv ist, soll dahingehend selbstverständlicherweise keine Wertung stattfinden. Allerdings sind in diesem Fall bereits mehrere zitierstilübergreifende Grundsätze missachtet worden. Sich dafür zu entscheiden, einen Fußnotenzitierstil zu nutzen und an späterer Stelle ein komplettes Quellenverzeichnis, wäre eine solide Wahl. Auch wenn als dabei übliche Kurzform in der Fußnote ausschließlich einen kompletten Weblink anzugeben schon wild ist. Nur dass es schlicht kein komplettes Quellenverzeichnis gibt!  
 Es gilt, ausreichend Informationen (lieber eine zu viel als eine zu wenig) zum Auffinden anzugeben, insbesondere und mindestens Äquivalente zu Autor*innen oder Herausgeber*innen, sowie Erscheinungsjahr und Titel, sowie ein Zugriffsdatum, falls Weblinks angegeben sind. 
-Als findige*r Konsument*in von Text lassen sich nun Teile von Titel und Namen sowie das Akronym der Herausgebenden im Link herauslesen. Allerdings führt der Link im Mai 2025 auf eine weiße Seite und ist damit ein Paradebeispiel, weshalb \gls{ua} wenigstens ein Zugriffsdatum angegeben sein sollte.
-Als bemühter Autor einer universitären Abschlussarbeit findet man jedoch unter diesem Link\footnote{https://gpje.de/publikationen/ (06.05.2025)} einen Download mit diesem Link\footnote{https://gpje.de/wp-content/uploads/2024/07/Bildungsstandards-1.pdf (05.05.2025)}, dessen \gls{url} entsprechend der Zahlen, die ein Datum darstellen könnten, womöglich eine aktuellere Version zu der im Bildungsplan \autocite[][9]{bplan} referierten verspricht. Laut Website und Untertitel, soll es sich zwar lediglich um einen Entwurf handeln. Wobei \enquote{Entwurf} sich an dieser Stelle wohl eher als Synonym für Vorschlag lesen lässt.  Das Dokument kann jedoch nach wie vor in seiner Veröffentlichungsform strukturell kritisiert werden:
+Als findige*r Konsument*in von Text lassen sich nun Teile von Titel und Namen sowie das Akronym der Herausgebenden im Link herauslesen. Allerdings führt der Link im Mai 2025 auf eine weiße Seite und ist damit ein Paradebeispiel, weshalb \gls{ua} wenigstens ein Zugriffsdatum zur eigenen Absicherung angegeben sein sollte.
+
+Als bemühter Autor einer universitären Abschlussarbeit findet man jedoch unter diesem Link\footnote{\url{https://gpje.de/publikationen/} (06.05.2025)} einen Download mit diesem Link\footnote{\url{https://gpje.de/wp-content/uploads/2024/07/Bildungsstandards-1.pdf} (05.05.2025)}, dessen \gls{url} entsprechend der Zahlen, die ein Datum darstellen könnten, womöglich eine aktuellere Version zu der im Bildungsplan \autocite[][9]{bplan} referierten verspricht. Laut Website und Untertitel, soll es sich zwar lediglich um einen Entwurf handeln. Wobei \enquote{Entwurf} sich an dieser Stelle wohl eher als Synonym für Vorschlag lesen lässt.  Das Dokument kann jedoch nach wie vor in seiner Veröffentlichungsform strukturell kritisiert werden:
 \begin{itemize}
     \item Das in der \gls{url} suggerierte Datum impliziert nun eine Veröffentlichung oder Version vom Juli 2024, im Dokument selbst ist ein \gls{c} vom Wochenschau Verlag von 2004 angegeben. Es handelt sich höchstwahrscheinlich um eine Version der viel zitierten 2. Auflage von \citeyear[]{gpje2004}. Nur dass im Bildungsplan nicht ersichtlich ist, ob er sich tatsächlich auf diese Version bezieht. Höchstwahrscheinlich bezog sich die alte \gls{url} in der 2017 zu lesen ist auf dieselbe Version, wie die, welche hier mit 2024 in der \gls{url} aufgefunden wurde. 
     
@@ -302,37 +158,37 @@ Als bemühter Autor einer universitären Abschlussarbeit findet man jedoch unter
     
     f. das wissenschaftlich-politische Engagement für den Ausbau der Disziplin an den Hochschulen.}
 
-    Hinsichtlich der in der Satzung formulierten Ziele, weiß der Widerspruch zwischen Form und Inhalt humoristisch zu begeistern. Bildungsstandards einer wissenschaftlichen Gesellschaft, welche mit der Intention von verschiedenen -- auch und insbesondere öffentlichen -- Bildungsinstitutionen genutzt zu werden, sind auf der eigenen Website schwer zugänglich (Kopierschutz), es gibt keine Suchfunktion und keinen stabilen Link (oder Versionsverlauf, wenn es sich um verschiedene Versionen handeln würde). Das erschwert wissenschaftlich korrektes Zitieren unnötig --- was sich tatsächlich auch in einem offiziellen Bildungsplan \autocite[][9]{bplan} niederschlägt. 
+    Hinsichtlich der in der Satzung formulierten Ziele, weiß der Widerspruch zwischen Form und Inhalt humoristisch zu begeistern. Bildungsstandards einer wissenschaftlichen Gesellschaft, welche mit der Intention von verschiedenen -- auch und insbesondere öffentlichen -- Bildungsinstitutionen genutzt zu werden, sind auf der eigenen Website schwer zugänglich (Kopierschutz), es gibt keine Suchfunktion und keinen stabilen Link (oder Versionsverlauf, wenn es sich um verschiedene Versionen handeln würde). Das erschwert wissenschaftlich korrektes Zitieren unnötig -- was sich tatsächlich auch in einem offiziellen Bildungsplan \autocite[][9]{bplan} niederschlägt, der diese Situation allerdings erst durch die unsaubere Arbeit derart verschärft hat. 
     
-    \item Man stelle sich vor, man ist etwa Schüler*in, Lehrkraft, Elternteil oder Student*in und wirklich daran interessiert in die Tiefe der Bildungsstandards einzusteigen und ist soweit wie oben beschrieben gekommen -- dann kommt man möglicherweise auf die Idee sich die wissenschaftliche Publizistik der \gls{gpje} anzuschauen, um nachzuprüfen, ob es doch verschiedene und womöglich aktuellere Versionen gibt. Die Publizistik wird im Wochenschau Verlag vertrieben und ist nicht frei zugänglich. 
+    \item Man stelle sich vor, man ist etwa Schüler*in, Lehrkraft, Elternteil oder Student*in und wirklich daran interessiert in die Tiefe der Bildungsstandards einzusteigen und ist soweit wie oben beschrieben gekommen -- dann kommt man möglicherweise auf die Idee sich sicherheitshalber die wissenschaftliche Publizistik der \gls{gpje} anzuschauen, um nachzuprüfen, ob es doch verschiedene und womöglich aktuellere Versionen gibt. Die Publizistik wird im Wochenschau Verlag vertrieben und ist nicht frei zugänglich. 
     
     Man könnte auf die Idee kommen, in einer Veröffentlichung von \citeyear{Gortler.2017} \gls{zb} (\citeauthor{Gortler.2017}) könnte ja eine passende Version von 2017 zu finden sein. Das auf Vertriebswebsites frei einsehbare Inhaltsverzeichnis reicht, um das zu verneinen. Was hilfreich ist. Denn auch wenn dem Band eine Tagung an der Universität Bremen von 2016 zur Grundlage liegt, ließen sich digitale (und physische) Versionen -- auch im Universitäts-Netzwerk der \gls{suub} eingeloggt sitzend -- nur gegen Geld erwerben. Die \gls{suub} besagter Bremer Uni führt immerhin genau ein physisches Exemplar auf Ebene 3 (Stand 06.05.2025). 
 
     \item An dieser Stelle ist dann womöglich ausreichend Sicherheit darin gefunden, dass die Version von \citeyear{gpje2004}, die aktuelle ist, auf die sich bezogen wird.
 
-    \item Immerhin gibt es überhaupt eine kostenlose online Version und es müssen nicht tausende Menschen, die was mit dem Bildungssystem in Bremen am Hut haben, auf das eine physische Exemplar in der \gls{suub} verwiesen werden (Stand 30.05.2025).    
+    \item Immerhin gibt es überhaupt eine kostenlose online Version und es müssen nicht tausende Menschen, die was mit dem Bildungssystem in Bremen am Hut haben, auf irgendein physisches Exemplar in einer Bibliothek verwiesen werden. % in der \gls{suub} verwiesen werden (Stand 30.05.2025).    
 \end{itemize}
 Einem Bildungssystem dessen Regelungen und Grundlagen nicht hürdenarm, frei und öffentlich zugänglich sind, lassen sich nämlich strukturelle Unzulänglichkeiten im Rahmen einer freiheitlichen Demokratie unterstellen. 
 % Es erschiene fast die Arbeitsbschaffungsmaßnahme des Müllsammelns sinnvoller, als sich durch einen derartigen Dschungel an Recherchearbeit schlagen zu müssen. Wenn es nur auch im Müllsammel-Beispiel nicht sinvoller wäre, die Umgebung so zu gestalten, dass Müll korrekt zu entsorgen niederschwelliger ist und damit eine höhere Wahrscheinlichkeit bekommt, sodass Müllsammeln kaum nötig ist.  
 
-An späterer Stelle in dieser Arbeit (\gls{s} \gls{abs} \ref{media}; \gls{S} \pageref{media}ff.) wird das an dieser Stelle dargelegte Beispiel insofern aufgegriffen, als das erläutert wird, weshalb Medienkompetenz und gute Quellenarbeit für die politischen Handlungskompetenzen sowohl Voraussetzung, Lerninhalt und daher auch Vorbildfunktion darstellen.
+An späterer Stelle in dieser Arbeit (\gls{s} \gls{abs} \ref{media}: \gls{S} \pageref{media}ff.) wird das an dieser Stelle dargelegte Beispiel insofern aufgegriffen, als das erläutert wird, weshalb Medienkompetenz und gute Quellenarbeit für die politischen Handlungskompetenzen sowohl Voraussetzung, Lerninhalt und daher auch Vorbildfunktion darstellen.
 
 \subsection{Kompetenzen in der politischen Bildung}
 Im Bildungsplan wurden diverse Entscheidungen getroffen. Insbesondere das Rahmenwerk, wie Kompetenzen für politische Bildung auszuformulieren sind, war und ist Bestandteil des (wissenschaftlichen) Diskurses. Die historische Entwicklung von politischer Bildung soll an dieser Stelle weitestgehend ausgespart werden.
-Markus Gloe und Tonio Oeftering steigen zwar mit einem Überblick tiefer in die Materie ein \autocite[95-100]{Gloe2020}, aber hangeln sich dann über den \gls{bbk} \autocite[101-103; in dieser Arbeit \gls{s} \gls{abs} \ref{bbk}; \gls{S} \pageref{bbk}]{Gloe2020} zu den heute maßgeblichen Kompetenzen \autocite[104-114]{Gloe2020}. Sie umreißen in ihrem Beitrag einen Diskurs um verschiedene Kompetenzmodelle in der politischen Bildung. Dem Zweck dieser Arbeit entgegenkommend, wird nun daran angelehnt ein Überblick gegeben:
+Markus Gloe und Tonio Oeftering steigen zwar mit einem Überblick tiefer in die Materie ein \autocite[95-100]{Gloe2020}, aber hangeln sich dann über den \gls{bbk} \autocite[101-103; in dieser Arbeit \gls{s} \gls{abs} \ref{bbk}: \gls{S} \pageref{bbk}]{Gloe2020} zu den heute maßgeblichen Kompetenzen \autocite[104-114]{Gloe2020}. Sie umreißen in ihrem Beitrag einen Diskurs um verschiedene Kompetenzmodelle in der politischen Bildung. Dem Zweck dieser Arbeit entgegenkommend, wird nun daran angelehnt ein Überblick gegeben:
 
-Das Modell der \gls{gpje} mit der früheren Veröffentlichung \citeyear{gpje2004} hat den Diskurs geprägt und findet deswegen womöglich auch besondere Erwähnung im Bildungsplan --- weniger des Inhalts wegen, aber der Form wegen \gls{vgl} dazu \gls{abs} \ref{gpje}; \gls{S} \pageref{gpje}.
+Das Modell der \gls{gpje} mit der früheren Veröffentlichung \citeyear{gpje2004} hat den Diskurs geprägt und findet deswegen womöglich auch besondere Erwähnung im Bildungsplan -- weniger des Inhalts wegen, aber der Form wegen \gls{vgl} dazu \gls{abs} \ref{gpje}: \gls{S} \pageref{gpje}.
 % diggi, hier vielleicht deskriptiv Kompetenzen der gpje umreißen
 Jenes macht die drei untereinander vernetzten Kompetenzen \emph{Politische Urteilsfähigkeit}, \emph{Politische Handlungsfähigkeit} und \emph{Methodische Föhigkeiten} aus, welche von \emph{Konzeptuellem Deutungswissen} gerahmt werden:
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{gpje 2004 Kompetenzmodell S. 13.png}
-    \caption{Kompetenzmodell der \gls{gpje} \autocite[übernommen nach][13]{gpje2004}. Genauso auch im Bildungsplan \autocite[10]{bplan} zu finden.}
+    \caption{\enquote{Kompetenzbereiche} der \gls{gpje} \autocite[13]{gpje2004}. Genauso auch im Bildungsplan \autocite[10]{bplan} zu finden.}
     \label{gpjeKompetenzmodell}
 \end{figure}
 
 \textcite[106-107]{Gloe2020} skizzieren weiter, wie zu dieser Zeit auch 
-\enquote{die eher sozialwissenschaftlich geprägte/n Vertreter[*innen] der Fachdidaktik Günter C. Behrmann, Tilman Grammes, Sibylle Reinhardt und Peter Hampe Kernkompetenzen} Kompetenzen der politischen Bildung als fünf \enquote{Demokratie-Kompetenzen} vorschlagen:
+\enquote{die eher sozialwissenschaftlich geprägte/n Vertreter[*innen] der Fachdidaktik Günter C. Behrmann, Tilman Grammes, Sibylle Reinhardt und Peter Hampe Kernkompetenzen} der politischen Bildung als fünf \enquote{Demokratie-Kompetenzen} vorschlagen:
 \begin{itemize}
     \item Wahrnehmung und Übernahme der Handlungsperspektiven Anderer, auch Dritter, zum Wechsel der eigenen Perspektive, zur Vermittlung des Eigeninteresses mit den Interessen Nah- und Fernstehender und dessen Ausweitung in Richtung auf allgemeinere Interessen (Perspektivenübernahme); 
     \item diskursiven Klärung konkurrierender und konfligierender Ideen und Interessen und zum Aushandeln von Konfliktregelungen und -lösungen (Konfliktfähigkeit); 
@@ -340,83 +196,124 @@ Jenes macht die drei untereinander vernetzten Kompetenzen \emph{Politische Urtei
     \item Einschätzung und Bewertung gesellschaftlicher Problemlagen, politischer Forderungen, Handlungschancen und -alternativen sowie zum reflektierten Gebrauch von Urteilskriterien (politische Urteilsfähigkeit); 
     \item Beteiligung an bürgerschaftlicher Selbstverwaltung, sozialen und politischen Initiativen, innerbetrieblicher und -organisatorischer Mitbestimmung, informellen und formalisierten Prozessen öffentlicher Meinungs- und Willensbildung (Partizipationsfähigkeit/demokratische Handlungskompetenz) 
 
-    (\textcite[337 f.]{Behrmann.2004} zitiert nach \textcite[106-107]{Gloe2020})
+    (\textcite[337 f.]{Behrmann.2004} \gls{zit} nach \textcite[106-107]{Gloe2020})
 \end{itemize}
-
-\textcite{weißeno.2010} Ein weiteres Kompetenzmodell kam dann  mit dem \citetitle{weißeno.2010} von  auf.
- 
-\citeyear{weißeno.2010}
-
-
-\begin{figure}[h]
+\citeyear{weißeno.2010} veröffentlichten Georg Weißeno, Joachim Detjen, Ingo Juchler, Peter Massing und Dagmar Richter \citetitle[\emph{Ein Kompetenzmodell}]{weißeno.2010}. Das darin vorgebrachte Kompentenzmodell % (\gls{s} \gls{abb} \ref{2010kompMod}: \gls{S} \pageref{2010kompMod}) 
+sorgte für einen neuen Diskussionsanstoß. 
+\begin{figure}[htb]
     \centering
     \includegraphics[width=1\linewidth]{Weißeno et al. 2010 p.12.png}
-    \caption{Kompetenzmodell nach \autocite[12]{weißeno.2010}}
+    \caption{\enquote{Basis- und Fachkonzepte der Politik} \autocite[12]{weißeno.2010}}
     \label{2010kompMod}
 \end{figure}
+Wie in \gls{abb} \ref{2010kompMod} (\gls{S} \pageref{2010kompMod}) zu sehen, sind 30 Fachkonzepte jeweils drei Basiskonzepten zugeordnet. Es wird Wert darauf gelegt mit Schüler*innen-Vorstellungen zu arbeiten. Im Sinne des Konstruktivismus keine abwegige Vorstelleung.
+An Aussagen wie: \enquote{Für erfolgreiches Lernen gilt, dass die Schüler/-innen mit dem in dieser Darstellung vorgestellten Fachvokabular angemessen umgehen können} \autocite[13]{weißeno.2010} lässt sich jedoch Kritik finden. Für die Messung des Outputs ist Fachvokabular sicherlich hilfreich, aber es ist nicht zwingend notwendige Bedingung, um die Wirkungsmechanismen von Macht zu verstehen oder das Zustandekommen von kollektiv verbindlichen Entscheidungen nachvollziehen und beeinflussen zu können -- was womöglich auch Dimensionen von Kompetenzen der politischen Bildung sind. Entsprechend vielfältiger Möglichkeiten Kritik zu üben, skizzieren \textcite[108-109]{Gloe2020} wie sich Anja Besand, Tilman Grammes, Reinhold Hedtke, Peter Henkenborg, Dirk Lange, Andreas Petrik, Sibylle Reinhardt und Wolfgang Sander zur Autorengruppe Fachdidaktik zusammenschlossen und in ihrem Werk \citetitle{Besand.2011} -- wie der Untertitel \emph{Eine Streitschrift} impliziert -- auch entsprechend Kritik am Modell um \citeauthor{weißeno.2010} üben. 
+Auch die Autorengruppe Fachdidaktik hat der Komplexität der Realität folgend eine wortreiche und zahlreich gegliederte Graphik in ihrer Streitschrift abgebildet -- welche einen schnelleren Überblick auf deren vorgeschlagene Einteilung der Kompetenzen der politischen Bildung in Basis- und Fachkonzepte ermöglicht, auch wenn sie keine strengen Vorgaben zur begrifflichen Einteilung geben möchte (\gls{abb} \ref{2011kompMod}: \gls{S} \pageref{2011kompMod}).
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=1\linewidth]{Autorengruppe p. 170 nach GloeOeftering p. 109.png}
+    \caption{Basis- und Fachkonzepte der politischen Bildung der \\ \textcite[170]{Besand.2011} \gls{zit} nach \textcite[109]{Gloe2020}}
+    \label{2011kompMod}
+\end{figure}
+
+Der entfachte Diskurs (oder die kontinuierliche (Lohn-)Arbeit der Forschenden?) führte zu einer Art Schlagabtausch\footnote{Was veranlasst an dieser Stelle die Nutzung dieses Wortes und der damit verbundenen schriftlichen Tonalität? \Gls{zb} Die schriftliche Tonalität des Beitrages \citetitle{Massing.2011}: \enquote{Auch zu den Vorschlägen der Autorengruppe Fachdidaktik wird hier nichts gesagt, die ein Teil ihrer Kritik nur wiederholt und deren Alternative bestenfalls den Status einer Ideensammlung hat.} \autocite[135]{Massing.2011}.}, fruchtete aber auch in einem überarbeiteten Modell (\gls{abb} \ref{2012kompMod}: \gls{S} \pageref{2012kompMod}).
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=1\linewidth]{Detjen et al. 2012 p. 15.png}
+    \caption{\enquote{Modell der Politikkompetenz} \autocite[15]{Detjen.2012}}
+    \label{2012kompMod}
+\end{figure}
+
+Im Rahmen dieses erneurten Modells, wurde sich weiter abgearbeitet. So führt \textcite[27]{Massing2012} aus, wie \emph{Artikulieren}, \emph{Argumentieren}, \emph{Verhandeln} und \emph{Entscheiden} die \enquote{Komeptenzfacetten} des \emph{kommunikativen-} und \emph{partizipativen politischen Handelns} bilden. 
+Insbesondere für das \emph{partizipative politische Handeln} führt \textcite[27]{Massing2012} aus, dass beim \emph{Verhandeln} Machtpotenziale, Konfliktfähigkeit, ökonomische Ressourcen oder Tausch genutzt werden können um \enquote{Verhandlungsprozesse abzukürzen und zu hierarchisch autoritären oder hierarchisch majoritären Entscheidungen zu gelangen. Diese lassen sich im Unterricht zwar nicht erfahren, sollten aber gewusst werden}. 
+Mit einem kreativeren Ansatz ließe sich zwar überlegen, inwiefern \gls{zb} mit einer interdisziplinären Verstrickung mit Darstellendes Spiel nicht auch ein ausreichend geschützter Rahmen gesschaffen werden kann, in welchem Machtpotenziale durchaus erfahren werden können. Für \emph{Entscheiden} wird jedoch ausgeführt, dass \enquote{Entscheiden durch kooperative oder handlungsorientierte Methoden geübt werden kann}, es aber \enquote{gegenüber der realen Politik unterkomplex} bleibt \autocite[27]{Massing2012}. Diese Kritik bleibt berechtigt und eine ähnlich gelagerte Problemstellung wird in \gls{abs} \ref{fakePartizipation} (\gls{S} \pageref{fakePartizipation}) aufgegriffen. 
+
+
+% Zum Verhandeln gehören neben argumentativen Strategien, die der konsensuellen Entscheidungsfindung dienen, auch Strategien, die durch den Einsatz von Machtpotenzialen, Konfliktfähigkeit, ökonomischen Ressourcen oder Tausch versuchen, Verhandlungsprozesse abzukürzen und zu hierarchisch autoritären oder hierarchisch majoritären Entscheidungen zu gelangen. Diese lassen sich im Unterricht zwar nicht erfahren, sollten aber gewusst werden. Entscheiden als Teil des realen partizipativen politischen Handelns lässt sich im Unterricht nur begrenzt fördern. Auch wenn Entscheiden durch kooperative oder handlungsorientierte Methoden geübt werden kann, bleibt es gegenüber der realen Politik unterkomplex. Allerdings lassen sich an konkreten politischen Fällen, Problemen, Konflikten oder Entscheidungsprozessen unterschiedliche Strategien und ihre Wirksamkeit analysieren, deren Ergebnisse den Lernenden dann als Fachwissen zur Verfügung stehen. 
+
+
+%Die Dimensionen sind dabei nicht isoliert, sondern interagieren miteinander, um ein umfassendes Verständnis und eine effektive Handlungskompetenz in politischen Kontexten zu fördern.
+
+Massing stellt diesen Zusammenhang wie ein beleidigter Frosch nicht her\autocite[23]{Massing.2022}
+
+
+Bei allen Diskursen um die Ausformulierung von Kompetenzen in Worte und zweidimensionale, druckbare Modelle (welche mit Worten wieder das vernetzte, interdependente und quasi dreidimensionale eingebaut bekommen), bleibt mit gewissem Abstand zu erkennen, dass sie sich in weiten Teilen ähneln.
+Die einen \autocite{weißeno.2010} hatten den Fokus auf klare und hilfreiche Strukturen gelegt und sind daher das Wagnis eingegangen, sehr konkrete Begrifflichkeiten zu finden. Um als Lehrkraft oder Schüler*in Orientierung zu bekommen ist das sicherlich hilfreich. Den Anderen \autocite{Besand.2011} war womöglich wichtiger, dass klar wird, dass nicht zwangsweise Fachwissen im Fokus stehen muss, da Zusammenhänge auch ohne die letzten Endes austauschbaren Begriffe verstanden werden können und dieses Versetehen im Vordergrund stehen sollte. 
+
+An welchem Punkt der \gls{bbk} recht deutlich wird und damit auch einen Kern von echter Demokratie trifft, ist die politische Handlungsfähigkeit. In einer pluralistischen Gesellschaft macht es viel Arbeit, wenn alle möglichst gleichen Zugang zu Entscheidungsbeeinflussungen haben sollen. Hilft aber auch dem demokratischen Gedanken. 
+Frank \textcite[466]{Nonnenmacher2010} beginnt einen Abschnitt damit, dass bisweilen handlungsorientiert mit schüler*innen-aktivierend gleichgesetzt wird. Von der Wortbedeutung her ist das sicherlich nicht falsch. Aber schon im \gls{bbk} steht man soll \enquote{die vorgefundene politische Lage nach seinen[/ihren] Interessen [...] beeinflussen} lernen (\gls{vgl} \gls{abs} \ref{bbk}: \gls{S} \pageref{bbk}). \textcite[466-467]{Nonnenmacher2010} führt jedoch aus, dass die Debatte aus den 1970er Jahren eher dazu geführt hätte, dass \enquote{das politische Handeln im engeren Sinne -- assoziiert mit Demonstration, Streik und zivilem Ungehorsam -- von vornherein in den Verdacht gestellt wurde und wird, dem bloßen Aktionismus, also einer entrationalisierten und emotionalisierten Geschäftigkeit Vorschub zu leisten}, was dem \emph{Überwältigungsverbot} widersprechen würde.
+Bissig bemerkt er wie unentschuldigtes Fehlen bei Demonstrationen zum Bildungsnotstand sanktioniert werden soll, aber wenn \enquote{karitative Bemühungen hinter einer \enquote{Aktion} stehen, ist öffentliches Lob zu erwarten, weil ehrenamtliches soziales Engagement in einer Gesellschaft, die gerade auf diesem Gebiet immer mehr Verantwortung in den privaten Bereich verlagern will, hoch willkommen ist} \autocite[467]{Nonnenmacher2010}.
+
+
+Er stellt drei Bedingungen, die eingehalten werden sollten, wenn tatsächliche poltische Aktionen in Zusammenhang mit Schule stattfinden sollten:
+\begin{enumerate}
+    \item Engagement auf \enquote{breiter Wissennsbasis} nach vorhergehender \enquote{Sachanalyse}.
+    \item Absoulute Freiwilligkeit für alle Beteileigten. Demnach auch außerhalb der Unterrichtszeit stattfindend.
+    \item Öffentlichkeit herstellen % $\rightarrow$ Das bedeutet 
+    
+    \autocite[467]{Nonnenmacher2010}
+\end{enumerate}
+
+
+Das mit der sinnvollen Einschränkung der Freiwilligkeit schließt \enquote{echte} poltische Aktionen für das hier untersuchte Material natürlich weitestgehend aus. Aber es ist avon auszugehen, dass es etwas zwischen \enquote{so banale[n] Tätigkeiten wie Lückentexte ausfüllen} \autocite[466]{Nonnenmacher2010} und einer Demonstration mit zivilem Ungehorsam gibt, was Schüler*innen aktivierend ist und auch die Chance bietet politisches Handeln wenigstens zu simulieren. 
+\emph{Simulieren} unter anderem, weil \textcite[467]{Nonnenmacher2010} dazu korrekterweise anmerkt, dass Schule eine \enquote{Zwangsveranstaltung} sei. Er geht darauf ein, wie verschiedene Initiativen sich immer wieder darum bemühen Schule zu einem demokratischeren Raum zu machen \autocite[467-469]{Nonnenmacher2010}, kommt jedoch zu einem ernüchternden Schluss, wie insbesondere folgendes Zitat verdeutlicht:
+\begin{quote}
+    Nichts ist aber an dem Faktum zu ändern, dass diese partizipatorischen Elemente immer nur \enquote{gewährt} werden können; solche Spielräume sind eben wie in allen autoritären Systemen auch jederzeit von den Trägern der Macht wieder zurücknehmbar. 
+
+    \autocite[468]{Nonnenmacher2010}
+\end{quote}
+
+
+\subsubsection[short]{Jonge, ich verliere mich in dem Komeptenzgebumsel; hier noch bla für weiter Schwafeln}
+VIELLEICHT MAL EINE BRÜCKE ZU DEM EMOTIONS-BUMS SCHLAGEN? PASST HIER PRIMA REIN
 
 
 
-Artikulieren Argumentieren Verhandeln Entscheiden - APuZ 46–47/2012 \autocite[27]{Massing2012}
+Ein Politikunterricht, der nicht die politische Handlungsfähigkeit als Ziel hat, bleibt daher hinter seinem Potential zurück.
 
 
 
-Kritik von Autorengruppe Fachdidaktik 2011 Quelle suchen
+Eine Berufsschule ist zwar nicht mehr derart der Schulpflicht unterworfen, wie eine allgemeinbildende, aber die grundsätzlichen Strukturen, um welche es hier geht, sollten vergleichbar sein.
 
-
-
-
-Dann abgewandeltes Modell \autocite[]{Detjen.2012}
-
-
-
-Massing stellt diesen Zusammenhang wie ein beleidigter Frosch nicht her nicht her\autocite[23]{Massing.2022}
-
-
+ \textcite[467-469]{Nonnenmacher2010}
 
 Autorengruppe Fachdidaktik:
 Wolfgang Sander, Sibylle Reinhardt, Andreas Petrik, Dirk Lange, Peter Henkenborg, Reinhold Hedtke, Tilman Grammes, Anja Besand
 \autocite[]{Sander.2016}
 digggaaaaahhh wohin gehört der bums?\autocite[]{Sander.2016}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+ZITAT
+Wolfgang Hilligen hatte in der schon erwähnten Untersuchung von 1955 Zur Auflösung der Fußnote[7] seine didaktischen Grundsätze bereits skizziert und damit zur Formulierung der Hessischen Richtlinien von 1957 beigetragen; seit diesem Jahr gibt es von ihm eines der bekanntesten Schulbücher („Sehen-Beurteilen-Handeln“) für den politischen Unterricht. Seine didaktische Konzeption entstand nicht aus einer vorgängigen wissenschaftlich-systematischen Überlegung, sondern umgekehrt aus den Schwierigkeiten der Unterrichtspraxis selbst, für deren Lösung er nach einer verallgemeinerungsfähigen, d. h. auch für andere Lehrer in gleicher Lage nützlichen Theorie suchte. Weil er diese im Laufe der Zeit immer wieder modifizierte und präzisierte, ist sein Wirken bis in die achtziger Jahre hinein eine wichtige Quelle für das Studium der Schwierigkeiten, die angesichts fortschreitender politischer und wissenschaftlicher Veränderungen mit einem solchen Vorhaben verbunden sind.  (Giesecke 1999, S. 15)
 
-%  Wolfgang Hilligen hatte in der schon erwähnten Untersuchung von 1955 Zur Auflösung der Fußnote[7] seine didaktischen Grundsätze bereits skizziert und damit zur Formulierung der Hessischen Richtlinien von 1957 beigetragen; seit diesem Jahr gibt es von ihm eines der bekanntesten Schulbücher („Sehen-Beurteilen-Handeln“) für den politischen Unterricht. Seine didaktische Konzeption entstand nicht aus einer vorgängigen wissenschaftlich-systematischen Überlegung, sondern umgekehrt aus den Schwierigkeiten der Unterrichtspraxis selbst, für deren Lösung er nach einer verallgemeinerungsfähigen, d. h. auch für andere Lehrer in gleicher Lage nützlichen Theorie suchte. Weil er diese im Laufe der Zeit immer wieder modifizierte und präzisierte, ist sein Wirken bis in die achtziger Jahre hinein eine wichtige Quelle für das Studium der Schwierigkeiten, die angesichts fortschreitender politischer und wissenschaftlicher Veränderungen mit einem solchen Vorhaben verbunden sind.  (Giesecke 1999, S. 15)
-% Literaturverzeichnis
-% Giesecke, Hermann (1999): Entstehung und Krise der Fachdidaktik Politik 1960-1976. In: Aus Politik und Zeitgeschichte (APuZ) (7-8), S. 13–23. Online verfügbar unter https://www.bpb.de/shop/zeitschriften/apuz/archiv/538800/apuz-7-8-1999/, zuletzt geprüft am 28.05.2025.
-„Sehen-Beurteilen-Handeln“ auch schon in den 50er Jahren ein Ding, guck hier \autocite[15]{Giesecke.1999}
+\enquote{Sehen-Beurteilen-Handeln} auch schon in den 50er Jahren ein Ding, guck hier \autocite[15]{Giesecke.1999}
+
+ZITAT
+3. Politisches und pädagogisches Handeln unter liegen unterschiedlichen Strategien und Erfolgskriterien. Das eine ist darauf aus, die Wirklichkeit zu verändern, das andere, sie im Rahmen geplanter Lehr- und Lernarrangements verständlich zu machen. Welche Schlußfolgerungen die Lernen den daraus ziehen, müssen sie selbst entscheiden. Insofern bleibt immer fraglich, ob Lehrziele auch tatsächlich zu Lernzielen werden. Die Didaktik kann von sich aus die Wirklichkeit nicht gestalten, über die sie aufklären will. \autocite[22]{Giesecke.1999}
+
 
 Fischer Prinzip \autocite[]{Grammes.2005}
 
 ZITAT
-Zum Verhandeln gehören neben argumentativen Strategien, die der konsensuellen Entscheidungsfindung dienen, auch Strategien, die durch den Einsatz von Machtpotenzialen, Konfliktfähigkeit, ökonomischen Ressourcen oder Tausch versuchen, Verhandlungsprozesse abzukürzen und zu hierarchisch autoritären oder hierarchisch majoritären Entscheidungen zu gelangen. Diese lassen sich im Unterricht zwar nicht erfahren, sollten aber gewusst werden. Entscheiden als Teil des realen partizipativen politischen Handelns lässt sich im Unterricht nur begrenzt fördern. Auch wenn Entscheiden durch kooperative oder handlungsorientierte Methoden geübt werden kann, bleibt es gegenüber der realen Politik unterkomplex. Allerdings lassen sich an konkreten politischen Fällen, Problemen, Konflikten oder Entscheidungsprozessen unterschiedliche Strategien und ihre Wirksamkeit analysieren, deren Ergebnisse den Lernenden dann als Fachwissen zur Verfügung stehen. (Massing 2012, S. 27)Literaturverzeichnis
-Massing, Peter (2012): Die vier Dimensionen der Politikkompetenz. In: Aus Politik und Zeitgeschichte (APuZ) 62 (46-47), 23-28. Online verfügbar unter https://www.bpb.de/shop/zeitschriften/apuz/148228/politische-bildung/, zuletzt geprüft am 20.05.2025.
+ Zum Verhandeln gehören neben argumentativen Strategien, die der konsensuellen Entscheidungsfindung dienen, auch Strategien, die durch den Einsatz von Machtpotenzialen, Konfliktfähigkeit, ökonomischen Ressourcen oder Tausch versuchen, Verhandlungsprozesse abzukürzen und zu hierarchisch autoritären oder hierarchisch majoritären Entscheidungen zu gelangen. Diese lassen sich im Unterricht zwar nicht erfahren, sollten aber gewusst werden. Entscheiden als Teil des realen partizipativen politischen Handelns lässt sich im Unterricht nur begrenzt fördern. Auch wenn Entscheiden durch kooperative oder handlungsorientierte Methoden geübt werden kann, bleibt es gegenüber der realen Politik unterkomplex. Allerdings lassen sich an konkreten politischen Fällen, Problemen, Konflikten oder Entscheidungsprozessen unterschiedliche Strategien und ihre Wirksamkeit analysieren, deren Ergebnisse den Lernenden dann als Fachwissen zur Verfügung stehen. (Massing 2012, S. 27)
 
-% bin bei gloe2020 s. 116 pdf118
+JOOONGE, DAS IST AUCH BEI KAPITEL RELFEXION
 
+bin bei gloe2020 s. 116 pdf118
+
+% \subsubsection{Brudi, SOLL DAS VIELLEICHT NOCH IN DAS ELLENLANGE KOMPETENZKAPITEL? KA MAN}
+% Massing meint Verhandeln mit Macht kann nicht erfahren werden. Was ist mit DSP diggi. \autocite[27]{Massing2012}
+% Gefunden nach \autocite[111]{Gloe2020}
+% \enquote{Die Strategien des Verhandelns, neben Argumentationsstrategien z. B. auch der Einsatz von Machtpotenzialen u. Ä., können in Lernprozessen »nicht erfahren, sollten aber gewusst werden« (Massing 2012: 27). Ebenso lässt sich die Kompetenzfacette Entscheiden nur begrenzt in Lernprozessen fördern: »Auch wenn Entscheiden durch kooperative oder handlungsorientierte Methoden geübt werden kann, bleibt es gegenüber der realen Politik unterkomplex« (ebd.).}
 
 ZITAT
-Das Leitmotiv einer Pädagogik der Lernhilfe hat sicher den Vorteil einer pragmatischen Sicht auf den Lehrerberuf. Problematisch an dem Modell ist allerdings, dass es die Schule von den sozialen Problemen von Schülerinnen und Schülern in der heutigen Gesellschaft entkoppelt (Böhnisch/Schroer 2011). (Sander et al. 2016, S. 51)Literaturverzeichnis
-Sander, Wolfgang; Reinhardt, Sibylle; Petrik, Andreas; Lange, Dirk; Henkenborg, Peter; Hedtke, Reinhold et al. (2016): Was ist gute politische Bildung? Leitfaden für den sozialwissenschaftlichen Unterricht. Schwalbach/Ts.: Wochenschau Verlag (Wochenschau Politik).
-\autocite[]{Sander.2016}
-
-
+Das Leitmotiv einer Pädagogik der Lernhilfe hat sicher den Vorteil einer pragmatischen Sicht auf den Lehrerberuf. Problematisch an dem Modell ist allerdings, dass es die Schule von den sozialen Problemen von Schülerinnen und Schülern in der heutigen Gesellschaft entkoppelt (Böhnisch/Schroer 2011). \autocite[51]{Sander.2016}
 
 Kompetenzen können kritisiert werden, es gibt Ähnlichkeiten. \enquote{Sie leisten die Verbindung zwischen den jeweiligen Bildungszielen der Fächer und den Aufgabenstellungen des Unterrichts (Detjen et al. 2012, S. 20)} \autocite[18]{Massing.2022}
 
-
 Ähnlich vernichtend wie \textcite[][]{Roler2016} den Beutelsbacher Konsens auseinanderbastelt, ließe sich der nur bemüht als praxisnah zu empfindenden Debatte um Kompetenzen gegenüberstehen. Allerdings 
-
-
-
-\subsection{Beutelsbacher Konsens} \label{bbk}% Beeinflussung durch Material.
-Da insbesondere durch die Schulpflicht \autocite{BremSchulG} die schulische (politische) Bildung mit Zwang verbunden ist, liegt es nahe, dass versucht wird, diese durch Regeln, trotz des Zwanges, mit freiheitlichen, demokratischen Grundwerten zu vereinbaren. 
-
-Ein wichtiges historisches Dokument im Rahmen derartiger Fragestellungen ist der \gls{bbk} \autocites[29]{Gesner2016}{Wehling1977}. So wichtig, dass auch über den deutschen Raum hinaus auf den \gls{bbk} Bezug genommen wird. So wurde jüngst im Rahmen der Aktionstage Politische Bildung vom 23. April bis 9. Mai 2024 in Österreich formuliert, dass der \gls{bbk} \enquote{[v]on internationaler Bedeutung [...] ist [...]. \autocite{bbkÖsterreich2023}}. Entsprechend leitet auch der Bremer Bildungsplan zentrale Kompetenzen aus dem \gls{bbk} ab und gibt ihn \enquote{im Wortlaut} wieder \autocite[11-12]{bplan}. 
-
-
 
 \subsection{Bildungsplan für berufsbildende Schulen oder allgemeine politische Bildung mit Zielgruppenorientierung?}
 % Politik an berufsbildenden Schulen in Bremen wird neben Deutsch als einziges Fach für alle Fachrichtungen berufsübergreifend unterrichtet. 
@@ -425,16 +322,13 @@ Der Bremer Bildungsplan für Politik in der Berufsbildung ist mit der Veröffent
 Mit der Arbeitnehmerkammer Bremen wird sich außerdem auf einen lokalen Akteur bezogen, welcher voraussichtlich auch für einen Großteil der Bremer Schüler:innen an allgemeinbildenden Schulen relevant werden könnte. 
 Zumal die politische Bildung an Berufsschulen sich explizit nicht auf den beruflichen Bereich beschränken soll, sondern gesamtgesellschaftliche Zusammenhänge zum Thema hat. Genau wie an allgemeinbildenden Schulen und bei politischer Bildung im Allgemeinen.
 
-
 % Politische Bildung ist (oder sollte) in zahlreichen Lebensbereichen verortet (sein). Daher sei auf das Offensichtliche hingewiesen. Es handelt sich hier um Unterrichtsmaterial, welches für die staatlich institutionalisierte Bildung eingesetzt werden soll. 
 % Dieses Bildungsmaterial soll jedoch mit einem anderen staatlichen Akteur herausgegeben werden. 
-
 
 Wie werden Demokratiekompetenzen gefördert? Wird Wissen über Demokratiekompetenzen gefördert oder gar direkt demokratisches oder eben undemokratisches Handeln erprobt und reflektiert?
 
 
-
-\subsection{Sozioökonomische Bildung, politische Bildung und interdisziplinäres Begriffs Wirrwarr} \label{polBildung}
+\subsection{Sozioökonomische Bildung, politische Bildung und interdisziplinäres Begriffs Wirrwarr \label{polBildung}}
 
 Politische Bildung % im Kontext staatlicher Bildungsakteure 
 ist im Schulkontext häufig nicht nur im Fach Politik, Sozial- oder Gemeinschaftskunde verortet, sondern auch häufig in Fächern mit Bezeichnungen, in denen \enquote{Politik} gleichbedeutend neben \enquote{Wirtschaft} genannt wird. 
@@ -451,41 +345,25 @@ Da die Trennschärfe solcher Begriffe Gefahr läuft, eine philosophische und lin
 % Der Begriff Politik Wirtschaft ist dabei 
 
 
-Gesellschaft und Kultur beeinflussen Wirtschaft.
-
-
+Als Tatsache kann angesehen werden, dass sich Gesellschaft und Kultur mit Wirtschaft wechselseitig beeinflussen. 
 
 
 \subsection{Arbeitnehmerkammer Bremen (ANK)}
 Im Gesetz über die Arbeitnehmerkammer im Lande Bremen \autocite[]{ArbnkG} ist festgesetzt, dass nach der Beitragsordnung \autocite[]{ArbnkB} Beiträge nahezu aller Arbeitnehmenden\footnote{ 
-Auf der Lohnabrechnung für einen Minijob taucht \gls{zb} kein Abzug für die \gls{ank} auf. Dies orientiert sich an der Geringfügigkeitsgrenze, welche für 2025 556€ beträgt \autocites{b.gering}{banz.gering}.
-}
-in Bremen zu erheben sind. Systemisch ähnlich zu Steuerzahlungen ist die Mitgliedschaft in der Kammer daher mit Zwangsbeiträgen verbunden. 
+Auf der Lohnabrechnung für einen Minijob taucht \gls{zb} kein Abzug für die \gls{ank} auf. Dies orientiert sich an der Geringfügigkeitsgrenze, welche für 2025 556€ beträgt \autocites{b.gering}{banz.gering}.} in Bremen zu erheben sind. Systemisch ähnlich zu Steuerzahlungen ist die Mitgliedschaft in der Kammer daher mit Zwangsbeiträgen verbunden. 
 
 Im Gesetz zur \gls{ank} ist in \S2(1) \autocite[1]{ArbnkG} zu den Aufgaben der Kammer unter anderem formuliert: \enquote{Maßnahmen zur Förderung und Durchführung der beruflichen sowie der allgemeinen und politischen Weiterbildung der Kammerzugehörigen zu treffen}.
+
 
 Da die \gls{ank}, wie der Name schon vermittelt, durchaus partikulare Interessen der Arbeitnehmer*innen vertritt, 
 
 
-\subsection{Unterrichtsmaterial}
-Der Begriff Unterrichtsmaterial soll in etwa synonym zur Definition auf der Website der \textcite{KMKMittel} für Lehr- und Lernmittel verwendet werden: 
-Es gibt eine Lernmittelfreiheit \autocite[]{KMKMittel}.
-Welches Unterrichtsmaterial am Ende auch in Kontakt mit den Schüler*innen kommt, liegt hauptsächlich in den Händen der Lehrer*innen.
-Die Lehrkräfte selbst sind bei der Auswahl des Materials jedoch zahlreichen Zwängen ausgesetzt:
-\begin{itemize}
-    \item Zeitliche Zwänge: Der Tag hat nur 24 Stunden und Menschen sind Tiere mit zahlreichen Bedürfnissen. Diese zu erfüllen ist Voraussetzung für eine gute Arbeitsleistung, nimmt jedoch, genau wie Arbeit selbst, Zeit in Anspruch. 
-    \item Finanzielle Zwänge: Schulen stehen begrenzte Budgets zur Verfügung, z.B. sind Schulbücher häufig nicht die \enquote{besten} und aktuellsten am Markt und Exkursionen müssen für alle bezahlbar sein. 
-    \item Bereits am Markt existierendes Material ist entweder kostspielig und/oder unterliegt nur unzureichenden Qualitätskontrollen. Die Prüfung und Umgestaltung, um im Unterricht eingesetzt werden zu können, nimmt wiederum viel Zeit in Anspruch. 
-\end{itemize}
 
-Unterrichtsmaterial wird häufig aus dem Internet bezogen \autocite[82]{Neumann2015}. % zitiert nach \autocite[66]{Hedtke2016}
+\subsection{Medienkompetenz und die unbedingte Verknüpfung zu \enquote{Wahrheit} \label{media}} 
 
+\subsection{\enquote{Wahrheit}, \enquote{Wahrhaftigkeit} und \enquote{Richtigkeit} \label{wahr}}
 
-
-
-\subsection{\enquote{Wahrheit}, \enquote{Wahrhaftigkeit} und \enquote{Richtigkeit}} \label{wahr}
-
-Für die Argumentation im Abschnitt der Medienkompetenz (\gls{abs} \ref{media}, \gls{S} \pageref{media}) ist eine Begriffsdefinition der drei Begriffe aus der Überschrift hilfreich. Da diverse Kompetenzmodelle der politischen Bildung auch die politische Handlungsfähigkeit als Ziel attestieren und zu dieser auch Meinungsbildung gehört -- ist es praktisch, dass diese Begriffe im Rahmen eines Kommentars zu dem Begriff Meinung dargestellt werden\footnote{Der folgende Abschnitt ist übernommen aus einer Hausarbeit von \textcite[4]{Klein2022}}:
+Für die Argumentation im Abschnitt der Medienkompetenz (\gls{abs} \ref{media}: \gls{S} \pageref{media}) ist eine Begriffsdefinition der drei Begriffe aus der Überschrift hilfreich. Da diverse Kompetenzmodelle der politischen Bildung auch die politische Handlungsfähigkeit als Ziel attestieren und zu dieser auch Meinungsbildung und -durchsetzung gehört, ist es praktisch, dass diese Begriffe im Rahmen eines Kommentars zu dem Begriff Meinung dargestellt werden\footnote{Der folgende Abschnitt ist übernommen aus einer Hausarbeit von \textcite[4]{Klein2022}}:
 
 In dem Essay \enquote{Bloße Meinung} beobachtet Frank \textcite[]{Nullmeier2019} kritisch, wie als Reaktion auf Desinformation eine absolute Wissenschaftlichkeit gefordert wird, welche die Meinung mit einem Anspruch auf Wahrheit \enquote{auf die Seite des zu Verwerfenden} \autocite{Nullmeier2019} stellt.  Weiterhin bezieht Nullmeier sich auf drei Begriffe für Wahrheit:
 \begin{enumerate}
@@ -497,9 +375,6 @@ In dem Essay \enquote{Bloße Meinung} beobachtet Frank \textcite[]{Nullmeier2019
 Er führt aus, dass Meinung in demokratischen, politischen Entscheidungsprozessen von einer immanenten Wichtigkeit ist. Entsprechend wichtig sollte die Meinung daher auch im Politikunterricht sein.
 
 
-
-
-\subsection{Medienkompetenz und die unbedingte Verknüpfung zu \enquote{Wahrheit}}\label{media} 
 Medienkompetenz sollte in allen Fächern der Schule grundsätzlich, aber aufgrund der großen Schnittmenge insbesondere im Politikunterricht mitgedacht und mitgemacht werden. 
 Noch konkreter argumentiert: Medienkompetenz ist lediglich ein bestimmte Bereiche betonender Begriff für integrale Lerngegenstände von politischer Bildung. Diese Lerngegenstände ergeben sich aus der Zielsetzung der geforderten Kompetenzen. Eine konkrete und praktische Umsetzung von Medienkompetenz kann dabei in Quellenarbeit und Zitation gesehen werden.
  
@@ -594,7 +469,7 @@ Dass Emotionen gerade in Zusammenhang mit Politik bisweilen einen faden Beigesch
 
 
 
-\subsection{Veröffentlichungsreichweite, Auffindbarkeit, Preis, Einsetzungsreichweite} \label{öffi}
+\subsection{Veröffentlichungsreichweite, Auffindbarkeit, Preis, Einsetzungsreichweite \label{öffi}}
 
 Es darf davon geträumt werden, Unterrichtsmaterial, welches durch öffentliche oder fast öffentliche Gelder finanziert wurde, auch der Öffentlichkeit zugänglich ist.
 
@@ -615,7 +490,7 @@ Daher wäre es kontraindiziert, Unterrichtsmaterial nach starren Vorgaben zu bew
 Dennoch soll eingegrenzt werden, nach welchen Maßstäben Unterrichtsmaterial bewertet werden könnte. Offen bedeutet nicht beliebig.
 
 Die erste Anlaufstelle dafür ist der Bildungsplan selbst. In Anlehnung an die Gliederung des Bildungsplans kann das Unterrichtsmaterial anhand folgender Punkte untersucht werden:
-\begin{itemize}
+\begin{itemize} 
     \item Kompetenzen jeweils der beruflichen \& politischen Bildung
     \item Lebensweltorientierungen % Modell der didaktischen Rekonstruktion
     \begin{itemize}
@@ -673,8 +548,8 @@ Fragen, die darüber hinaus und ergänzend an das Material gestellt werden solle
     \item Wo findet eine Binnendifferenzierung statt; sowohl im Inhalt als auch den Methoden? Ist die Wahl der Methoden aus der Didaktik zu begründen? Welche alternative Methoden wären möglich gewesen? Werden unterschiedliche Methoden für unterschiedliche Lerngruppen Angeboten?
     \item Handhabbarkeit, Anwendbarkeit, praktisches, pragmatisch. Handwerkliche Betrachtung
     \item Umfang, Zeitvorgaben, zur Verfügung Stellung realistisch?
-    \item Unwahrscheinlich: Aber, ist das Material Alterdgruppen geeignet oder gar übergriffig?
-    \item Welche Beeinflussungen sind zu erkennen? Lassen sich diese legitimieren?
+    \item Unwahrscheinlich: Aber, ist das Material Altersgruppen geeignet oder gar übergriffig?
+    \item Welche Beeinflussungen sind zu erkennen? Lassen die sich diese legitimieren?
 \end{itemize}
 Darüber hinaus soll untersucht werden, inwieweit sich Intentionen der Arbeitnehmerkammer Bremen im Material finden lassen und ob die Beeinflussungen des Akteurs sich in einem Rahmen bewegen, welcher der Intention des \gls{bbk} nicht entgegensteht. \#Kontroversitätsgebot 
 
@@ -685,7 +560,38 @@ Der Bildungsplan \autocite{bplan} in Politik für duale Studiengänge im Land Br
 Wie zu Kapitelanfang angedeutet ist der Bildungsplan vergleichsweise offen formuliert, ohne detaillierte Vorgaben zu machen. Angesichts der überbordenden Themenauswahl und interdisziplinären Verstrickung eines Faches wie Politik eine konsequente Entscheidung, die im Bildungsplan selbst argumentativ legitimiert wird \autocite[diggah, welche Seite habe ich das gelesen]{bplan}. Reinhold \textcite[17-18]{Hedtke2016} kritisiert für den Wirtschaftsunterricht den fehlenden Bezug auf die Fachwissenschaften sowie auch eine fehlende Berücksichtigung der zahlreichen Interdependenzen zu benachbarten Fachwissenschaften. 
 
 
-\subsection{Poltische Bildung in der Fachliteratur -- Ein Auszug}
+\subsubsection{MUSS WOANDERS HIN}
+AAAAnderes Kapitel
+Es wird keine Begründung zur didaktischen Auswahl der Themen mitgeliefert. Damit einhergehend wird auch eine didaktische Reduktion nicht begründet. In der Schulpraxis ist das in explizit schriflticher Form sicherlich auch nicht üblich. In der Ausbildung von Lehrkräften ist genau das jedoch gefordert und es wird implizit erwartet, dass auch später stets eine solide Begründung geliefert werden könnte.
+Das Material hat die Intention hat verbreitet und genutzt zu werden. Daher wäre es durchaus eine Überlegung wert, inwieweit es die Legitimation  erhöhen könnte, noch tiefer in die Entscheidungsbegründung einzustiegen.
+
+\subsubsection{MUSS AUCH WOANDERS HIN}
+Strukturelle Ähnichkeiten fallen zu dem im Bildungsplan geforderten Verständnis der Möglichkeiten und Grenzen des Föderalismus und folgenden Überlegungen zu Unterrichtsmaterial grundsätzlich auf.
+In einem vorstellbaren Ideal, wird eine offene Plattform für die Bereitstelleung von Unterrichtsmaterial bereitgestellt.
+Diese sollte mehrere Voraussetzungen erfüllen:
+\begin{itemize}
+    \item offen in Form von kostenfrei, öffentlich \gls{vgl} \gls{abs} \ref{lizenz}: \gls{S} \pageref{lizenz}f
+    \item Das würde bedeuten, es sollte gepusht werden, dass das Ding bestenfalls weltweit -- aber um der Egozentrik der politics Sphäre gerecht zu werden vielleicht erstmal als europaweit beworben -- genutzt wird und nicht jedes Bundesland rumknausert und die gleiche Software $\geq$ 16 mal in Auftrag gibt.
+    \item Das aus öffentlichen Geldern finanzierte Ding würde damit auch der Öffentlichkeit gehören und es würden nicht hauptsächlich privatwirtschaftliche Akteure davon profitieren, die die Rechte an ihrem schlechten Produkt halten, bei welchem auch niemand eine realistische Chance hätte es zu verbessen.
+    \item Daraus folt $\rightarrow$ Die Plattform sollte als veränderbar angelegt sein.
+    \item Das Material sollte von allen veränderbar sein. Was explizit nicht heißen muss, dass jede schlechte oder gar destruktive Änderung gesichtet oder gar übernommen werden muss.
+    (Womöglich ist hier such etwas in Richtung Klarnamen-Registrierungszwang angebracht. Hier sollte sich viel aus der Softwareentwicklung abgeschaut werden. Da steckt die Expertise)
+    \item Es sollte einen Versionverlauf haben.
+    \item Abstimmungsmöglichkeiten sollten gegeben sein. Dann hat man als womöglich staatlich veratnwortliche Person einen Überblick, was ein Ausschnitt der Öffentlichkeit zu dem Ding denkt.
+    \item Im besten Falle verschieden filterbare Bewertungsskalen. \Gls{zb} nach Lehrkräfte, Schüler*innen, andere Externe, Herkunftsorte, Alter etc.
+    \item 
+    \item Überraschung, ich habe extra \emph{Ding} geschrieben. Weil das ziemlich ersetzbar für viele (informationslastige) Produkte ist, welche mit öffentlichen Ressourcen realisiert werden.
+    \item diggah, als ob, ich habe kein bock mehr. es wird eh schlimmer anstatt besser
+\end{itemize}
+
+
+Programmierende Freunde von mir scherzen über \emph{pull requests} über \enquote{git} für eine Möglichkeit moderne, digitale Möglichkeiten für direktere Formen der Demokratie nutzen zu können.
+
+
+
+
+
+\subsection{Politische Bildung in der Fachliteratur -- Ein Auszug}
 Im Bremer Schulsystem werden in der Mittelstufe klassische Schulfächer wie Chemie, Physik und Biologie gemeinsam im Fach \gls{nw} \autocite{vogel2010nw} oder im sozialwissenschaftlichen Bereich wurden Geschichte, Politik und Geographie zu meiner Zeit an der Gesamtschule als \gls{wuk} \autocite{vogel2006gs} oder heutzutage an Oberschulen als \gls{gp} \autocite{vogel2010gp} unterrichtet.
 % GEHT DIE ICH FORM??
 ->
@@ -701,10 +607,40 @@ Die \gls{bpb} hat den Sammelband veröffentlicht.
 
 
 
-\section{Analyse}
-Obgleich im Bildungsplan explizit formuliert ist, dass durch inhaltliche Offenheit \enquote{der Einsicht entsprochen [wird], dass eine konsensfähige Festlegung relevanter, zeitloser Inhalte weder fachwissenschaftlich noch fachdidaktisch begründbar ist} \autocite[15]{bplan}, wird verlangt, vier der sieben \enquote{politischen Handlungsfelder}, darunter \enquote{Demokratie}, zu bearbeiten. 
+\section{Analyse der Unterrichtsvorschläge}
+\subparagraph{Hinweis}
+Das Material befindet sich in der Entwicklung ist und noch nicht veröffentlicht. Es unterliegt daher noch zahlreichen Veränderungsoptionen. 
+Ein besipelhaftes Layout der Materialkarten ist im Appendix auf \acrlong{S} \pageref{ANKPrototyp} zu sehen. Dahinter folgen die Entwürfe zu den Unterrichtsvorschlägen.
+Es wird das Material zu den drei Themenfeldern \emph{Demokratie} (\gls{S} \pageref{DEMOKRATIE}), \emph{Arbeitsleben} (\gls{S} \pageref{ARBEITSLEBEN}) und \emph{Wirtschaftspolitik} (\gls{S} \pageref{WIRTSCHAFTSPOLITIK}) untersucht. \\
 
-Das Material der \gls{ank} ist den im Bildungsplan vorgegebenen \enquote{politischen Handlungsfeldern} \autocite[15]{bplan} zugeordnet und erleichtert durch diese Vermeidung unnötiger Kompliziertheit eine Zuordnung und Einbettung in eine den Bildungsvorgaben entsprechende Grobplanung des Unterrichts.
+
+Das Material der \gls{ank} ist direkt den sieben im Bildungsplan vorgegebenen \enquote{politischen Handlungsfeldern} \autocite[3, 15]{bplan} zugeordnet.
+Obgleich im Bildungsplan explizit formuliert ist, dass durch inhaltliche Offenheit \enquote{der Einsicht entsprochen [wird], dass eine konsensfähige Festlegung relevanter, zeitloser Inhalte weder fachwissenschaftlich noch fachdidaktisch begründbar ist} \autocite[15]{bplan}, wird verlangt, vier der sieben \enquote{politischen Handlungsfelder}, darunter \enquote{Demokratie} als \enquote{verpflichtend}, zu bearbeiten.
+
+Die Unterrichtsvorschläge folgen einem einheitlichen Aufbau. Zur Orientierung in dieser Arbeit wird in der Regel das \enquote{Themenfeld} genannt, das den \enquote{politischen Handlungsfeldern} aus dem Bildungsplan direkt entspricht. 
+Die einzelnen Materialkarten sind in der Form \emph{Themenfeld A\#} angegeben. 
+Der Buchstabe kennzeichnet dabei ein Thema innerhalb des Handlungsfeldes/Themenfeldes.
+Die Nummerierung ergibt sich in der Regel aus den Phasen \emph{Einstieg}, \emph{Erarbeitung} und \emph{Auswertung/Übertrag}, welche die Materialien eines Themas in zumeist drei mögliche Unterrichtszeiteinheiten aufteilen. So gibt es zu \enquote{Arbeitsleben} die drei Themen A, B und C mit je zwei bis drei Unterrichtszeiteinheiten.
+Zu jeder Unterrichtszeiteinheit gibt es eine Leitfrage, welche sich innerhalb der Phasen ändern kann, aber nicht muss. 
+
+Die Kompetenzen, die im Material mitaufgeführt sind, finden sich ebenfalls genauso im Bildungsplan und teilen sozusagen das Themenfeld nur genauer ein. Sie bleiben genau wie der als \enquote{Gegenstand der Auseinandersetzung} bezeichnete Überblickstext über die oben angegeben Phasen gleich (also für einen Buchstaben über alle Nummern hinweg). 
+
+
+
+Wer mit dem Blick eines Lehrer*innen Klischees auf die direkte Übernahme der Struktur des Bildungsplans auf das Material schaut, könnte sich (wenn womöglich auch unterbewusst) fragen, was das Abschreiben soll und ob da nicht eine präzisere Einteilung sein müsste.
+Das Zuordnen in die \enquote{politischen Handlungsfelder} und die feinere Verknüpfung mit den Kompetenzen des Bildungsplans erleichtert durch die Vermeidung unnötiger Kompliziertheit jedoch eine Einbettung in eine den Bildungsvorgaben entsprechende Grobplanung des Unterrichts, die ohnehin erwartet werden kann.
+
+% Die Kompetenzen in Kompetenzbereiche einzuordnen, ist sicherlich sinnvoll, um einen Überblick zu haben, innerhalb welches Kompetenzbereiches exemplarisch gefördert wird und wo im Bildungsplan man bereits geübt hat und welche anderen Kompetenzen daher in Zukunft womöglich eher Aufmerksamkeit bedarfen. 
+
+
+% Eine präzisere Ausdifferenzierung wird in diesem Material dann nicht über eine angepasste Kompentenzformulierung erreicht, sondern über das ausformulierte Thema und die Leitfragen gewährleistet.
+
+Da für eine einzelne Unterrichtseinheit jedoch kaum in Anspruch genommen werden kann, einen Kompetenzbereich hinreichend abzudecken -- auch exemplarisch, denn wie stets ist es ausgeschlossen, nicht exemplarisch zu lernen  -- wäre es womöglich ergänzend sinnvoll, noch konkreter anzugeben, welche exakten Kompetenzen erworben werden.
+In dem Fall der Materialkarten geschieht dies nun nicht über eine konkretere Ausdifferenzierung der Kompetenzen, sondern über die \enquote{Leitfrage}, das \enquote{Thema} und die \enquote{Keywords}. 
+
+
+\subsubsection{Operationalisiete Arbeitsaufträge}
+In den Aufgabenstellungen der Materialkarten wird in der Regel mit Operatoren gearbeitet. Der Bildungsplan für Politik an Berufsschulen selbst hat zwar keine Liste der Operatoren \autocite{bplan}. Aber es ist üblich in der schulischen, politischen Bildung mit Operatoren zu arbeiten. Die \textcite[14-18]{KMK.2005} gibt für Abiturprüfungen in Politik an, welche Operationalisierungen durch ihren Imperativ die jeweilige Schüler*innenaktivität hervorbringen sollen und kategorisiert diese in drei Anforderungsbereiche. Im Bildungsplan für Politik an Gymnasien in Bremen sind die Vorgaben der \gls{kmk} entsprechend mit einer Operatorenliste umgesetzt \autocite[13-14]{lower2008}.
 
 
 \subsection{Demokratie}
@@ -713,37 +649,117 @@ Für den Bereich Demokratie sind zwei Themen angeboten:
     \item Demokratie A: \enquote{Föderalismus und Arbeitsschutz – Welche Chancen und Risiken bringt das Mehrebenensystem der BRD für die Sicherheit und Gesundheit am Arbeitsplatz mit sich?}
     \item Demokratie B: \enquote{Wahlen – von welchem Teil des Volkes geht eigentlich die Staatsgewalt aus?}
 \end{enumerate}
-Für beide Bereiche sind je drei Karten mit jeweils ausdifferenzierten Leitfragen vorhanden. Die drei Karten sind in der Struktur
-\enquote{Einstieg},
-\enquote{Erarbeitung} und
-\enquote{Auswertung/Übertrag} 
-bezeichnet. 
+% Für beide Bereiche sind je drei Karten mit jeweils ausdifferenzierten Leitfragen vorhanden. Die drei Karten sind in der Struktur 
+% \enquote{Einstieg},
+% \enquote{Erarbeitung} und
+% \enquote{Auswertung/Übertrag} 
+% bezeichnet. 
+
+
 
 
 \subsubsection{Demokratie A - \enquote{Föderalismus und Arbeitsschutz – Welche Chancen und Risiken bringt das Mehrebenensystem der BRD für die Sicherheit und Gesundheit am Arbeitsplatz mit sich?}}
-Am Beispiel des Themenbereiches \enquote{Demokratie A} (A1 bis A3) wird als Kompetenzbereich 
-\blockquote{Die Schüler:innen sind in der Lage das Wesen der Demokratie, die Strukturen und Organisationen des politischen Systems sowie die Mechanismen politischer Willensbildung einzuordnen und zu beurteilen.}
-angegeben. Diese Formulierung ist direkt aus dem Bildungsplan übernommen \autocite[][16]{bplan}.
 
-Die Kompetenzen in Kompetenzbereiche einzuordnen, ist sicherlich sinnvoll, um einen Überblick zu haben, innerhalb welches Kompetenzbereiches exemplarisch gefördert wird und wo im Bildungsplan man bereits geübt hat und welche anderen Kompetenzen daher in Zukunft womöglich eher Aufmerksamkeit bedarfen. 
-Denn wie stets ist es ausgeschlossen, nicht exemplarisch zu lernen. 
+Für den Themenbereich \enquote{Demokratie A} (A1 bis A3) wird als Kompetenzbereich angegeben:
+\begin{quote}
+    Die Schüler:innen sind in der Lage das Wesen der Demokratie, die Strukturen und Organisationen des politischen Systems sowie die Mechanismen politischer Willensbildung einzuordnen und zu beurteilen.
+    
+    \autocite[im Bildungsplan:][16]{bplan}
+\end{quote}
 
-Da für eine einzelne Unterrichtseinheit jedoch kaum in Anspruch genommen werden kann, einen Kompetenzbereich hinreichend -- auch exemplarisch -- abzudecken, wäre es sinnvoll, noch konkreter anzugeben, welche exemplarischen Kompetenzen erworben werden.
-In dem Fall der Materialkarten geschieht dies nicht über eine konkretere Ausdifferenzierung der Kompetenzen, sondern über die \enquote{Leitfrage}, das \enquote{Thema} und die \enquote{Keywords}. 
-
-Unter den drei Karten für \enquote{Demokratie A} grenzt das Thema: \enquote{Föderalismus und Arbeitsschutz – Welche Chancen und Risken bringt das Mehrebenensystem der BRD für die Sicherheit und Gesundheit am Arbeitsplatz mit sich?} konkreter ein, was durch das folgende Material und die Aufgaben an Kompetenzen vermittelt werden soll. 
+% Unter den drei Karten für \enquote{Demokratie A} grenzt das Thema: \enquote{Föderalismus und Arbeitsschutz – Welche Chancen und Risken bringt das Mehrebenensystem der BRD für die Sicherheit und Gesundheit am Arbeitsplatz mit sich?} konkreter ein, was durch das folgende Material und die Aufgaben an Kompetenzen vermittelt werden soll. 
 Die Leitfragen
 \begin{enumerate}
     \item Demokratie A1: \enquote{Welche Erfahrungen mit Arbeitsschutz habt ihr bisher gemacht?}
     \item Demokratie A2: \enquote{Wer kümmert sich um den Arbeitsschutz?}
-    \item Demokratie A3 \enquote{Pro und Contra Föderalismus oder warum ist das Teilen von Macht ein Strukturprinzip demokratischer Herrschaft?}
+    \item Demokratie A3: \enquote{Pro und Contra Föderalismus oder warum ist das Teilen von Macht ein Strukturprinzip demokratischer Herrschaft?}
 \end{enumerate}
 teilen das Thema dabei in die drei Karten auf.
+
+VIELLEICHT ALLGEMEIN ÜBER BESCHISSENEN VERSIONSVERLAUF VON GESETZEN REDEN?
+
+Gesetze unterliegen zahlreichen Änderungen. In aller Regel werden beschlossene Änderungen von Bundesgetzen in einem \gls{bgbl} veröffentlicht  
+
+% HIERRRRRRR FEHLER.TEX EINFÜGEN
+
+Beim \gls{bmas} findet sich tatsächlich eine nette Übersicht vom \enquote{Referenzentwurf} über den \enquote{Kabinettsbeschluss} bis zum \enquote{Abschluss des Gesetzes}.
+Alle Schriftstücke sind, wie es sein sollte, verlinkt. Der Referenzentwurf vom \gls{bmas} ist dabei einfach brav als PDF anzutreffen \autocite{BMAS-21.07.2020}. 
+Die Drucksache des Bundestages hingegen ist kopiergeschützt, wtf \autocite{Bundestag.31.08.2020}?
+Das Bundesgesetzblatt ist zwar ein eher nur maschinenlesbarer Link, aber hat immerhin einen netten Viewer mit ziemlich guter Suchfunktion integriert und ist damit nicht kopiergeschützt \autocite{BGBl.2020-I-Nr67}. 
+
+Gesetze sind komplex und kompliziert. Umso wichtiger mag es erscheinen, in Material, welches für die Verbreitung gedacht ist, nicht auf Korrektheit zu verzichten -- auch nicht im Tausch gegen Verständlichkeit.
+
+\paragraph{Demokratie A1 Einstieg: \enquote{Welche Erfahrungen mit Arbeitsschutz habt ihr bisher gemacht?}}
+
+
+Der Einführungstext stellt mehrere Daten dar, ohne diese weiter zu belegen.
+Die angesprochenen Gestze sind immerhin noch eindeutig zu identifizieren. Das Grundgesetz ist als \enquote{(GG Art. 83/84) ($\rightarrow$ Grundgesetz; $\rightarrow$ Föderalismus)} aufgenommen und schon ohne die \enquote{Keywords} gut aufzufinden. Wobei auch hier ein Bezug auf die Version angebracht wäre. Auch das Grundgesetz wird immer mal wieder geändert.  
+
+Weiter wird ein Gesetz in folgender Form genannt: 
+\begin{quote}
+    Das 2021 erlassene Bundesgesetz \enquote{Durchführung von Maßnahmen des Arbeitsschutzes zur  Verbesserung der Sicherheit und des Gesundheitsschutzes der Beschäftigten bei der Arbeit} ($\rightarrow$ Bundesgesetze)
+\end{quote}
+
+In der Angabe ist dankbarerweise ein Datum angegeben, welches jedoch leider irreführend ist. Das angepsrochene Gesetz, kurz auch Arbeitsschutzgesetz (ArbschSchG), ist 1996 erlassen worden\footnote{Stand 18.06.2025 ist folgendes die aktuelle Version: \enquote{Arbeitsschutzgesetz vom 7. August 1996 (BGBl. I S. 1246), das zuletzt durch Artikel 32 des Gesetzes vom 15. Juli 2024 (BGBl. 2024 I Nr. 236) geändert worden ist}.}. Die betreffende Änderung ist ebenfalls nicht 2021, sondern noch rechtzeitig 2020 erlassen worden. Das Inkraftreten der maßgeblichen Änderung für die im Text angesprochenen \enquote{Mindestbesichtigungsquote} ist durch eine Ergänzung in Absatz 1 und das Anfügen von Absatz 1a in §21 % \footnote{
+%    Die Änderung war Teil des: \enquote{Gesetz zur Verbesserung des Vollzugs im Arbeitsschutz (Arbeitsschutzkontrollgesetz) Vom 22. Dezember 2020} veröffentlicht durch das \enquote{Bundesgesetzblatt Jahrgang 2020 Teil I Nr. 67, ausgegeben zu Bonn am 30. Dezember 2020}.} 
+durch Artikel 1 ist nach Artikel 11 nun allerdings tatsächlich am 01.01.2021 \autocite[3334–3343]{BGBl.2020-I-Nr67}. 
+% des Bundesgesetzblattes 2020 I Nr. 67
+
+Mein Verbesserungsvorschlag zur Korrektur und Vereinheitlichung mit der Kurzangabe des Grundgesetzes ist \gls{zb} folgende Formulierung:
+\begin{quote}
+Zu 2021 wurde das Arbeitsschutzgesetz\footnote{
+    \emph{Arbeitsschutzgesetz} vom 7. August 1996 Änderung durch \emph{Gesetz zur Verbesserung des Vollzugs im Arbeitsschutz (Arbeitsschutzkontrollgesetz)} Vom 22. Dezember 2020 veröffentlicht im \emph{Bundesgesetzblatt Jahrgang 2020 Teil I Nr. 67, ausgegeben zu Bonn am 30. Dezember 2020} \gls{S} 3334–3343.\label{ArbschSchGfooty}} 
+    geändert, sodass es jetzt eine Mindestbesichtigungsquote enthält. % vorsieht. 
+    Bis 2026 sollen mindestens 5\% aller Betriebe abgedeckt sein (ArbschSchG §21 (1a))($\rightarrow$ Bundesgesetze). 
+\end{quote}
+
+Auch wenn es wonöglich mit minimalistischen Layout Vorstelleungen kollidieren mag, ist zu überlegen, ob es im Bildungsbereich nicht angebracht ist, Fußnoten \gls{oä} für hinreichende Quellenangaben einzubinden (wie \gls{zb} in Fußnote \ref{ArbschSchGfooty}). 
+
+
+Später im Text wird angegeben, dass \enquote{die Quote bei nur etwas über zwei Prozent [liegt], wodurch Betriebe im Schnitt erst alle 40 bis 50 Jahre überprüft werden.} Leider ebenfalls ohne Quelle.
+
+
+Die Aufgaben 1 und 2 beziehen sich auf zwei Texte aus \emph{M1} und \emph{M2} und operationalisieren schriftliche Einzelarbeitsaufträge in den Aufgabenbereichen II - III durch \emph{erläutern}, \emph{skizzieren} und \emph{erklären}.
+Aufgabe 3 operationalisiert mit \emph{erläutern} und \emph{diskutieren} \gls{me} doppelt und im falschen Aufgabenbereich. Die Operatoren sind zwar selbst in unterschiedlichen Anforderungsbereichen (II bis III), aber ich würde argumentieren, dass die geforderten Tätigkeiten von erläutern ohnehin unter Voraussetzung für diskutieren subsumiert werden können und daher eher verwirren:
+\begin{itemize}
+    \item Diskutieren: \enquote{Zu einem Sachverhalt, zu einem Konzept, zu einer Problemstellung oder zu einer These etc. eine Argumentation entwickeln, die zu einer begründeten Bewertung führt} 
+    \item Erläutern: \enquote{Wie erklären, aber durch zusätzliche Informationen und Beispiele verdeutlichen}
+    \item Erklären: \enquote{Sachverhalte durch Wissen und Einsichten in einen Zusammenhang (Theorie, Modell, Regel, Gesetz, Funktionszusammenhang) einordnen und deuten} 
+
+    \autocite[][13-14]{lower2008}
+\end{itemize}
+Andererseits mag es helfen durch die kleinschrittigere Strukturvorgabe die Arbeitsanweisungen zu gliedern. Dann wäre es jedoch womöglich hilfreich allgemein mehr Strukturvorgaben in die Aufgabenstellung einzubauen. Der Auftrag seine eigenen Erfahrungen mit Arbeitsschutz ist in erster Linie ein Aufzählung und Sortierung von Erinnerungen. Im zweiten Schritt können die Erinnerungen dann mit den Implikationen aus \emph{M1} und \emph{M2} in Zusammenhang gebracht werden. 
+Das könnte kleinschrittig wie folgt aussehen:
+\begin{quote}
+    \emph{Zähle} deine Erfahrungen mit Arbeitsschutz an deinem Arbeitsplatz \emph{auf}.
+
+    \emph{Erläutere} deine Erfahrungen mit Arbeitsschutz in Bezug auf M1 und M2. 
+\end{quote}
+
+Da diese Phase als \enquote{A1 Einstieg} mit 15$^\prime$ Dauer veranschlagt ist, wäre von der Lehrkraft ohenhin die Transferleistung gefordert, den Schüler*innen einen Hinweis zu geben, dass Aufgabe 1 bis 3 jeweils nur mit ein bis drei Sätzen beantwortet werden sollte.
+
+Den Abschluss bildet die Vier-Ecken-Methode. Sie wird erklärt mit: \enquote{Ihr geht zu der Ecke, die Eurer Ansicht am ehesten entspricht}.
+Die vier vorgeschlagenen Ecken beschreiben jedoch eher nach Level gegliederte Erfahrungen in Bezug auf Sicherheitsvorkehrungen. Das bleibt \gls{me} ein wenig unklar $\rightarrow$ Umformulierungsvorschlag:
+\begin{quote}
+    Ihr geht zu der Ecke, die Euren gemachten Erfahrungen am ehesten entspricht. 
+\end{quote}
+
+Besonders die Vier-Ecken-Methode bringt für einen Einstieg auch die hilfreiche körperliche Aktivierung mit sich und erzwingt damit ein unvermeidbares Mindestmaß an Aufmerksamkeit.  
+
+Eine präzise auf die Lernziele des Einstiegs bezogne Kompetenz könnte folgendermaßen formuliert werden:
+\begin{quote}
+    Die Schüler*innen können ihre Erfahrungen mit Arbeitsschutz nennen und grob mit dem Regelwerk der Bundesrepublik Deutschland in Beziehung setzen. 
+\end{quote}
+
+\paragraph{Demokratie A2 Erarbeitung: \enquote{Wer kümmert sich um den Arbeitsschutz?}}
+
+
+breeeee
+
 
 
 \subsubsection{Demokratie B - \enquote{Wahlen – von welchem Teil des Volkes geht eigentlich die Staatsgewalt aus?}}
 Der am Bildungsplan orientierte Kompetenzbereich für den zweiten Lehrvorschlag unter dem Thema: \enquote{Wahlen – von welchem Teil des Volkes geht eigentlich die Staatsgewalt aus?}, lautet: \enquote{Die Schüler:innen sind in der Lage unterschiedliche demokratische Entscheidungsverfahren zu reflektieren und zu beurteilen.} \autocite[][16]{bplan}.
-
 
 Leitfragen
 \begin{enumerate}
@@ -823,25 +839,70 @@ Der Anspruch der Unterrichtsvorschläge ist allerdings auch kein revolutionärer
 
 \enquote{Arbeitsleben B1} Debatte
 
-\enquote{Stellt Euch folgendes Situation vor.} \enquote{Arbeitsleben B2}
+\enquote{Stellt Euch folgende Situation vor.} \enquote{Arbeitsleben B2}
 
 \enquote{Welche politischen Rahmenbedingungen müssten geschaffen werden, um den Vorschlag umzusetzen?} \enquote{Arbeitsleben B3}
 
-\subsection{Vorbildfunktion -- Beobachtungslernen}
+\subsection{Vorbildfunktion, (Beobachtungs)-lernen und Fake Partizipation \label{fakePartizipation}}
+Die Schule ist eine restriktive Institution mit zumeist höchst undemokratischen Wirkmechanismen.
+Mitbestimmung, die in der Schule versucht wird zu realisieren ließe sich von Kritiker*innen als \emph{performative Mitbestimmung} bezeichnen. 
 
 
-\enquote{Arbeitsleben c} Martina Zandonella 
-\enquote{Ja. Diese Menschen haben die Erfahrung gemacht: Für mich zahlt es sich nicht aus, meine Stimme abzugeben.}
+Die Inhalte der Unterrichtsvorschläge der \gls{ank} zeigen durchaus Möglichkeiten zur realen Partizipation auf. Die  
+
+Berufsschule 
+
+So wird in einer Aufgabe zum Gender Pay Gap in \emph{Arbeitsleben A2 mit M5}
+
+\begin{quote}
+    Vergleicht in Lerntandems die Ergebnisse. Formuliert gemeinsam eine Antwort auf die Aussage \enquote{Dieses Problem muss die Politik lösen.}
+\end{quote}
+
+Distanz geschaffen und es wird einerseits geübt Forderungen auszumachen und zu formulieren. Andererseits wird subtil von den Schüler*innen erfahren, wie schnell womöglich sinnvolle Forderungen fomruliert werden können und wie gering die Chancen darauf sind, diese Forderungen im \enquote{Monstrum Bürokratie} (Friedrich Merz 2025, andauernd) mittelfristig umgesetzt zu erleben. 
+
+Im Bildungsplan werden \enquote{Methoden des realen Handelns} \autocite[13]{bplan} neben explizit als \enquote{Methoden des \emph{simulativen} Handelns} bezeichneten Methoden dargeboten \autocite[14]{bplan}.
+
+Das experimentell brauchbar untersuchbare Beobachtungslernen \autocite{Bandura.1977}, auf welches referiert werden kann, wenn von Vorbildern gesprochen wird und das sich anführen lässt, um schlechte Medienkompetenz kritisieren zu können ist wahrscheinlich nicht ausreichend, um die folgende Argumentation zu unterfüttern.
+Aber in Kombination mit unterbewusst ablaufenden Lernprozessen wie dem \emph{impliziten Lernen} \autocite[82-93]{Kiesel2012} kommt man der Sache näher.
+
+
+% Nach wie vor gilt der Ausspruch des englischen Staatsmannes Winston Churchill vom 11. November 1947 bei einer Rede im Unterhaus: "Demokratie ist die schlechteste aller Regierungsformen – abgesehen von all den anderen Formen, die von Zeit zu Zeit ausprobiert worden sind." Oder, mit dem Demokratieforscher Manfred G. Schmidt formuliert, " […] die zweitbeste Demokratie ist immer noch besser als die beste Nicht-Demokratie". Die Demokratie mag nur als das kleinere Übel angesehen werden, vereint aber andererseits so viele Vorteile auf sich, dass sie weiterhin als die beste bekannte Herrschaftsform bezeichnet werden kann.
+%% https://www.bpb.de/shop/zeitschriften/izpb/demokratie-332/248593/demokratie-in-der-krise-und-doch-die-beste-herrschaftsform/ 16.06.2025
+
+
+
+
+Beobachtung \autocite[72-81]{Kiesel2012}
+implizit 
+
+Welche Kategorisierungen für welche beim Lernen im Gehirn ablaufenden Prozesse nun auch dem aktuellen Wissensstand entsprechen mögen, die Arbeitshypothese, dass Menschen auch außerhalb von deutlich formulierten Regelsystemen lernen, ist vertretbar. 
+
+
+
+
+In \enquote{Arbeitsleben c} wird in M1 auf ein Interveiew mit Martina Zandonella \autocite{Zandonella.2024} Bezug genommen. Es geht \gls{ua} um niedrigere Wahlbeteiligung von Menschen aus sozioökonomisch benachteiligten Schichten.
+
+Herausgestellt werden soll das Zitat:
+\begin{quote}
+    Ja. Diese Menschen haben die Erfahrung gemacht: Für mich zahlt es sich nicht aus, meine Stimme abzugeben.   
+\end{quote}
+
+Die Qualität der Quelle von der \gls{ank} ist als hoch anzusehen. Für Interviews nicht unbedingt Standard, sind mehrere getroffene Aussagen von Martina Zandonella mit einem Link belegt. Der eine Link führt zum Beispiel zu einer Präsentation\footnote{
+    \url{https://www.arbeitnehmerkammer.de/fileadmin/user_upload/Veranstaltungen/Veranstaltungsdokumentation/Downloads/Demokratische_Dividende_Jirjahn.pdf} (besucht am 28.06.2025)
+} von Uwe Jirjahn, Porfessor an der Universität Trier. An anderer Stelle bezieht sich Frau Zandorella auf eine Studie, welche 
+\enquote{erstmals für Deutschland nachweisen [konnte], dass politische Entscheidungen mit höherer Wahrscheinlichkeit mit den Einstellungen höherer Einkommensgruppen übereinstimmen, wohingegen für einkommensarme Gruppen entweder keine systematische Übereinstimmung festzustellen ist oder sogar ein negativer Zusammenhang} \autocite[177]{Elsasser.2017}.
+
+\citetitle{Elsasser.2017} 
+
 Wahlbeteiligung vgl. \enquote{Demokratie}
 
-\footnote{Lernende sind nicht dumm. Wenn in der Schule demokratische Übungen immer das bleiben: Übungen. Lernen sie, dass ihr politisches Handeln keine Auswirkungen hat. Das ist gefährlich.}
+Da Rhetorik durchaus hilfreich sein kann, soll folgende Aussage die Problemstellung illustrieren:
+\begin{quote}
+    Lernende sind nicht dumm. Wenn in der Schule demokratische Übungen immer das bleiben: Übungen. Lernen sie, dass ihr politisches Handeln keine Auswirkungen hat. Das ist gefährlich.
+\end{quote}
 
-performative Mitbestimmung
-Schule restriktive Institution
-
-\autocite[][]{Elsasser.2017}
-
-
+Von anderer Seite ließe sich bestimmt arguzmentieren, dass es auch gefährlich ist, wenn Menschen dazu erzogen werden, ihre Bedingungen als veränderbar wahrzunehmen. Zum Beispiel indem sie sich als kooperierend sehen und ihnen das Zusammenschließen als Option bewusst ist.
+Aber da genau das vom demokratischen Gedanken gedeckt ist, können die auf Rechtsgrundlage ihre faschistische Fresse halten. HIER WISSENSCHAFTLICH MECKERN MEIN FREUND, ABER RECHT HAST DU JA
 
 
 \subsection{Subjektive Einschätzung}
@@ -856,11 +917,6 @@ Ausschließlich auf der Beobachtungsebene zu bleiben, birgt die Gefahr, ausgezei
 Daher ist es immer wieder spannend zu reflektieren, an welchen Stellen Unterricht es schafft, politische Selbstwirksamkeit im Kleinen erproben zu lassen.  
 
 
-Massing meint Verhandeln mit Macht kann nicht erfahren werden. Was ist mit DSP diggi. \autocite[27]{Massing2012}
-Gefunden nach \autocite[111]{Gloe2020}
-\enquote{Die Strategien des Verhandelns, neben Argumentationsstrategien z. B. auch der Einsatz von Machtpotenzialen u. Ä., können in Lernprozessen »nicht erfahren, sollten aber gewusst werden« (Massing 2012: 27). Ebenso lässt sich die Kompetenzfacette Entscheiden nur begrenzt in Lernprozessen fördern: »Auch wenn Entscheiden durch kooperative oder handlungsorientierte Methoden geübt werden kann, bleibt es gegenüber der realen Politik unterkomplex« (ebd.).}
-
-
 
 % teilweiser Notizen Übertrag vom 2024-09-04 Mi. (auch Rückseite verkehrt rum)
 % weshalb vergesse ich immer Handlungsbums. Referenz auf Gefühl von geringer Veränderungswirkung. Stichhwort agency. Werden Schüler*innen zu Handlungsfähhigkeit ohnmächtig politische Entwicklungen auf gesellschaftlicher Ebene nachhvollziehen zu können erzogen. Oder werden sie tatsächlich in die Lage versetzt auch gesamtgesellschaftliche Entwicklungen anzustoßen? Keine Ahnung diggah. 
@@ -869,13 +925,19 @@ Gefunden nach \autocite[111]{Gloe2020}
 % Sich trauen SuS zu "guten" Menschen zu erziehen.. Was ist gut? Dieses Gedankenexperiment mit der zufälligen Geburt. Stichwort: Empathie
 % -- Leute ohne Vorstelleungskraft ausschließen 
 % -- Extremisten auschließen?
-% -- Aber im idealen Diskurs sind auch Stimmen bedacht, welche nicht gut gehört werden --- Habermas
+% -- Aber im idealen Diskurs sind auch Stimmen bedacht, welche nicht gut gehört werden -- Habermas
 % -- für bbs abkürzen bla bla
 % 20225-04-22 John Rawls ist das mit dem Gedankenexperiment, danke Disarstar
 
 
 \section{Handlungsfähigkeit = Reproduktion des Status quo versus Handlungsfähigkeit = Überwindung von Resignation und Zynismus}
-Im Zuge der vorliegenden Arbeit wird an verschiedenen Stellen auf das Potential zur Arbeitserleichterung durch vorgefertigtes Unterrichtsmaterial eingegangen. Ein Blick, der pragmatisch ist und in sich Handeln zum Ziel hat. Angesichts der auch im dritten Jahrtausend bewegten Weltgeschichte lässt sich als geschulter Beobachter schnell in Zynismus verfallen. Zu Ende gedacht und gemacht -- \gls{bzw} gelassen -- käme das einem Aufgeben gleich. Den Lehrtätigkeiten und den Wissenschaften, welche einem gelingenden Lernen zuarbeiten sollen, würde ein solches Aufgeben die Legitimationsgrundlage entziehen\footnote{Das würde Folgendes bedeuten: \url{https://youtu.be/E9UgBzmU30E?si=3UG7mIwTNfkn2C0H&t=1414} (Zugriff am 21.05.2025) Zeitstempel Beginn schon im Fußnoten-Link \autocite[][Als Meme von $23^{\prime}34^{\prime\prime}$ bis $23^{\prime}50^{\prime\prime}$ schauen]{Wolle}. Zur Einordnung, da dort auch eine Antwort geschrieben steht und weil es eine Auseinandersetzung an den Konfliktlinien von Pragmatismus, Bürokratie und Rechtsstaatlichkeit illustriert zwei Artikel des RedaktionsNetzwerk Deutschland \autocites{Schwarzer.05.02.2021}{Schwarzer.08.02.2021}.}. % https://proofwiki.org/wiki/Symbols:Prime/Minutes_and_Seconds
+Im Zuge der vorliegenden Arbeit wird an verschiedenen Stellen auf das Potential zur Arbeitserleichterung durch vorgefertigtes Unterrichtsmaterial eingegangen. Ein Blick, der pragmatisch ist und in sich Handeln zum Ziel hat. Angesichts der auch im dritten Jahrtausend bewegten Weltgeschichte lässt sich als geschulter Beobachter schnell in Zynismus verfallen. Zu Ende gedacht und gemacht -- \gls{bzw} gelassen -- käme das einem Aufgeben gleich. Den Lehrtätigkeiten und den Wissenschaften, welche einem gelingenden Lernen zuarbeiten sollen, würde ein solches Aufgeben die Legitimationsgrundlage entziehen\footnote{
+    Das würde Folgendes bedeuten: 
+
+    \url{https://youtu.be/E9UgBzmU30E?si=3UG7mIwTNfkn2C0H&t=1414} (Zugriff am 21.05.2025) Zeitstempel Beginn schon im Fußnoten-Link \autocite[][Als Meme von $23^{\prime}34^{\prime\prime}$ bis $23^{\prime}50^{\prime\prime}$ schauen]{Wolle}. Zur Einordnung, da dort auch % eine Antwort geschrieben steht und weil es 
+    eine Auseinandersetzung an den Konfliktlinien von Pragmatismus, Bürokratie und Rechtsstaatlichkeit illustriert wird zwei Artikel des RedaktionsNetzwerk Deutschland \autocites{Schwarzer.05.02.2021}{Schwarzer.08.02.2021}.
+    }. 
+% https://proofwiki.org/wiki/Symbols:Prime/Minutes_and_Seconds
 
 
 \autocite[]{Roler2016}
@@ -899,8 +961,47 @@ Das Material hält sich nett an die vom Bildungsplan vorgegebenen Bereiche.
 Der bplan selbst ist weniger an wirtschaftswissenschaftlicher Logik ausgerichtet und nimmt eher das komplexe Gesamtbild von Politik in den Blick.
 Verweis auf verzeckte Bremer Ausgestaltung?
 
+ALLES SCHWIERIG
+
+\subsection{Ausblick und Evaluationsschwierigkeiten}
+Mit bemüht standardisierten Tests wie \gls{zb} PISA oder Abiturprüfungen wird auch versucht zu evaluieren, wie gut der Lern- und damit auch Lehrerfolg ausgefallen ist. Für verschiedene Bereiche von verschiedenen Fächern hat das Testdesign unterschiedliche Hürden zu überwinden. 
+In Biologie kann auswendig gelerntes Wissen vergleichsweise gut getestet werden, Geschicklichkeit und Genauigkeit bei der handwerklichen Durchführung des Experimentierens wird aber kaum auf großskalierter Ebene vergleichbar getestet werden (können).
+Grammatik, Orthographie und Aussprache lassen sich ebenfalls gut testen. Kreatives Schreiben hingegen ist in hohem Maße subjektiv und verlangt nach präzise ausformulierten Erwartungshorizonten, um das auszugleichen und überhaupt eine vernünftige Bewertung vornehmen zu können. 
+Auch im Fach Politik lässt sich auswendig gelerntes Wissen von historischen Abläufen oder der Institutionenkunde gut auf großangelegter Ebene vergleichbar testen. Aber die politische Handlungsfähigkeit, die ein Stück weit auf die anderen Kompetenzen aufbaut -- dort ist eine Testung in vergleichbarer Weise kaum zu realisieren. 
+
+Das führt zu dem Problem, dass viele Dinge im Unterrichten von Politik ins Blaue hinein gemacht werden muss und mehr auf persönlicher Erfahrung und Einstellung basieren, als auf empirischen Erkenntnissen.
+Noch spannender wird die Frage nach dem Erfolg der Bildung, wenn man sie Jahre oder gar Jahrzente später, also die Nachhaltigkeit, evaluieren möchte. Gebetsmühlenartig sage ich auch zu alltäglichen Erklärungsversuchen von vielem: \enquote{(fast) alles ist multikausal}. Entsprechend aufwendig wird eine empirische Annäherung, der im es im Optimalfall gelingt, ein paar hauptsächlich erklärende Variblen ausreichend zu isolieren, um eine Signifikanz feststellen zu können. 
 
 
-\printbibliography
+Ein denkbares Testdesign hätte dermaßen viele Variablen auszuklammern, dass erstens die Gruppe riesig sein müsste und zweitens gäbe es viele Variablen, dür die auch schlicht keine gut geeignete Kontrollgruppe gefunden werden kann. Der Einfluss von historischen Entwicklungen, die die gesamtgesellschaftliche Ebene betreffen können vielleicht noch geeignet mit vorherigen Genrationen verglichen werden. Bei der steten Entwicklung des Bildungssystems und der Gessellschaft lässt sich aber womöglich nur mit gewagter Datemassage und den wildesten statistischen Kniffen rausrechnen, was jetzt wie viel Einfluss gehabt hat. 
+Bei den vorhergehenden Überlegungen denke ich \gls{zb} an den Versuch den Einfluss des Smartphones an Lernerfolg auszuklammern. Schon beim ersten Brainstorming denke ich an den Einfluss die ein stets griffbereites Internt oder ein konstanter Social Media Strom hat. Konzentration, Informationsverarbeitung, die Einflüsse sind zahlreich und für die aktuellen Genrationenin der Schule gibt es kaum eine Kontrollgruppe, da ab einem bestimmten Alter fast alle Menschen ein Smartphone haben. In 20 Jahren den Lernerfolg für die politische Handlungsfähigkeit messen zu wollen, würde ein gottgleiches Testdesign verlangen, wenn es den Anspruch hat, den Einfluss des Unterrichtes von den gesamtgesellschaftlichen getrennt ausmachen zu wollen. 
+
+
+
+\clearpage
+\newpage
+\printbibliography[]
 % [fields={organization}] geht nicht
-\end{document} 
+
+\appendix % page 158: https://ftp.rrze.uni-erlangen.de/ctan/macros/latex/contrib/koma-script/doc/scrguide-de.pdf oder: https://ctan.net/macros/latex/contrib/koma-script/doc/scrguide-de.pdf
+
+\section{Nachklapp}
+\subsection{Lizenzierung: \acrfull{c} oder Copyleft?: CC BY-SA 4.0 \label{lizenz}}
+In dieser Arbeit werden die gesellschaftlichen Implikationen von der zum Teil \enquote{unfreien}  Veröffentlichung von Wissen genannt und kritisiert -- mal deutlicher, mal mehr im Subtext.
+Es mag wohl ungewöhnlich sein eine universitäre Abschlussarbeit mit einer Lizenz zu versehen, die voraussichtlich nie gebraucht wird. Aber es würde sich inkonsequent anfühlen, es nicht zu tun.
+Dank der Vorarbeit von Menschen, die sich ähnliche Gedanken gemacht haben, ist die Auswahl einer Lizenz deutlich hürdenfreier, als man vermuten mag. Diese Arbeit steht inspiriert von Copyleft\footnote{Diese Lizenz ist für Software verbreitet. \gls{vgl} \gls{zb} \url{https://www.gnu.org/licenses/copyleft.en.html} (zuletzt geprüft am 10.06.2025)} unter der ähnlichen, für Textprodukte (und viele weitere) gebräuchlicheren, creativecommons Lizenz: \textbf{CC BY-SA 4.0}\footnote{\emph{Creative Commons Attribution-ShareAlike 4.0 International License} \url{https://creativecommons.org/licenses/by-sa/4.0/} (zuletzt geprüft am 10.06.2025).} Die Idee von Copyleft und der CC BY-SA 4.0 Lizenz, ist die Möglichkeit, nahezu alles mit dem Material unter Quellenangabe machen zu dürfen, nur nicht plötzlich freie Werke für unfreie weitere Werke zu verwenden (SA = share alike). 
+
+Dass Share Alike ist dabei eine durchaus starke Einschränkung. Aber eine die bei Produkten (für die sich überhaupt jemand interessiert) viel Freiheit erzwingt -- eine fantatstische rhetorische Figur, finde ich, Freiheit erzwingen\footnote{Dieses Oxymoron passt auch wieder gut zu den Antinomien mit denen Bildung, auch insbesondere politische Bildung im System Schule, konfrontiert ist.}!
+
+\subsection{Kommentar zu Lizenzen}
+Fast schon schade, dass ich meine Lebensaufgabe gerade nicht darin sehe Springer VS die kognitive Dissonanz zwischen ihrer Geschäftstätigkeit und den publizierten Inhalten um die Ohren zu hauen. Zumal sie ja nichtmal direkt etwas dafür können. Das System der wissenschaftlichen Publizistik ist auf gönnende Philantropen angewiesen -- \Gls{zb} wenn die Max Planck Society mal Bock hat eine CC Lizenz für eine Veröffentlichung rauszuhauen \autocite[Beispiel von hier:][178, übrigens ohne SA, damit auch die kommerzielle Publizistik Spaß damit haben kann]{Elsasser.2017}. Ansonsten scheint es Usus zu sein, dass Menschen, die ihr Geld hauptsächlich aus einer Anstellung beim Staat verdienen, ihre Forschungsergebnisse bisweilen in einem Verlag veröffentlichen, der sie dann für viel Geld weitervermarktet \autocite[schade, dass sich das wahrscheinlich niemand anschauen wird, der nicht über den akademischen Bereich \gls{oä} Zugang hat. Ist spannend, aber Paywall ftw (e-book {66,99€} am 12.06.2025)]{Schroder.2020}. Und auch die Autor*innen verrichten nur ihre Arbeit und freuen sich wahrscheinlich, über eine prestige-trächtige Veröffentlichung. Es ist fast schon nervig, sich kein vernünftiges Feindbild gestalten zu können. %, wenn man sein Gehirn benutzt. 
+Immer muss ich grummelig auf ein abstraktes System sein. 
+
+Mal sehen wie freigiebig ich als Lehrer später mit meinem Unterrichtsmaterial sein werde. Es ist natürlich peinlich, miese Qualität zu publizieren. Aber wenn es viele machen, geht es wieder und man könnte gemeinsam an Qualität feilen und kooperieren anstatt zu konkurrieren, was auch zur Effizienz beitragen müsste. Ferner könnte es zur Transparenz von Bildung beitragen und damit auch mehr den Weg zur Demokratisierung dieser öffnen. 
+
+
+\section{Materialkarten}
+Die Materialkarten sind unveröffentlicht und NICHT geistiges Eigentum des Autors. 
+\input{appendix.tex}
+
+\end{document}

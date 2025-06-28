@@ -1,0 +1,27 @@
+\maketitle
+\clearpage
+
+
+\pagenumbering{roman}
+\addsec{Abstract}
+blub
+Bre steht das hier auch in vsc?
+\clearpage
+\newpage
+
+
+\tableofcontents % war früher mal vor pagenumbering. Macht das einen Unterschied? Keine AHnung 2024-06-05 ah ja, will ja nicht das Inhaltsverzeichnis Seitenummeriert haben 2024-06-06
+\clearpage
+\newpage
+
+% \addsec{Abkürzungsverzeichnis}
+\printacronyms[type=\acronymtype, title={Abkürzungsverzeichnis}, toctitle={Abkürzungsverzeichnis}, nonumberlist]{} % Acronymtype ist von glossaries, title und toctitle sind Titel im Inhaltsverzeichnis
+\vspace{24pt}
+
+\listoffigures % Abbildungsverzeichnis
+\clearpage
+\newpage
+
+
+\setcounter{page}{1}
+\pagenumbering{arabic}

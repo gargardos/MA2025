@@ -1,0 +1,77 @@
+\includepdfset{    
+    pages=-, 
+    landscape=true, 
+    rotateoversize=true, 
+    link=true, 
+    linktodoc=true,
+    pagecommand={}, % for pagenumbers
+    }
+
+
+\includepdf[
+    nup=1x1, 
+    addtotoc={
+        1, % no idea what this changes, changing number has no effect, it says on page 7:  ⟨page number⟩: Page number of the inserted page. https://texdoc.org/serve/pdfpages.pdf/0
+        subsection, 
+        2, 
+        Angedachtes Layout der Materialkarten, 
+        ANKPrototyp
+        }
+    ]
+{AKB-24-032_Prototyp_2024-02-26.pdf}
+
+
+\includepdf[
+    nup=2x1, 
+    addtotoc={
+        1, 
+        subsection, 
+        2, 
+        Demokratie, 
+        DEMOKRATIE
+        }
+]
+{DEMOKRATIE.pdf}
+
+
+\includepdf[
+    nup=2x1, 
+    addtotoc={
+        1, 
+        subsection, 
+        2, 
+        Arbeitsleben, 
+        ARBEITSLEBEN
+        }
+]
+{ARBEITSLEBEN.pdf}
+
+
+\includepdf[
+    nup=2x1, 
+    addtotoc={
+        1, 
+        subsection, 
+        2, 
+        Wirtschaftspolitik, 
+        WIRTSCHAFTSPOLITIK
+        }
+]
+{WIRTSCHAFTSPOLITIK.pdf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% from page 7-8 of: https://texdoc.org/serve/pdfpages.pdf/0
+% Experimental options: (Syntax may change in future versions!)
+% addtotoc Adds an entry to the table of contents. This option requires five arguments, separated by commas:
+% addtotoc={⟨page number⟩,⟨section⟩,⟨level⟩,⟨heading⟩,⟨label⟩}
+% ⟨page number⟩: Page number of the inserted page.
+% ⟨section⟩: LATEX sectioning name– e.g., section, subsection, …
+% ⟨level⟩: Number, denoting depth of section– e.g., 1 for section level, 2 for
+% subsection level, …
+% ⟨heading⟩: Title inserted in the table of contents.
+% ⟨label⟩: Name of the label. This label can be referred to with \ref and \pageref.
+
+% Note: The order of the five arguments must not be mixed. Otherwise you will get very strange error messages.
+% The addtotoc option accepts multiple sets of the above mentioned five arguments, all separated by commas. The sets must be sorted such that the ⟨page number⟩s are in ascending order. (Strictly speaking they must have the same order as the page numbers specified by the pages option.)
+% The proper recursive definition of the addtotoc option is:
+% addtotoc={⟨toc-list⟩}
+% ⟨toc-list⟩ → ⟨page number⟩,⟨section⟩,⟨level⟩,⟨heading⟩,⟨label⟩[,⟨toc-list⟩]

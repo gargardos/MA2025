@@ -1,11 +1,13 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 03.06.2025  18:35:23
-;; Indexstyle: "C:\\Users\\klein\\MA Paul Klein\\_nGRWizHSq", Rawindex: "C:\\Users\\klein\\MA Paul Klein\\SBEgcB2EN0", Output: "main.acr"
+;; at 10.06.2025  17:00:50
+;; Indexstyle: "C:\\Users\\klein\\MA Paul Klein\\kuoWbD71S_", Rawindex: "C:\\Users\\klein\\MA Paul Klein\\yyDBtnUqI9", Output: "main.acr"
 
 
 Building indexentry-tree:
 Hierdepth of index is :TREE
 
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -49,6 +51,8 @@ Letter-group: "\\†ÃÈíË¨¤Ú " -> "default"
 Letter-group: "Ã¨" -> "D"
 Letter-group: "Ã€—" -> "O"
 Letter-group: "Ðàà„" -> "S"
+Letter-group: "ð¨Ú" -> "Z"
+Letter-group: "€„„" -> "A"
 Letter-group: "—Ú†" -> "E"
 Letter-group: "¼æ" -> "N"
 Letter-group: "æà®" -> "W"
@@ -59,7 +63,7 @@ Letter-group: "„ðæ" -> "B"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "\\†ÃÈíË¨¤Ú " -> "default"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "€„Ð" -> "A"
+Letter-group: "€„„" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "„„®" -> "B"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -86,4 +90,4 @@ sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "æà®" -> "W"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "ð€È" -> "Z"
-Reading raw-index "C:\\Users\\klein\\MA Paul Klein\\SBEgcB2EN0"...WARNING: Would replace complete index key by empty string, ignoring
+Reading raw-index "C:\\Users\\klein\\MA Paul Klein\\yyDBtnUqI9"...WARNING: Would replace complete index key by empty string, ignoring
