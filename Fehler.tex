@@ -15,26 +15,191 @@ Das Bundesgesetzblatt ist zwar ein eher maschinenlesbarer Link\footnote{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
 %%%%%%%%%%%%%%%% ZWEITE VERSION OHNE FUßNOTEN, die geht %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Beim \gls{bmas} findet sich tatsächlich eine nette Übersicht vom \enquote{Referenzentwurf} über den \enquote{Kabinettsbeschluss} bis zum \enquote{Abschluss des Gesetzes}.
 Alle Schriftstücke sind, wie es sein sollte, verlinkt. Der Referenzentwurf vom \gls{bmas} ist dabei einfach brav als PDF anzutreffen \autocite{BMAS-21.07.2020}. 
 Die Drucksache des Bundestages hingegen ist kopiergeschützt, wtf \autocite{Bundestag.31.08.2020}?
 Das Bundesgesetzblatt ist zwar ein eher maschinenlesbarer Link, aber hat immerhin einen netten Viewer mit ziemlich guter Suchfunktion integriert und ist damit nicht kopiergeschützt \autocite{BGBl.2020-I-Nr67}. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
-
 \newenvironment{myenumerate}
 { \begin{enumerate}
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0pt}     }
 { \end{enumerate}                } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%% FUNKTIONIERENDE VERSION %%%%%%%%%%%%%%%%%%%%%%%%
+        \begin{landscape}
+    \begin{table}
+\centering 
+\begin{tabularx}{\linewidth}{| X | X | X | X | X | X |} % {c|c|c|c|c|c} this was for tabulat without x
+
+    \hline
+     & 
+    KI-basiertes Hilfsmittel 
+        
+    AI-based Tool & 
+    Einsatzform 
+
+    Purpose & 
+    Betroffene Teile der Arbeit 
+        
+    Aspect of the Work Affected & 
+    Beschreibung der Eingabe (Prompt) 
+  
+    Prompt (Entry) & 
+    Bemerkung 
+    
+    Comment\\
+    \hline
+    \hline
+    
+    1 & 
+    Copilot in Visual Studio Code
+    
+    mostly with GPT-4.1 as \gls{llm} & 
+    Fragen zu \LaTeX Code, keine inhaltlichen Fragen &
+    alle, insbesondere \gls{zb} der Code zur Form dieser Tabelle & 
+    \gls{zb} \enquote{ia there \textbackslash{}vfill in latex?} & 
+    Es werden nicht alle Prompts aufgeführt. Es wurde ausschließlich für den Code Hintergrund benutzt und nie für den Inhalt. 
+    
+    Das Meiste wurde dann ohnehin doch wieder über Suchmaschinen und Anleitungen lesen erledigt. Häufig eben im Anschluss an das Ausprobieren von \gls{ki} \\
+    \hline
+
+
+     2 & 
+    Copilot in Microsoft Edge & 
+    Zusammenfassung von Texten & 
+    Die Erwartungshorizonte       
+    An den jeweiligen Stellen der Arbeit direkt angegeben &
+    \enquote{fasse mir stichpunktartig die punkte des pdf zusammen} & 
+    \\
+
+\end{tabularx}
+
+\caption{Dokumentation der Nutzung von KI-basierten Anwendungen und Werkzeugen -- Documentation of the Use of AI-based Applications and Tools}
+
+\label{KIHilfsmittel}
+
+    \end{table}
+
+        \end{landscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%% ALTE VERSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+
+\begin{table}
+    \centering
+    \begin{tabularx{\linewidth}{ 
+        | >{\raggedright\arraybackslash}X 
+        | >{\raggedright\arraybackslash}X 
+        | >{\raggedright\arraybackslash}X 
+        | >{\raggedright\arraybackslash}X 
+        | >{\raggedright\arraybackslash}X 
+        | >{\raggedright\arraybackslash}X | 
+        }
+        } % {c|c|c|c|c|c} this was for tabulat without x
+        
+        & 
+         KI-basiertes Hilfsmittel AI-based Tool & 
+         Einsatzform Purpose & 
+         Betroffene Teile der Arbeit Aspect of the Work Affected & 
+         Beschreibung der Eingabe (Prompt) Prompt (Entry) & 
+         Bemerkung Comment\\
+        \hline
+        
+        1 & 
+        Copilot in Visual Studio Code
+        
+        mostly with GPT-4.1 as \gls{llm} & 
+        alle &
+        Fragen zu LaTeX Code, keine inhaltlichen Fragen & 
+        \gls{zb} \enquote{ia there \textbackslash{}vfill in latex?} & 
+        es werden nicht alle Prompts aufgeführt. Es wurde ausschließlich für den Code Hintergrund benutzt und nie für den Inhalt. Das Meiste wurde dennoch über Suchmaschinen und Anleitungen lesen erledigt. Meist auch noch im Anschluss an das Ausprobieren von \gls{ki} \\
+
+
+        2 & 
+        Copilot in Microsoft Edge & 
+        Zusammenfassung von Texten, meist bei den Erwartungshorizonten. An den jeweiligen Stellen der Arbeit direkt angegeben & 
+        \enquote{fasse mir stichpunktartig die punkte des pdf zusammen} & 
+         & \\
+    \end{tabularx}
+    \caption{Dokumentation der Nutzung von KI-basierten Anwendungen und Werkzeugen -- Documentation of the Use of AI-based Applications and Tools}
+    \label{KIHilfsmittel}
+\end{table}
+
+\end{landscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+Allgemeine Entwicklungen
+\begin{myitemize}
+\item Rückgang der Berufskrankheiten-Anzeigen in Bremen 2017 um 20\% gegenüber 2016 – Ursache unklar.
+\item 2017: 899 Verdachtsanzeigen, 401 Anerkennungen, 139 neue Renten, 100 Todesfälle.
+\item Bremen hat im Vergleich zum Bund ein ungünstigeres Verhältnis von Anzeigen zu Todesfällen.
+\end{myitemize}
+
+
+Hauptursachen für Berufskrankheiten
+\begin{myitemize}
+\item Asbestbedingte Erkrankungen dominieren (z. B. Asbestose, Mesotheliom).
+\item Weitere häufige Erkrankungen: Hautkrankheiten, Lärmschwerhörigkeit, Hautkrebs durch UV-Strahlung.
+\item Asbest: Ursache für 94 von 100 Todesfällen 2017.
+\end{myitemize}
+
+
+Geschlechtsspezifische Unterschiede
+\begin{myitemize}
+\item Frauen: häufig betroffen durch Haut-, Infektions- und Wirbelsäulenerkrankungen in frauendominierten Berufen.
+\item Männer: häufiger betroffen durch asbestbedingte Erkrankungen, Lärm, UV-Strahlung – typisch für Industrie und Bau.
+\end{myitemize}
+
+
+Anerkennungsverfahren & Hürden
+\begin{myitemize}
+\item Berufskrankheit = juristischer Begriff, nicht medizinisch.
+\item Hohe Beweislast bei Betroffenen: Nachweis der beruflichen Ursache erforderlich.
+\item Verfahren oft langwierig, Anerkennung schwierig, besonders bei fehlender Dokumentation oder Betriebsauflösung.
+\item Manche Krankheiten (z.B. chronisches Ekzem) nur anerkennbar nach Tätigkeitsaufgabe.
+\end{myitemize}
+
+
+Beratung & Unterstützung
+\begin{myitemize}
+\item Beratungsstelle der Arbeitnehmerkammer Bremen bietet kostenlose Hilfe.
+\item 2018: 260 Beratungen, v.a. zu Asbest, Muskel-Skelett-Erkrankungen, Lärm, Krebs, Asthma.
+\item Fehlende unabhängige arbeitsmedizinische Expertise seit Wegfall des Landesgewerbearztes.
+\end{myitemize}
+
+
+Arbeitsschutz & Prävention
+\begin{myitemize}
+\item Schwerpunktaktion 2018 zu UV-Strahlung: große Defizite bei Prävention in Betrieben.
+\item Nur 41 von 115 Betrieben hatten Gefährdungsbeurteilung zu UV-Strahlung.
+\item Schutzmaßnahmen oft unzureichend oder von Beschäftigten selbst finanziert.
+\end{myitemize}
+
+
+Politische Forderungen & Handlungsbedarf
+\begin{myitemize}
+\item Anerkennungssystem muss reformiert werden: z.B. Beweiserleichterung bei Beweisnot.
+\item Erweiterung der Berufskrankheiten-Liste notwendig (z.B. frauentypische Erkrankungen).
+\item Bessere Ausstattung der Gewerbeaufsicht und Rückkehr eines Landesgewerbearztes gefordert.
+\item Systematischer Arbeitsschutz und gezielte Prävention müssen gestärkt werden.
+\end{myitemize}
