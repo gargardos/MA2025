@@ -125,6 +125,27 @@
 % \usepackage{pdfpages} % vielleicht mal pdfs direkt hier als anhang einbinden https://texwelt.de/fragen/19153/pdf-dateien-in-anhang-einbinden-aber-formatierung-des-vorhergehenden-dokuments-ubernehmen
 % \usepackage{subfiles} % Best loaded last in the preamble https://de.overleaf.com/learn/latex/Multi-file_LaTeX_projects%23The_subfiles_package
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{myitemize} % https://tex.stackexchange.com/questions/10684/vertical-space-in-lists 2025-06-29
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
+
+\newenvironment{myenumerate}
+{ \begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{enumerate}                } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 \usepackage[]{pdfpages}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -140,7 +161,8 @@
 \usepackage[
     xindy, 
     toc, 
-    acronym
+    acronym,
+    nomain % ergänzt nach file main.glo which said main.gls is empty
     ]
     {glossaries}
 % xindy weil: https://tex.stackexchange.com/questions/199211/differences-between-xindy-and-makeindex/199841#199841
@@ -160,8 +182,10 @@
     \newacronym{etc}{etc.}{et cetera}
     \newacronym{gp}{GP oder GuP}{Gesellschaft und Politik}
     \newacronym{gpje}{GPJE}{Gesellschaft für Politikdidaktik und politische Jugend- und Erwachsenenbildung}
+    \newacronym{ki}{KI}{Künstliche Intelligenz}
     \newacronym{kmk}{KMK}{Kultusministerkonferenz}
     \newacronym{lis}{LIS}{Landesinstitut für Schule}
+    \newacronym{llm}{LLM}{Large Language Model}
     \newacronym{me}{m.E.}{meines Erachtens}
     \newacronym{nw}{NW}{Naturwissenschaften}
     \newacronym{oä}{o.Ä.}{oder Ähnliche(s)}
