@@ -24,3 +24,5 @@ preamble.fdb_latexmk
 preamble.fls
 preamble.glo
 preamble.log
+
+main.lot

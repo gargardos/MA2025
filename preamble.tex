@@ -80,18 +80,19 @@
 %scheint aber nix zu ändern 2025-05-28
 %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% 
 
-\DefineBibliographyStrings{ngerman}{
+\DefineBibliographyStrings{german}{
    andothers = {{et\,al\adddot}},
 } % damit wird u.a. zu et al. siehe https://tex.stackexchange.com/questions/236854/changing-u-a-of-german-to-et-al
 
 % no p. pp. and : instead of ,
 % https://stackoverflow.com/questions/58448860/how-can-i-add-colons-and-remove-p-pp-from-in-text-citations-with-biblatex
-\DefineBibliographyStrings{ngerman}{
+\DefineBibliographyStrings{german}{
   page             = {},
   pages            = {},
 }  % ich habe german anstatt english ergänzt % 2025-05-27 auf ngmerman geändert
 % colon instead of comma bei in text cite
 \renewcommand{\postnotedelim}{\addcolon \addspace} % \addspace kommt von mir
+%%%%% 2025-06-30 I try german instead of ngerman -- doesnt solve warning, but works as well %%%%%%%%%%%%%%%
 
 % no p.von anderer Quelle
 % \DeclareFieldFormat{postnote}{#1}
@@ -180,6 +181,7 @@
     \newacronym{abb}{Abb.}{Abbildung}
     \newacronym{abs}{Abs.}{Abschnitt}
     \newacronym{ank}{ANK}{Arbeitnehmerkammer Bremen}
+    \newacronym{arbschg}{ArbSchG}{Arbeitsscchutzgesetz}
     \newacronym{bbk}{BBK}{Beutelsbacher Konsens}
     \newacronym{bgbl}{BGBl}{Bundesgesetzblatt}
     \newacronym{bmas}{BMAS}{Bundesministerium für Arbeit und Soziales}
@@ -201,7 +203,7 @@
     \newacronym{s}{s.}{siehe}
     \newacronym{S}{S.}{Seite}
     \newacronym{suub}{SuUB}{Staats- und Universitätsbibliothek Bremen}
-    \newacronym{sek}{SEK}{Sekundarstufe}
+    \newacronym{sek}{Sek.}{Sekundarstufe}
     \newacronym{sus}{SuS}{Schülerinnen und Schüler}
     \newacronym{ua}{u.A.}{unter Anderem}
     \newacronym{url}{URL}{Universal Ressource Locator }% (einheitlicher Ressourcen Verorter, Webadressen)

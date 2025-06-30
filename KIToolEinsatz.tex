@@ -10,6 +10,7 @@ Die folgende Tabelle wurde in Anlehnung an die Vorlage der Universität Bremen e
 
 \clearpage
 \newpage
+\newgeometry{left=10mm, right=10mm, top=10mm, bottom=20mm} %%%
 
         \begin{landscape}
     \begin{table}
@@ -17,39 +18,57 @@ Die folgende Tabelle wurde in Anlehnung an die Vorlage der Universität Bremen e
 \begin{tabularx}{\linewidth}{| >{\raggedright\arraybackslash} c || >{\raggedright\arraybackslash} X | >{\raggedright\arraybackslash} X | >{\raggedright\arraybackslash} X | >{\raggedright\arraybackslash} X | >{\raggedright\arraybackslash} X |} % {c|c|c|c|c|c} this was for tabular not tabularx
 
     \hline
-     & 
+                                & 
     KI-basiertes Hilfsmittel 
         
-    AI-based Tool & 
+    AI-based Tool               & 
     Einsatzform 
 
-    Purpose & 
+    Purpose                     & 
     Betroffene Teile der Arbeit 
         
     Aspect of the Work Affected & 
     Beschreibung der Eingabe (Prompt) 
   
-    Prompt (Entry) & 
+    Prompt (Entry)              & 
     Bemerkung 
     
-    Comment\\
+    Comment                     \\ 
     \hline
     \hline
+    %%%%%%%
+
     
-    1 & 
+    1                                                                                                                                           & 
     GitHub Copilot in Visual Studio Code
+
+    Inline Chat \& Chat on Secondary Sidebar
+
+    mostly with GPT-4.1 as \gls{llm}                                                                                                            & 
+    Fragen zu \LaTeX{} Code, keine inhaltlichen Fragen                                                                                          &
+    alle, insbesondere \gls{zb} der Code zur Form dieser Tabelle oder Fragen zum Darstellen von eingebunden PDF-Seiten im Inhaltsverzeichnis    & 
+    \gls{zb} \enquote{ia there \textbackslash{}vfill in latex?},  
     
-    mostly with GPT-4.1 as \gls{llm} & 
-    Fragen zu \LaTeX{} Code, keine inhaltlichen Fragen &
-    alle, insbesondere \gls{zb} der Code zur Form dieser Tabelle & 
-    \gls{zb} \enquote{ia there \textbackslash{}vfill in latex?} 
+    \enquote{what does \textbackslash{}arraybackslash in tabularx do?}, 
     
-    oder \enquote{what does \textbackslash{}arraybackslash in tabularx do?} & 
+    \enquote{what can the parameter in lines 14 or 27 change?} oder
+    
+    \enquote{how do I make several entries to the toc like I treid in lines 26 to 62?}                                                          & 
     Es werden nicht alle Prompts aufgeführt. Es wurde ausschließlich für den Code Hintergrund benutzt und nie für den Inhalt. 
     
-    Das Meiste wurde dann ohnehin doch wieder über Suchmaschinen und dann Foren und Anleitungen lesen erledigt. Häufig eben erst im Anschluss an das initiale Ausprobieren von \gls{ki} \\
+    Das Meiste wurde dann ohnehin doch wieder über Suchmaschinen und dann Foren und Anleitungen lesen erledigt. Häufig eben erst im Anschluss an das initiale Ausprobieren von \gls{ki} \\ 
     \hline
+    %%%%%%%
 
+
+    2                                                                                                           &
+    Visual Studio Code Autovervollständigung                                                                    &
+    Codevervollständigung und Autovervollständigung von einzelnen Worten, ähnlich dem Tippen auf Smartphones    &
+    alle                                                                                                        &
+    keine Prompts                                                                                               &
+    Die Grenze von maschinellem Lernen und Skripts oder überhaupt Software Hilfsmitteln ist fließend. Auch wenn schon lämger existierende Autovervollständigungen für einzelne Worte keinen \gls{ki}-Boom und derartige gesellschaftliche Diskurse ausgelöst hat, wie es die \gls{llm} derzeit hervorrufen.                                                    \\ 
+    \hline
+    %%%%%%%
 
 \end{tabularx}
 
@@ -59,5 +78,8 @@ Die folgende Tabelle wurde in Anlehnung an die Vorlage der Universität Bremen e
 
     \end{table}
         \end{landscape}
+
+\restoregeometry %%%
+
 
 % \footnote{\url{https://www.uni-bremen.de/zpa/formulare} führt zu \url{https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.uni-bremen.de%2Ffileadmin%2Fuser_upload%2Fsites%2Fzpa%2Fpdf%2Fallgemein%2FDokumentation_Nutzung_KI_-_AI_Use_Documentation.docx&wdOrigin=BROWSELINK} beide 29.06.2025}
