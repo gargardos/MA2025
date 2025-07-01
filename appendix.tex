@@ -1,11 +1,11 @@
 \includepdfset{    
-    pages=-, 
+    pages=-, % =- means all pages globally 
     landscape=true, 
     rotateoversize=true, 
     link=true, 
     linktodoc=true,
     pagecommand={}, % for pagenumbers
-    }
+    } % global settings for \includepdf{}
 
 \includepdf[
     nup=1x1, 
@@ -30,6 +30,7 @@
 
 \includepdf[
     nup=2x1, 
+    pages=1-14, % the last page (p. 15) is a blank box only and therefore excluded
     addtotoc={
     1, subsection, 2, Arbeitsleben A1, ARBEITSLEBEN-A1, 
     3, subsection, 2, Arbeitsleben A2, ARBEITSLEBEN-A2, 

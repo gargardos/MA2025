@@ -9,11 +9,9 @@
 % hatte bis 2025-05-14 a4paper in [] nach springer nature vorlage habe ich da mal pdflatex reingeschrieben, scheint nix kaputt zu machen. Ich glaube KOMA script mit scrartcl sollte sich schon um DIN A4 kümmern
 
 \usepackage[utf8]{inputenc} % moderner Zeichencode, auch mit ä ö ü und so'n Kram
+\usepackage[T1]{fontenc} % font encoding. T1 is best for west european e.g. due to hyphenation - Schriftarten gute diese glaube ich
+\usepackage{lmodern} % latin modern Serif Font based on the older Computer Modern - hübsche Schrift? hab's vergessen
 
-\usepackage{lmodern} % hübsche Schrift? hab's vergessen
-
-\usepackage[T1]{fontenc} % Schriftarten gute diese glaube ich
-\usepackage[onehalfspacing]{setspace} % Zeilenanbstand, Grüße ans Kompendium
 \usepackage[ngerman]{babel} % Sprache, ngerman Silbentrennung nach neuer Rechtschreibung und so
 % \usepackage{verbatim} % das habe ich gefunden um ganze Blöcke inklusive Zeilenumbrüchen auszukommentieren -- Nachtrag lol, bullshit, verbatim direkt druckt code ohne auszuführen
 % \usepackage[normalem]{ulem} % zum Durchstreichen https://texwelt.de/fragen/3223/wie-kann-ich-text-durchstreichen ulem besser wegen äöüß und neuer. soul besser als ulem für Zeilenumbrüche, Zeilenumbrüche bei Links waren nicht existent mit ulem https://tex.stackexchange.com/questions/74893/strikeout-when-which-package-ulem-vs-soul-vs#comment710882_74910 ich versuche also ulem mit normalem als Option https://golatex.de/viewtopic.php?t=3079 prima, scheint zu klappen
@@ -23,6 +21,7 @@
 % [v2 used because compile time in overleaf free]
 % I try \usepackage{glossaries} 2025-06-03
 
+\usepackage[onehalfspacing]{setspace} % Zeilenanbstand, Grüße ans Kompendium
 \usepackage{geometry} % Seitenränder, ein wahrer Krampf
 \geometry{
     left=30mm, 
@@ -33,8 +32,7 @@
 \usepackage[
     autostyle=true, 
     german
-    ]
-    {csquotes} % für Anführungszeichen in Zitaten in versch. Sprachen, Schachtelung und so: https://www.namsu.de/Extra/pakete/Csquotes.html
+    ]{csquotes} % für Anführungszeichen in Zitaten in versch. Sprachen, Schachtelung und so: https://www.namsu.de/Extra/pakete/Csquotes.html
 
 \usepackage[
     backend=biber, 
@@ -44,11 +42,10 @@
     maxcitenames=2, 
     maxbibnames=99, 
     block=none
-    ]
-    {biblatex} % Zitationsstil, authoryear kommt Harvard nah -- date=year von Antwort aus https://texwelt.de/fragen/27027/zitationsstil-anpassen-biblatex-authoryear
+    ]{biblatex} % Zitationsstil, authoryear kommt Harvard nah -- date=year von Antwort aus https://texwelt.de/fragen/27027/zitationsstil-anpassen-biblatex-authoryear
 % 2025-04-22 block=nbpar wäre erklärt bei Seite 51 von der Anleitung 3.1.2.1 https://mirrors.ibiblio.org/CTAN/info/translations/biblatex/de/biblatex-de-Benutzerhandbuch.pdf
 
-\addbibresource{references.bib} %Bibliographie erstellen
+\addbibresource{references.bib} % Bibliographie erstellen
 % wenn unter Zitation -> Latex Assistant F7 ausgegraut, dann: Extras > Optionen > Zitation, da LaTeX anklicken
 % im Moment (2022-09-06) ist TeXStudio angegeben und: quote; autocite; cite; parencite & quote; autocite; cite; parencite
 % inspiriert von: https://help.citavi.com/topic/latex-assistent-kopieren
@@ -151,18 +148,16 @@
 \usepackage{tabularx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%% LANDSCAPE %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% LANDSCAPE %%%%%%% UND PDF EINBINDEN %%%%%%%
 \usepackage{pdflscape}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \usepackage[]{pdfpages}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}   % PDF Support % vorher war hier auch [pdftex] eingebunden. Nachdem ich hyperref in der Präambel nach unten geschoben habe, hat overleaf aber einen Fehler ausgespuckt
 \usepackage{float} % addded 2025-06-10
 % hier war mal \usepackage[hidelinks]{hyperref} % Hyperlinks % hidelinks keine bunten Kasten um klickbare Elemente: https://texwelt.de/fragen/1121/wie-entferne-ich-die-roten-rahmen-um-hyperlinks? 2025-05-14 ist jetzt nach unten gerutscht 2025-06-19
-\usepackage{times}              % Font fuer PDF besser
+% \usepackage{times}              % Font fuer PDF besser % 2025-07-01 vielleicht doch lieber beim Standard bleiben: https://tex.stackexchange.com/questions/182906/ugly-usepackagetimes-examples % außerdem habe ich oben schon \usepackage{lmodern} eingebunden
 \usepackage{thumbpdf}           % PDF Thumbnails erstellen
 % https://www.linux-community.de/ausgaben/linuxuser/2005/04/mit-pdflatex-bessere-pdf-dateien-erzeugen/2/  
 % 2025-05-14
@@ -172,9 +167,10 @@
     xindy, 
     toc, 
     acronym,
-    nomain % ergänzt nach file main.glo which said main.gls is empty
-    ]
-    {glossaries}
+    nomain, % ergänzt nach file main.glo which said main.gls is empty 
+    nopostdot,
+    nogroupskip
+    ]{glossaries}
 % xindy weil: https://tex.stackexchange.com/questions/199211/differences-between-xindy-and-makeindex/199841#199841
 % https://en.wikibooks.org/wiki/LaTeX/Glossary#cite_note-2
 

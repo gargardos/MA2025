@@ -14,12 +14,15 @@ Bre steht das hier auch in vsc?
 % \clearpage
 % \newpage
 
-\printacronyms[type=\acronymtype, nonumberlist]{} % Acronymtype ist von glossaries, title und toctitle sind Titel im Inhaltsverzeichnis
-% listof=totoc in \documentclass[] replaces %% , title={Abkürzungsverzeichnis}, toctitle={Abkürzungsverzeichnis} %% here
-\vspace{24pt} % vertical space
-
 \listoffigures % Abbildungsverzeichnis
 \listoftables % Tabellenverzeichnis
+
+\printacronyms[type=\acronymtype, 
+    nonumberlist, 
+    title=Abkürzungsverzeichnis, 
+    toctitle=Abkürzungsverzeichnis]{} % Acronymtype ist von glossaries, title und toctitle sind Titel im Inhaltsverzeichnis
+% listof=totoc in \documentclass[] replaces %% , title={Abkürzungsverzeichnis}, toctitle={Abkürzungsverzeichnis} %% here
+% \vspace{24pt} % vertical space
 
 \clearpage
 \newpage
