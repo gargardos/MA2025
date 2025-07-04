@@ -130,14 +130,20 @@
 { \begin{itemize}
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0pt}     }
-{ \end{itemize}                  } 
+    \setlength{\parsep}{0pt}
+    % \setlength{\baselineskip}{0pt}
+    % \setlength{\topsep}{2pt}    % space before and after the list
+    % \setlength{\partopsep}{0pt} % extra space added to \topsep when environment starts a new paragraph
+ }
+{ \end{itemize} } 
 
 \newenvironment{myenumerate}
 { \begin{enumerate}
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0pt}     }
+    \setlength{\parsep}{0pt}
+    % \setlength{\baselineskip}{0pt}
+ }
 { \end{enumerate}                } 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -215,4 +221,9 @@
 \makeglossaries % das makeglossaries muss vor \begin{document} stehen, damit es funktioniert
 % open Console in Visual Studio Code -- STRG+J click Console -- type: makeglossaries main (main being main.tex without extension) if no glossary with abbreviations appears
 
-\usepackage[hidelinks]{hyperref} % Hyperlinks % hidelinks keine bunten Kasten um klickbare Elemente: https://
+\usepackage[hidelinks=true,
+            pdftitle=Chancen und Risiken von Fremdmaterial_Eine beispielhafte Analyse und Wertung von Unterrichtsmaterial der Arbeitnehmerkammer Bremen für den Politikunterricht an berufsbildenden Schulen in Bremen,
+            pdfauthor=Paul Aljsocha Klein,
+            pdfsubject=Masterarbeit Universität Bremen,
+            pdfcreator=Paul Aljsocha Klein with LaTeX,
+            pdfcreationdate=16.07.2025]{hyperref} % Hyperlinks % hidelinks keine bunten Kasten um klickbare Elemente. Das ist rausgenommen, weil keine Leerzeile unter Literatureinträgen: , backref=true, pagebackref=true
