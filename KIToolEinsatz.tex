@@ -13,16 +13,18 @@ Die folgende Tabelle wurde in Anlehnung an die Vorlage der Universität Bremen e
     beide 29.06.2025
     }
 
+% Adaptive column width and multipage support using longtable and tabularx
+
 \clearpage
-\newpage
-\newgeometry{left=10mm, right=10mm, top=10mm, bottom=20mm} %%%
 
-        \begin{landscape}
-    \begin{table}
-\centering 
-\begin{tabularx}{\linewidth}{| >{\raggedright\arraybackslash} c || >{\raggedright\arraybackslash} X | >{\raggedright\arraybackslash} X | >{\raggedright\arraybackslash} X | >{\raggedright\arraybackslash} X | >{\raggedright\arraybackslash} X |} % {c|c|c|c|c|c} this was for tabular not tabularx
+\newgeometry{left=10mm, right=10mm, top=10mm, bottom=20mm}
 
-    \hline
+\begin{landscape}
+\begin{longtblr}[
+    caption = {Dokumentation der Nutzung von KI-basierten Anwendungen und Werkzeugen -- Documentation of the Use of AI-based Applications and Tools},
+    label = {KIHilfsmittel}]
+    {colspec={|c||XXXXX|}}
+\hline
                                 & 
     KI-basiertes Hilfsmittel 
         
@@ -75,18 +77,27 @@ Die folgende Tabelle wurde in Anlehnung an die Vorlage der Universität Bremen e
     Bei der Eingabe \enquote{Effiz} wird dann \gls{zb} \enquote{Effizienz} vorgeschlagen und nach Druck auf Enter ausgeschrieben    &
     Die Grenze von maschinellem Lernen und Skripts oder überhaupt Software Hilfsmitteln ist fließend. Auch wenn schon länger existierende Autovervollständigungen für einzelne Worte keinen \gls{ki}-Boom und derartige gesellschaftliche Diskurse ausgelöst hat, wie es die \gls{llm} derzeit hervorrufen.                                             \\ 
     \hline
-    %%%%%%%
 
-\end{tabularx}
+% \pagebreak
 
-\caption{Dokumentation der Nutzung von KI-basierten Anwendungen und Werkzeugen -- Documentation of the Use of AI-based Applications and Tools}
+    3                                               &
+    ChatGPT.com                                     &
+    Erstellen einer Graphik                         &
+    \gls{abb} \ref{Absetzungsbetrag} auf \gls{S} \pageref{Absetzungsbetrag}                                      &
+    \enquote{Bitte plotte  die vier Funktionen unten in einer Abbildung. Beschrifte die x-Achse in hunderter Schritten. Mach keine Überschrift. Nenne die x-Achse anzurechnendes Einkommen in €. Nenne die y-Achse Absetzungsbetrag in € \\
 
-\label{KIHilfsmittel}
+    f (x) = x Df = {0 < x < 100} (1) \\
 
-    \end{table}
-        \end{landscape}
+    f (x) = 0, 2x + 80 Df = {100 < x < 520} (2) \\
 
-\restoregeometry %%%
+    f (x) = 0, 3x + 28 Df = {520 < x < 1000} (3) \\
 
+    f (x) = 0, 1x + 228 Df = {1000 < x < 1200} (4)}                                           \\
+    \hline
+
+\end{longtblr}
+\end{landscape}
+
+    \restoregeometry
 
 % \footnote{\url{https://www.uni-bremen.de/zpa/formulare} führt zu \url{https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.uni-bremen.de%2Ffileadmin%2Fuser_upload%2Fsites%2Fzpa%2Fpdf%2Fallgemein%2FDokumentation_Nutzung_KI_-_AI_Use_Documentation.docx&wdOrigin=BROWSELINK} beide 29.06.2025}

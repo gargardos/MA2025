@@ -1147,11 +1147,27 @@ DArüber hinaus könnten Kausalketten hervorgehoben werden, wie \gls{bspw}
 
 
 \textsc{Aufgabe 2} \quad
-Dieses Mal schreibe ich direkt in den Erwartungshorizont die Wertung. 
-In der Aufgabe wird vor allem eines evident: Dass Zahlen zu Leistungsempfangenden gut zu finden sind und Formeln zur Berechnung der Höhe der möglichen Leistungen besser unter Verschluss gehalten sind, als schmutzige Geheimnisse. 
-Erst im Kapitel 9.2 des hundertseitigen Infoflyers zum SGB II\footnote{
-    \url{https://www.arbeitsagentur.de/datei/merkblatt-buergergeld_ba043375.pdf} (08.07.2025)
-} wird defintiv gesagt, was anrechnungsfrei bleibt: Die ersten 100\,€ zu 100\,\%, von den nächsten 420\,€ bleiben 20\,\% von den nächsten 480\,€ bleiben 30\,\% und von den letzten 200\,€ sind es 10\,\%. Das Maximum, welches anrechnungsfrei bleibt, wenn man 1200\,€ oder mehr brutto verdient, ist also: 100\,€ + 84\,€ + 144\,€ + 20\,€ = 348\,€ \autocite[59-62]{MerkblattSGBII}. 
+Bis zu 1200\,€ Brutto kann ein Betrag anrechenungsfrei bleiben. Dieser setzt sich in jeweils unterschiedlichen Anteilen zusammen. zusammen: Die ersten 100\,€ zu 100\,\%, von den nächsten 420\,€ bleiben 20\,\% von den nächsten 480\,€ bleiben 30\,\% und von den letzten 200\,€ sind es 10\,\%. Das Maximum, welches anrechnungsfrei bleibt, wenn man 1200\,€ oder mehr brutto verdient, ist also: 100\,€ + 84\,€ + 144\,€ + 20\,€ = 348\,€ \autocite[59-62]{MerkblattSGBII}. 
+
+Das lässt sich überblicksweise auch in vier linearen Funktionen, die jeweils nur für einen Bereich gelten, ausdrücken:
+\begin{align} 
+f(x)& = x    & 
+    D_{f}& = \{0<x<100\}    \\
+f(x)& = 0,2x + 80 & 
+    D_{f}& = \{100<x<520\}  \\
+f(x)& = 0,3x + 28 & 
+    D_{f}& = \{520<x<1000\} \\
+f(x)& = 0,1x + 228 & 
+    D_{f}& = \{1000<x<1200\}
+\end{align}
+% Dieses Mal schreibe ich direkt in den Erwartungshorizont meinen Kommentar. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Absetzungsbetrag.png}
+    \caption{Absetzungsbetrag in Abhängigkeit zum Einkommen laut den Angaben aus \emph{M3}}
+    \label{Absetzungsbetrag}
+\end{figure}
 
 
 
@@ -1169,10 +1185,50 @@ In \emph{M2} selbst ist leider kein Datum angegeben. Aus dem Text heraus ist ein
 } und nach 2020 anzunehmen. Ein Blick in die \gls{url} scheint das zu bestätigen, da es sich danach um die \enquote{ausgabe-juliaugust-2021} des auch gedruckt veröffentlichten Magazins der \gls{ank} handelt. Eigentlich eine Lapalie, das Datum des Magazins nicht um den Text herum genannt zu haben, aber dadurch, dass \gls{zb} auf sehr veränderbare Zahlen, wie eben den Landesmindestlohn, Bezug genommen wird, ist eine zeitliche Einordnung relevant. Erst so haben auch Leser*innen mit weniger Hintergrundwissen, eine größere Chance darauf gestoßen zu werden, dass die angesprochenen Fakten im Kontext der Zeit zu sehen sind. 
 
 
-Aus \emph{M3} geht nicht direkt hervor, ob der Absetzungsbetrag immer 223\,€ beträgt, oder ob sich dieder je nach Einkommen individuell errechnet. Eine Formel ist nicht direkt aufzufinden. 
+\emph{M3} läst sich in mehreren Hinsichten kritisieren: 
+
+\begin{myenumerate}
+    \item Es geht aus \emph{M3} nicht direkt hervor, ob der Absetzungsbetrag immer 223\,€ beträgt, oder ob sich dieder je nach Einkommen individuell errechnet. Eine Formel ist nicht direkt aufzufinden. 
+    \item 
+\end{myenumerate}
+
+
+
+Erst im Kapitel 9.2 des hundertseitigen Infoflyers zum SGB II %\footnote{\url{https://www.arbeitsagentur.de/datei/merkblatt-buergergeld_ba043375.pdf} (08.07.2025)} 
+wird defintiv gesagt, was anrechnungsfrei bleibt: 
+
+HIER NOCH MEHR EINORDNUNG UND NICHT SO AGITIEREN
+
+Auch Andreas Peichl vom ifo Institut wird in deren Pressemitteilung als kritisch zitiert: \enquote{Das System ist zu kompliziert, und wirkt, als wäre es gemacht, um es den Empfängern schwer zu machen. Denn der Staat spart zwischen 6 und 10 Milliarden Euro im Jahr, weil Berechtigte im Antragsdschungel abgeschreckt werden und ihre Ansprüche nicht geltend machen. Das ist seit Jahrzehnten so.} Er führt weiter aus: \enquote{Das ist völlig absurd. Arbeitsagentur, Jugendamt, Wohnungsamt legen unterschiedliche und teilweise widersprüchliche Kriterien an, was zum Einkommen zählt. Da fehlt es an Abstimmung.} \autocite{ifo.05.05.2021}
+
+In der Aufgabe wird vor allem eines evident: Dass Zahlen zu Leistungsempfangenden gut zu finden sind und Formeln zur Berechnung der Höhe der möglichen Leistungen besser unter Verschluss gehalten sind, als manche Geheimnisse. Es ist so, als ob die Aufgabe das Ziel hat zu zeigen, wie hochkomplex das Verlangen nach Rechtssicherheit und Kompromissen soziale Sicherungssysteme werden lässt. 
+
+Es können mehrere Ebenen, die für Fehler und Missverständnisse sorgen können unterschieden werden:
+
+\begin{myitemize}
+    \item Die Aufgabe kann pauschal nicht beantwortet werden.
+    \item Die Webiste der Arbeitsagentur gibt falsche Informationen an und sichert sich nicht ab.
+    \item Die Gesetzgebung an sich ist kompliziert und ausufernd.
+\end{myitemize}
+
+\autocite[Anlage zu §28]{Bundestag.2003}
+
+
+Aber auch dort ließe sich mit einer präzisen Formulierung vorbeugen:
+Die Höhe des Regelbedarfes ist im SGB XII unter der Anlage zu §28 zu finden (Stand 2023). 
+Dieses Gesetz ist unter: \url{https://www.gesetze-im-internet.de/sgb_12/} (Stand: Datum) zu finden.
 
 
 \paragraph{Erwartungshorizont: Arbeitsleben A2 Erarbeitung} (\gls{S} \pageref{ARBEITSLEBEN-A2})
+\textsc{Aufgabe 1} \quad 
+--- 
+
+\textsc{Aufgabe 2} \quad
+Niedriglohn ist Bruttoeinkommen unterhalb von \enquote{zwei Dritteln des deutschlandweiten mittleren Bruttomonatseinkommens}.
+In der Quelle \emph{M4} sind für 2023 2.530\,€ brutto angegeben. 
+
+Mindestlohnerhöhungen und von Gewerkschaften miterkämpfte Tarifabschlüsse auch für untere Einkommensschichten können den schrumpfenden Niedriglohnsektor erklären. 
+
 
 \paragraph{Arbeitsleben A2 Erarbeitung -- \enquote{Wie viel verdienen Arbeitnehmer:innen in Bremen und welche (politischen und wirtschaftlichen) Maßnahmen würden die Situation am Arbeitsmarkt verbessern?}}
 \bigskip
@@ -1183,12 +1239,6 @@ In Aufgabe 2 sollte
 
 durch das Kursive präzisiert werden, da ansonsten die Steuerklasse zu vage bleibt. 
 
-
-
-
-
-
-\paragraph{Erwartungshorizont: Arbeitsleben A2 Erarbeitung} (\gls{S} \pageref{ARBEITSLEBEN-A2})
 
 
 
@@ -1252,7 +1302,7 @@ Leitfragen
 
 
 
-\subsection{Wirtschaftspolitik} % ansonsten wohl Gesellschaft
+% \subsection{Wirtschaftspolitik} % ansonsten wohl Gesellschaft
 
 
 
