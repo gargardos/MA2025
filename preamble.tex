@@ -148,22 +148,6 @@
 { \end{enumerate}                } 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%% TABELLEN %%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{booktabs}
-\usepackage{array}
-% \usepackage{tabularx}
-% \usepackage{longtable}
-% \usepackage{ltablex}
-\usepackage{tabularray}
-\usepackage{xcolor}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%% LANDSCAPE %%%%%%% UND PDF EINBINDEN %%%%%%%
-\usepackage{pdflscape}
-\usepackage[]{pdfpages}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}   % PDF Support % vorher war hier auch [pdftex] eingebunden. Nachdem ich hyperref in der Präambel nach unten geschoben habe, hat overleaf aber einen Fehler ausgespuckt
 \usepackage{float} % addded 2025-06-10
@@ -173,6 +157,20 @@
 % https://www.linux-community.de/ausgaben/linuxuser/2005/04/mit-pdflatex-bessere-pdf-dateien-erzeugen/2/  
 % 2025-05-14
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% TABELLEN %%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{booktabs}
+\usepackage{array}
+% \usepackage{tabularx} % columns with X behave better
+% \usepackage{longtable} % tables over several pages are possible
+% \usepackage{ltablex} % should combine usepackage{tabularx} and \usepackage{longtable}
+\usepackage{xcolor} % several colors available, needed for nice color options in \usepackage{tabularray} e.g.
+\usepackage{tabularray} % this does everything tabularx and longtable can and even more, requires LaTeX3 (which is included in TeXLive e.g.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% LANDSCAPE %%%%%%% UND PDF EINBINDEN %%%%%%%
+\usepackage{pdflscape} % I think I need this to have pdf pages in landscape orientation, to fit more pages on on a4paper
+\usepackage[]{pdfpages} % very nice options to insert pdf once you understand them
 
 \usepackage[
     xindy, 
@@ -213,8 +211,9 @@
     \newacronym{oä}{o.\,Ä.}{oder Ähnliche(s)}
     \newacronym{s}{s.}{siehe}
     \newacronym{S}{S.}{Seite}
-    \newacronym{suub}{SuUB}{Staats- und Universitätsbibliothek Bremen}
+    \newacronym{sgb}{SGB}{Sozialgesetzbuch}
     \newacronym{sek}{Sek.}{Sekundarstufe}
+    \newacronym{suub}{SuUB}{Staats- und Universitätsbibliothek Bremen}
     \newacronym{sus}{SuS}{Schülerinnen und Schüler}
     \newacronym{ua}{u.\,A.}{unter Anderem}
     \newacronym{url}{URL}{Universal Ressource Locator }% (einheitlicher Ressourcen Verorter, Webadressen)
