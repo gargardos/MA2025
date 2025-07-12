@@ -26,3 +26,7 @@ preamble.glo
 preamble.log
 
 main.lot
+
+references.bib.bbl
+references.bib.blg
+preamble.bbl
