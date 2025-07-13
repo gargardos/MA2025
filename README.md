@@ -2,7 +2,14 @@ Moin aus Bremen.
 
 main.pdf ist das eigentliche Dokument zur Abgabe und "Veröffentlichung".
 
-Wenn man alle anderen Dateien in das gleiche Verzeichnis haut und main.tex z.B. mit pdfLaTeX kompiliert (womöglich mehrere Durchläufe), sollte main.pdf rauskommen.
+
+
+----------- Erstellung des Dokumentes -----------
+Wenn man eine aktuelle LaTeX Distribution installiert hat (ich habe TeX-Live genutzt) und alle anderen Dateien in das gleiche Verzeichnis haut und main.tex z.B. mit pdfLaTeX und biber (für die Bibliographie) kompiliert (womöglich mehrere Durchläufe), sollte main.pdf rauskommen.
+Für das Abkürzungsverzteichnis kann es nötig sein in einer Konsole das Kommando "makeglossaries main" durchzuführen.
+-------------------------------------------------
+
+
 
 HINWEIS
 Der Code ist nicht schön und gespickt mit persönlichen Kommentaren und Ballast.
