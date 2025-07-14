@@ -24,11 +24,8 @@ preamble.fdb_latexmk
 preamble.fls
 preamble.glo
 preamble.log
-
 main.lot
-
 references.bib.bbl
 references.bib.blg
 preamble.bbl
-
 Probleme/

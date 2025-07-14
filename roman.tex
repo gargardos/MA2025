@@ -6,6 +6,11 @@
 blub
 Bre steht das hier auch in vsc?
 
+\section*{Hinweis zur Leser*innen Führung}
+Wer das Dokument digital liest, kann die Zahlen anklicken, die auf einen \gls{abs}, eine \gls{S} oder eine Fußnote innerhalb dieses Dokumentes verweisen. 
+Auch bei Literaturverweisen kann auf das Jahr (oder \gls{ebd}) geklickt werden, um direkt ins Literaturverzeichnis zu gelangen. 
+
+
 \clearpage
 \newpage
 
@@ -14,16 +19,15 @@ Bre steht das hier auch in vsc?
 % \clearpage
 % \newpage
 
-\listoffigures % Abbildungsverzeichnis
-\listoftables % Tabellenverzeichnis
-
-
 \printacronyms[type=\acronymtype, 
     nonumberlist, 
     title=Abkürzungsverzeichnis, 
     toctitle=Abkürzungsverzeichnis]{} % Acronymtype ist von glossaries, title und toctitle sind Titel im Inhaltsverzeichnis
 % listof=totoc in \documentclass[] replaces %% , title={Abkürzungsverzeichnis}, toctitle={Abkürzungsverzeichnis} %% here
 % \vspace{24pt} % vertical space
+
+\listoffigures % Abbildungsverzeichnis
+\listoftables % Tabellenverzeichnis
 
 \clearpage
 \newpage
